@@ -1,0 +1,681 @@
+@import "../../css/includes";
+
+.nation-teasers {
+  scroll-behavior: smooth !important;
+  font-family: "AkzidGroStd";
+  padding-bottom: 50px;
+
+  .container {
+    margin: -1px auto;
+    padding: 0 20rem;
+
+    @media screen and (max-width: 1919px) {
+      padding: 0rem 15rem;
+    }
+
+    @media screen and (max-width: 1439px) {
+      padding: 0rem 20rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      padding: 0rem 26rem;
+    }
+
+    @include max-screen($screen-md) {
+      padding: 0 6rem;
+    }
+
+    html[lang="ar"] & {
+      @media screen and (max-width: 1023px) {
+        padding: 0rem 12rem;
+      }
+
+      @include max-screen($screen-xs) {
+        padding: 0 4rem;
+      }
+    }
+
+    .row {
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 2.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+
+    &:hover {
+      color: #387973;
+    }
+
+    @media screen and (max-width: 1439px) {
+      display: none;
+    }
+
+    html[lang="ar"] & {
+      font-size: 26px;
+    }
+  }
+
+  &__dropdown-wrapper {
+    @media screen and (min-width: 1440px) {
+      display: none;
+    }
+  }
+
+  &__dropdown {
+    font-size: 25px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 0;
+    font-weight: 900;
+    appearance: none;
+    background-image: url("./assets/dropdown-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 220px center;
+    padding: 0 3rem;
+
+    html[lang="ar"] & {
+      background-position: 8px center;
+    }
+  }
+
+  &__left-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__left-bottom-menu {
+    position: absolute;
+    bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 1919px) {
+      bottom: 7rem;
+    }
+
+    @media screen and (max-width: 1439px) {
+      display: none;
+    }
+
+    html[lang="ar"] & {
+      bottom: 7rem;
+      @media screen and (max-width: 1919px) {
+        bottom: 6.5rem;
+      }
+
+      @media screen and (max-width: 1439px) {
+        display: none;
+      }
+    }
+  }
+
+  &__left-side {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 1439px) {
+      padding-bottom: 3rem;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  &__right-side {
+    background-image: url("./assets/letters-background.svg");
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 16rem;
+
+    @media screen and (max-width: 1600px) {
+      left: 13rem;
+    }
+
+    @media screen and (max-width: 1439px) {
+      left: 10rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      left: 0;
+    }
+
+    @include max-screen($screen-md) {
+      background-image: url("./assets/letters-background-mobile.svg");
+    }
+
+    @media screen and (max-width: 520px) {
+      margin-left: 4rem;
+    }
+
+    html[lang="ar"] & {
+      background-position: right;
+      background-image: url("./assets/letters-background-arabic.svg");
+      left: 0;
+      right: 15rem;
+
+      @media screen and (max-width: 1700px) {
+        right: 3rem;
+      }
+
+      @include max-screen($screen-md) {
+        right: 0;
+        background-image: url("./assets/letters-background-arabic-mobile.svg");
+      }
+      @media (max-width: 768px) {
+        margin-right: 5rem;
+        margin-left: auto;
+      }
+      @media (max-width: 375px) {
+        margin-right: 15rem;
+      }
+      @media (max-width: 350px) {
+        margin-right: 17rem;
+      }
+    }
+  }
+
+  &__teaser-block {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem 0;
+    width: 100% !important;
+    max-width: 61rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    @include max-screen($screen-md) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 50px 0 0;
+    }
+
+    &:nth-child(1) {
+      margin-left: -18rem;
+
+      html[lang="ar"] & {
+        margin-right: -16rem;
+
+        @media screen and (max-width: 1919px) {
+          margin-right: -15rem;
+        }
+
+        @include max-screen($screen-md) {
+          margin-right: -7rem;
+        }
+      }
+
+      @include max-screen($screen-md) {
+        margin-left: 0rem;
+      }
+
+      img {
+        @include max-screen($screen-md) {
+          margin-left: -3rem;
+        }
+
+        html[lang="ar"] & {
+          @include max-screen($screen-md) {
+            margin-right: 4rem;
+          }
+
+          @include max-screen($screen-md) {
+            margin-right: 6rem;
+          }
+        }
+      }
+
+      .nation-teasers__block-right {
+        @include max-screen($screen-md) {
+          margin-left: 4rem;
+          margin-top: -1.5rem;
+        }
+
+        @include max-screen($screen-xs) {
+          margin-left: 0;
+        }
+
+        html[lang="ar"] & {
+          @include max-screen($screen-md) {
+            margin-right: 11rem;
+          }
+
+          @include max-screen($screen-md) {
+            margin-right: 11rem;
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      margin-left: -4rem;
+
+      html[lang="ar"] & {
+        margin-right: -6rem;
+      }
+
+      @include max-screen($screen-md) {
+        margin-left: 0;
+      }
+
+      img {
+        @include max-screen($screen-md) {
+          margin-left: -1rem;
+        }
+
+        html[lang="ar"] & {
+          @include max-screen($screen-md) {
+            margin-right: 4rem;
+          }
+        }
+      }
+
+      .nation-teasers__block-right {
+        @include max-screen($screen-md) {
+          margin-top: -1.5rem;
+          margin-left: 2rem;
+        }
+
+        html[lang="ar"] & {
+          @include max-screen($screen-md) {
+            margin-right: 11rem;
+          }
+
+          @include max-screen($screen-md) {
+            margin-right: 9rem;
+          }
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      margin-left: -18rem;
+
+      html[lang="ar"] & {
+        margin-right: -15rem;
+
+        @media screen and (max-width: 1439px) {
+          margin-right: -6rem;
+        }
+      }
+
+      @include max-screen($screen-md) {
+        margin-left: 0;
+      }
+
+      img {
+        @include max-screen($screen-md) {
+          margin-left: -2rem;
+        }
+
+        html[lang="ar"] & {
+          @include max-screen($screen-md) {
+            margin-right: 18rem;
+          }
+
+          @include max-screen($screen-md) {
+            margin-right: 5rem;
+          }
+        }
+      }
+
+      .nation-teasers__block-right {
+        @include max-screen($screen-md) {
+          margin-left: 3rem;
+          margin-top: -1.5rem;
+        }
+
+        html[lang="ar"] & {
+          @include max-screen($screen-md) {
+            margin-right: 24rem;
+          }
+
+          @include max-screen($screen-md) {
+            margin-right: 11rem;
+          }
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      margin-left: 2rem;
+
+      html[lang="ar"] & {
+        margin-right: 2.5rem;
+
+        @media screen and (max-width: 1919px) {
+          margin-right: 3rem;
+        }
+
+        @include max-screen($screen-md) {
+          margin-right: -6rem;
+        }
+      }
+
+      @include max-screen($screen-md) {
+        margin-left: 0;
+      }
+
+      img {
+        @include max-screen($screen-md) {
+          margin-left: -1rem;
+        }
+
+        html[lang="ar"] & {
+          @include max-screen($screen-md) {
+            margin-right: 6rem;
+          }
+
+          @include max-screen($screen-md) {
+            margin-right: 5rem;
+          }
+        }
+      }
+
+      .nation-teasers__block-right {
+        @include max-screen($screen-md) {
+          margin-left: 5rem;
+          margin-top: -1.5rem;
+        }
+
+        html[lang="ar"] & {
+          @include max-screen($screen-md) {
+            margin-right: 19rem;
+          }
+
+          @include max-screen($screen-md) {
+            margin-right: 10.5rem;
+          }
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      margin-left: -11rem;
+
+      html[lang="ar"] & {
+        margin-right: -12rem;
+
+        @media screen and (max-width: 1439px) {
+          margin-right: -10rem;
+        }
+      }
+
+      @media screen and (max-width: 1439px) {
+        margin-left: 3rem;
+      }
+
+      @include max-screen($screen-md) {
+        margin-left: 0;
+      }
+
+      img {
+        @include max-screen($screen-md) {
+          margin-left: 1rem;
+        }
+
+        html[lang="ar"] & {
+          @include max-screen($screen-md) {
+            margin-right: 20rem;
+          }
+
+          @include max-screen($screen-md) {
+            margin-right: 12rem;
+          }
+        }
+      }
+
+      .nation-teasers__block-right {
+        @include max-screen($screen-md) {
+          margin-left: 5rem;
+          margin-top: -1.5rem;
+        }
+
+        html[lang="ar"] & {
+          @include max-screen($screen-md) {
+            margin-right: 28rem;
+          }
+
+          @include max-screen($screen-md) {
+            margin-right: 15rem;
+          }
+        }
+      }
+    }
+
+    &:nth-child(6) {
+      margin-left: 4rem;
+
+      @include max-screen($screen-md) {
+        margin-left: 0;
+      }
+
+      img {
+        @include max-screen($screen-md) {
+          margin-left: -3rem;
+        }
+
+        html[lang="ar"] & {
+          @include max-screen($screen-md) {
+            margin-right: 5rem;
+          }
+
+          @include max-screen($screen-md) {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .nation-teasers__block-right {
+        @include max-screen($screen-md) {
+          margin-left: 5rem;
+          margin-top: -1.5rem;
+        }
+
+        html[lang="ar"] & {
+          @include max-screen($screen-md) {
+            margin-right: 13rem;
+          }
+
+          @include max-screen($screen-md) {
+            margin-right: 5rem;
+          }
+        }
+      }
+    }
+
+    &:nth-child(7) {
+      margin-left: -5rem;
+
+      html[lang="ar"] & {
+        margin-right: -5rem;
+      }
+
+      @include max-screen($screen-md) {
+        margin-left: 0;
+      }
+
+      img {
+        @include max-screen($screen-md) {
+          margin-left: 4rem;
+        }
+
+        html[lang="ar"] & {
+          @include max-screen($screen-md) {
+            margin-right: 11rem;
+          }
+
+          @include max-screen($screen-md) {
+            margin-right: 4rem;
+          }
+        }
+      }
+
+      .nation-teasers__block-right {
+        @include max-screen($screen-md) {
+          margin-left: 5rem;
+          margin-top: -1.5rem;
+        }
+
+        html[lang="ar"] & {
+          @include max-screen($screen-md) {
+            margin-right: 19rem;
+          }
+
+          @include max-screen($screen-md) {
+            margin-right: 10rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__block-right {
+    padding-left: 2.5rem;
+
+    @include max-screen($screen-md) {
+      width: 28rem;
+    }
+
+    html[lang="ar"] & {
+      padding-left: 0;
+      margin-right: 2.5rem;
+    }
+  }
+
+  &__thumbnail {
+    max-width: 22rem;
+    min-width: 22rem;
+    box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.5);
+
+    @media screen and (max-width: 1439px) {
+      max-width: 20rem;
+    }
+
+    @include max-screen($screen-md) {
+      max-width: 17rem;
+    }
+
+    html[lang="ar"] & {
+      @include max-screen($screen-md) {
+        max-width: 173px;
+        min-width: 173px;
+      }
+    }
+  }
+
+  &__title-holder {
+    display: flex;
+  }
+
+  &__teaser-title {
+    padding: 0.6rem 1.5rem;
+    margin-bottom: 0.9rem;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "AkzidGroStd";
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #387973;
+    text-align: center;
+    text-transform: uppercase;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: .26px;
+    line-height: 20px;
+
+    html[lang="ar"] & {
+      font-size: 17px;
+      letter-spacing: -.52px;
+      line-height: 22px;
+    }
+  }
+
+  &__ruler-name {
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+    margin-top: 15px;
+    margin-bottom: 12px;
+    line-height: 17px;
+
+    @include max-screen($screen-xs)
+    {
+      max-width: 240px;
+    }
+
+    html[lang="ar"] & {
+      font-size: 16px;
+      line-height: 20px;
+
+      @include max-screen($screen-md) {
+        margin-bottom: 0.4rem;
+      }
+    }
+  }
+
+  &__headline-text {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 4.5rem;
+    letter-spacing: 0.2px;
+    color: #000;
+    width: 36rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-family: "AkzidGroStd";
+
+    @include max-screen($screen-md) {
+      font-size: 25px;
+      line-height: 26px;
+      width: 22rem;
+    }
+
+    html[lang="ar"] & {
+      font-size: 47px;
+
+      @include max-screen($screen-md) {
+        width: 17rem;
+        font-size: 32px;
+        margin-bottom: 20px;
+        line-height: 37px;
+      }
+    }
+  }
+
+  &__button {
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    html[lang="ar"] & {
+      font-size: 18px;
+    }
+  }
+}
+
+#left-sticky {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: fixed;
+}
+
+#left-sticky .nation-teasers__link:last-child,
+#left-menu-bottom .nation-teasers__link:last-child,
+#left-menu .nation-teasers__link:last-child {
+    margin-bottom: 0
+}

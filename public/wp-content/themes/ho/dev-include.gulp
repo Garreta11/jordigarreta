@@ -1,0 +1,13 @@
+<!-- build:css /../build/style.css -->
+<link type="text/css" rel="stylesheet" href="/css/style.css">
+<!-- endbuild -->
+
+<!-- build:js /../build/lib.js -->
+<!-- lib:js -->
+<!-- endinject -->
+<!-- endbuild -->
+
+<!-- build:js /../build/app.js -->
+<!-- app:js -->
+<!-- endinject -->
+<!-- endbuild -->

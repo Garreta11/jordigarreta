@@ -1,0 +1,90 @@
+@import "../../css/includes";
+
+.arrow-left, .arrow-right {
+	&:hover path {
+		fill: var(--color-rust);
+	}
+	cursor: pointer;
+}
+
+.arrow-right {
+	transform: rotate(180deg);
+}
+
+.block-slider {
+	.slider-image .box {
+		position: relative;
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-image: url('assets/corner.svg');
+			background-repeat: no-repeat;
+			background-position: bottom left;
+			z-index: 1;
+
+			html[lang="ar"] & {
+				background-image: url('assets/corner-ar.svg');
+				background-position: bottom right;
+			}
+		}
+	}
+
+	.slider-text {
+		padding: 20px;
+		@include max-screen($screen-xs-max) {
+			padding: 20px 20px 20px 5px;
+		}
+	}
+
+	.arrow {
+		margin-top: 10px;
+
+	}
+	.arrow-right {
+		@include max-screen($screen-xs-max) {
+			float: right;
+		}
+	}
+
+	.swiper-pagination-wrapper {
+		left: 50%;
+		transform: translateX(-50%);
+		white-space: nowrap;
+		padding: 20px 0;
+	}
+
+ 	.swiper-pagination {
+		position: relative !important;
+		display: inline-block;
+
+		.swiper-pagination-bullet {
+			transition: transform .2s,left .2s;
+			background-color: transparent !important;
+			background-image: url("/assets/icons/bullet.svg");
+			width: 22px;
+			height: 20px;
+			display: inline-block;
+			margin: 0 2px;
+
+			-webkit-transform: scale(1) !important;
+			-ms-transform: scale(1) !important;
+			transform: scale(1) !important;
+			
+			&.swiper-pagination-bullet-active {
+				background-image: url("/assets/icons/bullet-active.svg");
+				background-color: transparent !important;
+			}
+		}
+		
+	}
+
+	.swiper-pagination-fraction {
+		position: relative;
+		font-size: 1.2rem;
+	}
+}

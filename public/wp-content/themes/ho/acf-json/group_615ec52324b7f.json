@@ -1,0 +1,150 @@
+{
+    "key": "group_615ec52324b7f",
+    "title": "Block : Social footer",
+    "fields": [
+        {
+            "key": "field_615ec52a30369",
+            "label": "Social platforms",
+            "name": "social_platforms",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "wpml_cf_preferences": 0,
+            "sub_fields": [
+                {
+                    "key": "field_615ec53a3036a",
+                    "label": "Platform",
+                    "name": "platform",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 0,
+                    "choices": {
+                        "fb": "Facebook",
+                        "insta": "Instagram",
+                        "twitter": "Twitter",
+                        "yt": "Youtube"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_615ec56b3036b",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "wpml_cf_preferences": 0
+                },
+                {
+                    "key": "field_6162d42371132",
+                    "label": "Mobile Link",
+                    "name": "mobile_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "wpml_cf_preferences": 0
+                }
+            ]
+        },
+        {
+            "key": "field_61800e7e1edf6",
+            "label": "Social BG Color",
+            "name": "footer_social_color",
+            "type": "swatch",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "choices": {
+                "transparent": "None",
+                "#D8D2CC": "Beige",
+                "#B69E83": "Ochre",
+                "#DDCAC3": "Syringa",
+                "#F1EEE6": "Mint",
+                "#D2E0E4": "Slight Blue",
+                "#A7BFC7": "Sky Blue",
+                "#4868B5": "School blue",
+                "#CF7C59": "Orange",
+                "#B7624F": "Winered",
+                "#387973": "Dark Green",
+                "#89A895": "Light Green",
+                "#BB674D": "Hover Brown",
+                "#E4E5E6": "Light Grey",
+                "#5CBCC4": "School aqua",
+                "#81B2E2": "Dreamlight Blue",
+                "#F7F7F9": "Bright White",
+                "#598798": "Deep Blue",
+                "#B59D82": "Light Brown"
+            },
+            "allow_null": 1,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "other_choice": 0,
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/standard-social-footer"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1635782343
+}

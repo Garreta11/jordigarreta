@@ -1,0 +1,51 @@
+*[class^="col-"] {
+    box-sizing: border-box;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -moz-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -moz-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    -webkit-flex-basis: 100%;
+    -moz-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+.col-padding-remove
+{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.middle-xs {
+    align-items: center;
+}
+
+@import 'flexboxgrid.scss';
+
+@media (min-width: 860px) {
+    .col-sm-fifth {
+        -webkit-flex-basis: 20%;
+        -moz-flex-basis: 20%;
+        -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+        max-width: 20%;
+    }
+    .col-sm-four-fifth {
+        -webkit-flex-basis: 80%;
+        -moz-flex-basis: 80%;
+        -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+        max-width: 80%;
+    }
+}
+
+
+@import "hide";

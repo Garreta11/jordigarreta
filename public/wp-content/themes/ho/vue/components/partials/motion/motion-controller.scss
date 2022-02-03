@@ -1,0 +1,29 @@
+[data-motion-text]
+{
+  visibility: hidden;
+
+  &.motionLoaded
+  {
+    visibility: visible;
+  }
+}
+
+.data-motion-text-wrapper
+{
+  overflow: hidden;
+  opacity: 1;
+}
+
+.wp-admin // GUTENBERG
+{
+  [data-motion-text]
+  {
+    visibility: visible !important;
+  }
+}
+
+.parallax-stagger-mask
+{
+  overflow: hidden;
+  opacity: 1;
+}

@@ -1,0 +1,303 @@
+@import "../../css/includes";
+
+.slider-wrapper{
+    position: relative;
+    margin-top: 100px;
+    padding-bottom: 100px;
+
+    @include max-screen($screen-sm) {
+        padding-right: 1.5em;
+        padding-left: 1.5em;
+        margin-top: 30px;
+    }
+
+    .slider-bg{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        max-width: 1025px;
+        max-height: 1141px;
+        right: 50%;
+        -webkit-transform: translate(-50%);
+        transform: translate(-50%);
+        html[lang="ar"] & {
+            -webkit-transform: translate(50%) scaleX(-1);
+            transform: translate(50%) scaleX(-1);
+        }
+        @media (max-width: 400px) {
+            display: none;
+        }
+        &.mobile {
+            display: none;
+            @media (max-width: 400px) {
+                display: block;
+            }
+        }
+    }
+
+    .slider-content{
+        position: relative;
+        z-index: 100;
+
+        h1{
+            font-size: 71px;
+            letter-spacing: 0px;
+            margin-bottom: 30px;
+            @include max-screen($screen-sm) {
+                font-size: 40px;
+                margin-top: 50px;
+            }
+        }
+        p{
+            font-size: 18px;
+            max-width: 575px;
+            margin: 0px auto;
+            line-height: 26px;
+            @include max-screen($screen-sm) {
+                font-size: 16px;
+            }
+
+            html[lang="ar"] & {
+                max-width: 480px;
+                font-size: 20px;
+                line-height: 30px;
+                @include max-screen($screen-sm) {
+                    max-width: 250px;
+                    font-size: 18px;
+                }
+            }
+            
+        }
+
+        .separator{
+            margin-top: 45px;
+            margin-bottom: 20px;
+            background-image: url('/assets/icons/strange-subline-large-extra.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 6px;
+            @include max-screen($screen-sm) {
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+            @include max-screen($screen-xs) {
+                background-image: url('/assets/icons/strange-subline-large-mobile.svg');
+            }
+        }
+
+        .swiper-container {
+            @media (max-width: 425px) {
+                overflow: visible !important;
+
+                .collab:not(.collab.swiper-slide-active)
+            {
+                h3, .link-wrapper {
+                    display: none;
+                }
+            }
+            }
+        }
+
+        .title_arrow_wrapper{
+            position: relative;
+            padding-top: 100px;
+            h2{
+                text-align: left;
+                letter-spacing: 0px;
+                html[lang="ar"] & {
+                    text-align: right;
+                    letter-spacing: 0.39px;
+                }
+            }
+            .arrows {
+                position: absolute;
+                bottom: 4px;
+                width: 100%;
+                height: 40px;
+                z-index: 1;
+                max-width: 120px;
+                right: 0;
+
+                html[lang="ar"] & {
+                    left: 0;
+                    right: auto;
+                    -webkit-transform: scaleX(-1);
+                    transform: scaleX(-1);
+                }
+
+                @include max-screen($screen-sm) {
+                    bottom: auto;
+                    top: 510px;
+                    right: auto;
+                    left: 0px;
+                    z-index: 300;
+                    max-width: 100%;
+                }
+            }
+            .swiper-button-next{
+                width: 40px;
+                height: 40px;
+                bottom: 0 !important;
+                left: auto;
+                right: 0;
+                top: 0;
+                background-image: url("/assets/icons/arrowleft.svg");
+                background-size: contain;
+                transform: scaleX(-1);
+                &:hover{
+                    background-image: url("/assets/icons/arrowleft-hover.svg");
+                }
+
+                @include max-screen($screen-sm) {
+                    
+                }
+
+                html[lang="ar"] & {
+                    left: 0px;
+                    // transform: scaleX(1);
+                }
+            }
+            .swiper-button-prev{
+                width: 40px;
+                height: 40px;
+                bottom: 0 !important;
+                right: 80px;
+                top: 0;
+                left: auto;
+                background-size: contain;
+                background-image: url("/assets/icons/arrowleft.svg");
+                &:hover{
+                    background-image: url("/assets/icons/arrowleft-hover.svg");
+                }
+
+                @include max-screen($screen-sm) {
+                    left: 0;
+                    right: auto;
+                }
+
+                html[lang="ar"] & {
+                    left: 80px;
+                    @include max-screen($screen-sm) {
+                        left: 0;
+                    }
+                    // transform: scaleX(-1);
+                }
+
+                
+            }
+        }
+
+        .swiper{
+            h3{
+                text-align: left;
+                margin-top: 1em;
+                font-size: 32px;
+                letter-spacing: 0px;
+                @media (max-width: 520px) {
+                    font-size: 25px;
+                    line-height: 26px;
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                }
+                @include max-screen($screen-sm) {
+                    margin-top: 4em;
+                }
+                html[lang="ar"] & {
+                    text-align: right;
+                    font-size: 34px;
+                    line-height: 44px;
+                    letter-spacing: -0.28px;
+                    @include max-screen($screen-sm) {
+                        margin-top: 4em;
+                    }
+                    @media (max-width: 520px) {
+                        font-size: 23px;
+                        line-height: 33px;
+                        letter-spacing: -.19px;
+                    }
+                }
+            }
+            .collab{
+                cursor: pointer;
+                &:hover{
+                    .image-container{
+                        .overlay{
+                            opacity: 0.5;
+                        }
+                        ~ .link-wrapper {
+                            a {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            .image-container{
+                position: relative;
+                img{
+                    min-height: 318px;
+                    max-height: 375px;
+                    object-fit: cover;
+                    @media (max-width: 520px) {
+                        min-height: 300px;
+                        max-height: 311px;
+                    }
+                }
+                .overlay{
+                    background-color: rgb(187,103,77);
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0;
+                }
+            }
+
+            .link-wrapper {
+                padding-bottom: 8px;
+                text-align: left;
+                margin-top: 3em;
+                @media (max-width: 520px) {
+                    margin-top: 25px;
+                }
+                html[lang="ar"] & {
+                    text-align: right;
+                }
+                a {
+                    opacity: 0;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: .34px;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    padding-bottom: 10px;
+                    position: relative;
+                    text-decoration: none;
+                    @include max-screen($screen-sm) {
+                        opacity: 1;
+                    }
+                    &::after {
+                        content: " ";
+                        height: 5px;
+                        position: absolute;
+                        width: 100%;
+                        background-image: url(/assets/icons/button-line-new.svg);
+                        background-repeat: no-repeat;
+                        bottom: 0;
+                        left: 0;
+                    }
+                    &:hover::after {
+                        background-image: url(/assets/icons/button-line-new-hover.svg);
+                    }
+                }
+            }
+        }
+    }
+}

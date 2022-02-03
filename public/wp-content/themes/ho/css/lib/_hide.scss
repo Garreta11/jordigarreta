@@ -1,0 +1,24 @@
+.hide-xs {
+  @include max-screen($screen-xs-max) {
+	display: none;
+  }
+}
+
+.hide-sm {
+  @include min-screen($screen-sm-min) {
+	display: none;
+  }
+}
+
+.hide-md {
+  @include min-screen($screen-md-min) {
+	display: none;
+  }
+}
+
+
+.hide-lg {
+  @include min-screen($screen-lg-min) {
+	display: none;
+  }
+}

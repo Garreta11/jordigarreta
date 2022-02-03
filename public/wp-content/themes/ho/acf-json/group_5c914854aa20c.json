@@ -1,0 +1,52 @@
+{
+    "key": "group_5c914854aa20c",
+    "title": "Standard – Block: Audio",
+    "fields": [
+        {
+            "key": "field_5c9148845a75e",
+            "label": "File",
+            "name": "file",
+            "type": "file",
+            "instructions": "MP3 only.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e3850debe437",
+                        "operator": "==",
+                        "value": "file"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "return_format": "id",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp3"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/standard-audio"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1630190310
+}

@@ -1,0 +1,161 @@
+//
+// Spacing
+//
+:root {
+  --spacing: 120px;
+
+
+  @include max-screen($screen-xs-max) {
+	--spacing: 72px;
+  }
+
+  --spacing-two-thirds: calc( var(--spacing) * 2 / 3);
+  --spacing-half: calc( var(--spacing) / 2);
+  --spacing-third : calc( var(--spacing) / 3);
+  --spacing-sixth : calc( var(--spacing) / 6);
+  --spacing-minimal : calc( var(--spacing) / 10);
+  --spacing-atom : calc( var(--spacing) / 20);
+}
+
+@mixin margin-bottom {
+  margin-bottom: var(--spacing);
+}
+@mixin margin-bottom-two-thirds {
+  margin-bottom: var(--spacing-two-thirds);
+}
+@mixin margin-bottom-half {
+  margin-bottom: var(--spacing-half);
+}
+@mixin margin-bottom-third {
+  margin-bottom: var(--spacing-third);
+}
+@mixin margin-bottom-sixth {
+  margin-bottom: var(--spacing-sixth);
+}
+@mixin margin-bottom-minimal {
+  margin-bottom: var(--spacing-minimal);
+}
+@mixin margin-bottom-atom {
+  margin-bottom: var(--spacing-atom);
+}
+@mixin margin-bottom-zero {
+  margin-bottom: 0;
+}
+
+.margin-bottom {
+  @include margin-bottom;
+}
+.margin-bottom-two-thirds {
+  @include margin-bottom-two-thirds;
+}
+.margin-bottom-half {
+  @include margin-bottom-half;
+}
+.margin-bottom-third {
+  @include margin-bottom-third;
+}
+.margin-bottom-sixth {
+  @include margin-bottom-sixth;
+}
+.margin-bottom-minimal {
+  @include margin-bottom-minimal;
+}
+.margin-bottom-atom {
+  @include margin-bottom-atom;
+}
+
+.margin-bottom-zero {
+  @include margin-bottom-zero;
+}
+
+.nomargin {
+  margin: 0 !important;
+}
+
+@mixin padding-top {
+  padding-top: var(--spacing);
+}
+@mixin padding-top-two-thirds {
+  padding-top: var(--spacing-two-thirds);
+}
+@mixin padding-top-half {
+  padding-top: var(--spacing-half);
+}
+@mixin padding-top-third {
+  padding-top: var(--spacing-third);
+}
+@mixin padding-top-sixth {
+  padding-top: var(--spacing-sixth);
+}
+@mixin padding-top-minimal {
+  padding-top: var(--spacing-minimal);
+}
+@mixin padding-top-atom {
+  padding-top: var(--spacing-atom);
+}
+
+.padding-top {
+  @include padding-top;
+}
+.padding-top-two-thirds {
+  @include padding-top-two-thirds;
+}
+.padding-top-half {
+  @include padding-top-half;
+}
+.padding-top-third {
+  @include padding-top-third;
+}
+.padding-top-sixth {
+  @include padding-top-sixth;
+}
+.padding-top-minimal {
+  @include padding-top-minimal;
+}
+.padding-top-atom {
+  @include padding-top-atom;
+}
+
+@mixin padding-bottom {
+  padding-bottom: var(--spacing);
+}
+@mixin padding-bottom-two-thirds {
+  padding-bottom: var(--spacing-two-thirds);
+}
+@mixin padding-bottom-half {
+  padding-bottom: var(--spacing-half);
+}
+@mixin padding-bottom-third {
+  padding-bottom: var(--spacing-third);
+}
+@mixin padding-bottom-sixth {
+  padding-bottom: var(--spacing-sixth);
+}
+@mixin padding-bottom-minimal {
+  padding-bottom: var(--spacing-minimal);
+}
+@mixin padding-bottom-atom {
+  padding-bottom: var(--spacing-atom);
+}
+
+.padding-bottom {
+  @include padding-bottom;
+}
+.padding-bottom-two-thirds {
+  @include padding-bottom-two-thirds;
+}
+.padding-bottom-half {
+  @include padding-bottom-half;
+}
+.padding-bottom-third {
+  @include padding-bottom-third;
+}
+.padding-bottom-sixth {
+  @include padding-bottom-sixth;
+}
+.padding-bottom-minimal {
+  @include padding-bottom-minimal;
+}
+.padding-bottom-atom {
+  @include padding-bottom-atom;
+}

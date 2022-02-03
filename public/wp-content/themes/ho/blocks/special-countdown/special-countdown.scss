@@ -1,0 +1,474 @@
+.block.block-special-countdown.block-no-margin{
+    padding-bottom: 0;
+}
+.is-1 {
+    position: relative;
+}
+.days_remaining_container
+{
+    font-size: 134px;
+    font-weight: 700;
+    line-height: 105px;
+    letter-spacing: .38px;
+    font-family: 'AkzidGroStdCnd';
+    color: #C8102E;
+    html[lang="ar"] & {
+        font-family: 'AkzidGroStdCnd' !important;
+        line-height: 105px !important;
+    }
+
+    .days_remaining_number
+    {
+        
+        .middle{
+            line-height: 105px;
+            html[lang="ar"] & {
+                font-family: 'AkzidGroStdCnd' !important;
+                line-height: 105px;
+            }
+            span {
+                html[lang="ar"] & {
+                    font-family: 'AkzidGroStdCnd' !important;
+                    line-height: 105px;
+                }
+            }
+        }
+        i {
+            font-style: normal;
+        }
+        html[lang="ar"] & {
+        direction: inherit !important;
+        }
+        position: relative;
+        .overflow_number
+        {
+            position: absolute;
+            top: 0;
+            html[lang="ar"] & {
+                left: 0;
+            }
+            span {
+                position: absolute;
+                width: 16px;
+                overflow: hidden;
+               
+            }
+
+            &.left 
+            {
+                span {
+
+                    .is-1 {
+                        left: -10px;
+                    }
+                    
+                html[lang="ar"] & {
+                    direction: ltr;
+                }
+                    &:nth-child(1)
+                    {
+                        left: -20px;
+                    }
+                    &:nth-child(2)
+                    {
+                        left: -40px;
+                    }
+                    &:nth-child(3)
+                    {
+                        left: -60px;
+                    }
+                }
+            }
+            &.right
+            {
+                direction: rtl !important;
+                right: 0;
+                span {
+                    .is-1 {
+                        right: -10px;
+                    }
+
+                    &:nth-child(1)
+                    {
+                        right: -20px;
+                    }
+                    &:nth-child(2)
+                    {
+                        right: -40px;
+                    }
+                    &:nth-child(3)
+                    {
+                        right: -60px;
+                    }
+                }
+            }
+        }
+        span {
+            html[lang="ar"] & {
+                line-height: 105px;
+            }
+            i {
+                html[lang="ar"] & {
+                    font-family: 'AkzidGroStdCnd' !important;
+                    line-height: 105px;
+                }
+            }
+        }
+    }
+
+    .day
+    {
+        font-family: 'AkzidGroStd';
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: .34px;
+        margin-top: 20px;
+        @media screen and (max-width: 768px) {
+            padding-bottom: 54px;
+        }
+        html[lang="ar"] & {
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }   
+}
+.main-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+    margin-left: 200px;
+    padding-bottom: 60px;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        margin-left: 0;
+        padding-top: 64px;
+        padding-bottom: 93px;
+    }
+    .countdown-container{
+        width: 50%;
+        padding-right: 123px;
+        display: flex;
+        justify-content: flex-end;
+        html[lang="ar"] & {
+            padding-left: 123px;
+            padding-right: 0;
+        }
+        @media screen and (max-width: 768px) {
+            padding-right: 0px;
+            width: max-content;
+            justify-content: initial;
+            margin: 0 auto;
+            html[lang="ar"] & {
+                padding-left: 0px;
+            }
+        }
+    }
+    .text-container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        width: 50%;
+        padding-left: 68px;
+        margin-top: 53px;
+        html[lang="ar"] & {
+            padding-right: 68px;
+            padding-left: 0;
+            margin-top: 29px;
+            @media screen and (max-width: 768px) {
+                padding-right: 0;
+                margin-top: 0;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            width: max-content;
+            padding-left: 0;
+            margin: 0 auto;
+        }
+        a{
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: .34px;
+            line-height: 20px;
+            max-width: max-content;
+            cursor: pointer;
+            color: white;
+            margin-bottom: 0;
+            padding-bottom: 10px;
+            html[lang="ar"] & {
+                font-size: 18px;
+                font-weight: 900;
+                letter-spacing: .39px;
+                line-height: 22px;
+                max-width: 142px;
+            }
+            &:hover::after {
+                background-image: url("/assets/icons/button-line-new-extra-big-hover.svg");
+            }
+            &::after {
+                content: "";
+                height: 5px;
+                position: absolute;
+                width: 100%;
+                background-image: url("/assets/icons/button-line-new-extra-big-invert.svg");
+                background-repeat: no-repeat;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        
+        h3{
+            color: white;
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: .2px;
+            line-height: 45px;
+            max-width: 360px;
+            margin-bottom: 25px;
+            html[lang="ar"] & {
+                max-width: 472px;
+                font-size: 47px;
+                font-weight: 900;
+                letter-spacing: -0.39px;
+                line-height: 57px;
+                text-align: right;
+            }
+            @media screen and (max-width: 768px) {
+                font-size: 28px;
+                line-height: 30px;
+                letter-spacing: 0;
+                max-width: 240px;
+                html[lang="ar"] & {
+                    font-size: 32px;
+                    font-weight: 900;
+                    letter-spacing: -0.27px;
+                    line-height: 37px;
+                    max-width: 250px;
+                }
+            }
+        }
+    }
+}
+
+.green-img{
+    height: 52px;
+    width: 149px;
+    position: absolute;
+    right: 293px;
+    bottom: -22px;
+    z-index: 10;
+    html[lang="ar"] & {
+        right: auto;
+        left: 293px;
+
+        @media screen and (max-width: 768px) {
+            right: 50%;
+            left: 50%;
+            -webkit-transform: translate(50%);
+            transform: translate(50%);
+        }
+    }
+    @media screen and (max-width: 768px) {
+        margin-top: 64px;
+        right: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+        transform: translate(-50%);
+    }
+}
+
+.countdown_teaser_container {
+    padding: 72px 0;
+    margin: 0 auto;
+
+    @media (max-width: 992px) {
+        padding: 72px 0 108px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 10px 0 78px;
+    }
+
+    @media (max-width: 400px) {
+        margin-left: 0;
+    }
+
+    @media screen and (max-width: 370px) {
+        margin: 0 auto;
+    }
+
+    html[lang = 'ar'] & {
+        @media (max-width: 400px) {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        @media screen and (max-width: 370px) {
+            margin: 0 auto;
+        }
+    }
+
+    .countdown_teaser_content {
+        position: relative;
+
+        .countdown_teaser_text {
+            position: absolute;
+            left: 85px;
+            top: 88px;
+            max-width: 400px;
+
+            @media (max-width: 768px)
+            {
+                left: 22px;
+                top: 47px;
+            }
+
+            @media (max-width: 370px) {
+                padding-right: 20px;
+            }
+
+            html[lang = 'ar'] &
+            {
+                left: auto;
+                right: 80px;
+                top: 60px;
+
+                @media (max-width: 768px)
+                {
+                    right: 41px;
+                    top: 38px;
+                    max-width: 255px;
+                }
+
+                @media (max-width: 370px) {
+                    padding-right: 0;
+                    padding-left: 20px;
+                    right: 22px;
+                }
+            }
+
+            h3 {
+                font-weight: 900;
+                letter-spacing: .2px;
+                font-size: 42px;
+                line-height: 45px;
+                margin-bottom: 11px;
+                color: #fff;
+
+                @media (max-width: 768px)
+                {
+                    line-height: 30px;
+                    font-size: 28px;
+                    letter-spacing: 0;
+                    margin-bottom: 8px;
+                }
+
+                html[lang = 'ar'] &
+                {
+                    letter-spacing: -.39px;
+                    font-size: 47px;
+                    line-height: 57px;
+                    margin-bottom: 10px;
+
+                    @media (max-width: 768px)
+                    {
+                        letter-spacing: -.27px;
+                        line-height: 37px;
+                        font-size: 32px;
+                    }
+                }
+            }
+
+            p {
+                font-weight: normal;
+                letter-spacing: 0;
+                font-size: 18px;
+                line-height: 26px;
+                color: #fff;
+                margin-bottom: 25px;
+
+                @media (max-width: 768px)
+                {
+                    line-height: 22px;
+                    font-size: 16px;
+                    margin-bottom: 17px;
+                }
+
+                html[lang = 'ar'] &
+                {
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 30px;
+                    max-width: 360px;
+                    margin-bottom: 20px;
+
+                    @media (max-width: 768px)
+                    {
+                        max-width: 270px;
+                    }
+                }
+            }
+
+            a.btn-square {
+                @media (max-width: 370px) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .countdown_teaser_image_desk {
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .countdown_teaser_image_mobile {
+
+            display: none;
+
+            @media screen and (max-width: 768px) {
+                display: block;
+            }
+        }
+
+        .countdown_teaser_tag {
+            position: absolute;
+            top: 31px;
+            width: 213px;
+            right: -111px;
+
+            @media (max-width: 992px) {
+                top: auto;
+                right: -30px;
+                bottom: -98px;
+                width: 170px;
+            }
+
+            @media (max-width: 370px) {
+                right: 15px;
+            }
+
+            html[lang = 'ar'] &
+            {
+                right: auto;
+                left: -99px;
+                top: 24px;
+
+                @media (max-width: 992px) {
+                    left: -30px;
+                }
+
+                @media (max-width: 768px) {
+                    top: auto;
+                }
+
+                @media (max-width: 370px) {
+                    left: 15px;
+                }
+            }
+        }
+    }
+}

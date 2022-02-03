@@ -1,0 +1,150 @@
+@import "../../css/includes";
+
+.block-aboutsecond {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 !important;
+}
+
+.about-second {
+  padding: 200px 0;
+  @include max-screen($screen-sm-max) {
+    position: relative;
+    top: 30px;
+  }
+
+  .right-side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include max-screen($screen-sm-max) {
+      align-items: center;
+    }
+  }
+
+  .left-side {
+    position: relative;
+    @include max-screen($screen-sm-max) {
+      align-items: center;
+
+      html[lang="ar"] & {
+        padding: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 45px;
+    margin-bottom: 15px;
+    margin-right: 35px;
+    position: relative;
+
+    html[lang="ar"] & {
+      margin-right: 0;
+      font-size: 47px;
+      line-height: 57px;
+      letter-spacing: -0.39px;
+    }
+
+    @include max-screen($screen-sm-max) {
+      font-size: 28px;
+      line-height: 30px;
+      margin-top: 27px;
+      margin-bottom: 10px;
+      max-width: 325px;
+
+      html[lang="ar"] & {
+        font-size: 32px;
+        line-height: 37px;
+        letter-spacing: -0.27px;
+        margin-left: 18px;
+      }
+    }
+  }
+
+  &__description {
+    margin-right: 60px;
+    position: relative;
+    font-size: 18px;
+    line-height: 26px;
+
+    html[lang="ar"] & {
+      margin-right: 0;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @include max-screen($screen-sm-max) {
+      font-size: 16px;
+      line-height: 22px;
+      max-width: 297px;
+
+      html[lang="ar"] & {
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  &__image {
+    background-image: url("./assets/image.jpg");
+    background-repeat: no-repeat;
+    width: 647px;
+    height: 375px;
+    position: relative;
+    left: 20px;
+
+    @media screen and (max-width: 1439px) {
+      width: 100%;
+      left: 0;
+    }
+
+    @include max-screen($screen-sm-max) {
+      width: 327px;
+      height: 190px;
+      margin: 0 auto;
+      left: 0;
+      background-size: contain;
+    }
+  }
+
+  &__border {
+    background-image: url("./assets/border.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 626px;
+    height: 444px;
+    position: absolute;
+    top: -80px;
+    left: -20px;
+    right: 60px;
+
+    html[lang="ar"] & {
+      left: 60px;
+      right: -60px;
+      transform: rotate(180deg);
+    }
+
+    @media screen and (max-width: 1439px) {
+      width: 100%;
+    }
+
+    @include max-screen($screen-sm-max) {
+      width: 311px;
+      height: 221px;
+      top: -48px;
+      left: 50%;
+      transform: translateX(-57%);
+
+      html[lang="ar"] & {
+        right: 50%;
+        transform: translateX(57%) rotate(180deg);
+      }
+    }
+  }
+}

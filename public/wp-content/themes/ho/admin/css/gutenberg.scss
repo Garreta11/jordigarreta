@@ -1,0 +1,208 @@
+.table-of-contents
+{
+  //display: none !important;
+}
+
+.interface-interface-skeleton__editor
+{
+  width: 100%;
+}
+
+.wp-block
+{
+  width: 90%;
+  max-width: 1440px;
+}
+
+.components-external-link[href="https://codex.wordpress.org/Excerpt"]
+{
+  //display: none;
+}
+
+.taxonomy-add-new
+{
+  //display: none;
+}
+
+.category-tabs
+{
+  //display: none;
+}
+
+#edit-slug-box
+{
+  //display: block !important;
+}
+
+
+.swatch-toggle
+{
+  background: none !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+  margin-right: 0 !important;
+}
+
+.swatch-color
+{
+  border-radius: 100% !important;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.2) !important;
+}
+
+ul.acf-swatch-list.acf-hl > li
+{
+  float: left;
+  margin-right: .1em;
+}
+
+ul.acf-swatch-list input[type=radio]:checked ~ .swatch-toggle .swatch-color
+{
+  border: 0 !important;
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.5) !important;
+}
+
+.acf-field
+{
+  .acf-label
+  {
+    &:empty
+    {
+      vertical-align: 0 !important;
+      margin: 0 !important;
+      display: none !important;
+    }
+  }
+}
+
+.acf-field
+{
+  .acf-label
+  {
+      &:empty
+      {
+        vertical-align: 0 !important;
+        margin: 0 !important;
+        display: none !important;
+      }
+  }
+}
+
+.acf-postbox
+{
+
+}
+
+
+// ACF SIZE SMALL
+.editor-size-small
+{
+  /*
+  .acf-editor-wrap iframe
+  {
+    height: 100px !important;
+    min-height: 100px !important;
+  }
+
+  .mce-i-resize
+  {
+    display: none;
+  }
+
+   */
+}
+
+.edit-post-visual-editor .block-editor-block-list__block .block-editor-block-list__block-edit
+{
+  //margin-top: 14px;
+ // margin-bottom: 14px;
+}
+
+.editor-styles-wrapper [data-block]
+{
+ // margin-top: 14px;
+ // margin-bottom: 14px;
+}
+
+
+.block-editor-inserter__menu-help-panel .components-tip
+{
+  //display: none;
+}
+
+.block-editor-inserter__menu.has-help-panel
+{
+ // width: auto;
+}
+
+.edit-post-sidebar
+{
+  resize:horizontal;
+  border-left: 8px solid #e2e4e7;
+}
+
+#rocket_post_exclude
+{
+  display: none !important;
+}
+
+.edit-post-layout__metaboxes
+{
+  display: none !important;
+}
+
+.components-dropdown > [aria-label="Tools"] {
+	//display: none;
+}
+
+.components-dropdown .block-editor-block-navigation {
+	//display: none;
+}
+
+/**
+  IMAGE HOTSPOT TOOL HIDE INPUT
+ */
+.image_mapping-input
+{
+  display: none;
+}
+
+/* REMOVE HIERARCHICAL SELECT FOR TAXONOMIES ON MAGAZIN ARTICLES */
+.block-editor-page .components-panel__body .editor-post-taxonomies__hierarchical-terms-label ~ .components-base-control {
+	display: none;
+}
+
+
+/* NOT EDITABLE TAXES*/
+.block-editor-page  .editor-post-taxonomies__hierarchical-terms-list[aria-label="Notable sale"] +*,
+.block-editor-page  .editor-post-taxonomies__hierarchical-terms-list[aria-label="Popular"] +*,
+.block-editor-page  .editor-post-taxonomies__hierarchical-terms-list[aria-label="For sale"] +* {
+	display: none;
+}
+
+/**
+  REMOVE PATTERNS FROM MENU, SINCE WP 5.5
+ */
+.components-tab-panel__tabs-item
+{
+  display: none;
+}
+
+.block-editor-inserter__quick-inserter-patterns,.block-editor-inserter__quick-inserter-separator
+{
+  display: none;
+}
+
+/**
+  REMOVE BLOCK INSERT TIPS, SINCE WP 5.5
+ */
+.block-editor-inserter__tips
+{
+  display: none;
+}
+
+
+.column-featured_image
+{
+  width: 150px;
+  text-align: center;
+}

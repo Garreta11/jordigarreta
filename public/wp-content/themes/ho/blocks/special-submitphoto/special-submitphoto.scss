@@ -1,0 +1,354 @@
+@import "../../css/includes";
+.yourstory-header {
+  font-size: 4rem;
+  padding-right: 35px;
+  @include max-screen($screen-sm-max) {
+    padding-right: 0px;
+    br {
+      display: none;
+    }
+  }
+}
+
+.form-answer {
+  height: 100px;
+  overflow-y: scroll;
+}
+
+.form-answer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.form-answer::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  width: 3px !important;
+  border: 1px solid #d2e0e4;
+}
+
+.form-answer::-webkit-scrollbar-thumb {
+  background: white;
+  width: 5px;
+}
+
+.block-submitphoto {
+  padding: var(--spacing-two-thirds) 0;
+}
+
+.app-blockinput {
+  pointer-events: none;
+}
+
+.timeline-overline {
+  font-size: 1.4rem;
+  padding-bottom: 0.3em;
+}
+
+.timeline {
+  @include max-screen($screen-sm-max) {
+    max-width: 109px;
+  }
+}
+
+.botsmile-container {
+  position: relative;
+}
+
+.botsmile {
+  max-width: 111px;
+  @include max-screen($screen-sm-max) {
+    max-width: 32px;
+    margin: 0 0 10px 20px;
+  }
+  @include min-screen($screen-md-min) {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.submit-photo_app {
+  padding: 80px 50px 40px 50px;
+  min-height: 350px;
+
+  @include max-screen($screen-xs-max) {
+    padding: 30px 21px 0 21px !important;
+  }
+  textarea,
+  input {
+    width: 100%;
+  }
+  .btn-prev {
+    @include max-screen($screen-xs-max) {
+      display: flex;
+    }
+    span {
+      @include max-screen($screen-xs-max) {
+        opacity: 0;
+      }
+    }
+  }
+  .btn-next {
+    @include max-screen($screen-xs-max) {
+      padding: 2.6em 0;
+      &.btn-prev:before,
+      &.btn-next:before {
+        display: none;
+      }
+      &.btn-next:after {
+        display: inline-block;
+        height: 2em;
+        width: 2em;
+      }
+    }
+
+    span {
+      @include max-screen($screen-xs-max) {
+        opacity: 0;
+      }
+    }
+  }
+  @include max-screen($screen-sm-max) {
+    padding: 30px 25px 30px 25px;
+    min-height: 400px !important ;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    .submit-photo_arrow {
+      margin-top: 0px;
+      align-items: center;
+      div {
+        a {
+          margin: 0px !important;
+          //width: auto !important;
+          width: auto;
+        }
+      }
+    }
+    h4 {
+      font-size: 2rem;
+
+      @include max-screen($screen-sm-max) {
+        margin-bottom: 28px !important;
+      }
+    }
+    .file-uploadbox span span {
+      display: none;
+    }
+  }
+}
+
+.submit-photo_3 {
+  h4 {
+    margin-bottom: 0px;
+  }
+}
+
+.submit-photo_3 .copy:first-child h4:first-child {
+  @include max-screen($screen-sm-max) {
+    //margin-top: -4em;
+  }
+}
+
+.submit-photo_3 .copy:first-child h4:nth-child(2) {
+  margin-bottom: 18px;
+  @include max-screen($screen-sm-max) {
+    margin-top: 0.5em;
+    margin-bottom: 28px;
+  }
+}
+
+.app-can-edit {
+  cursor: pointer;
+  font-size: 1.4rem;
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 1em;
+    width: 3em;
+    background-image: url("/assets/icons/pen.svg");
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+  }
+  @include max-screen($screen-sm-max) {
+    font-size: 1.2rem;
+  }
+}
+
+.padding-top-third:last-child {
+  @include max-screen($screen-sm-max) {
+    margin-bottom: var(--spacing-half);
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.align-bottom {
+  position: absolute !important;
+  width: calc(100% - 150px);
+  @include max-screen($screen-sm-max) {
+    width: calc(100% - 0px);
+    position: inherit !important;
+  }
+}
+
+.submit-photo_3 .box {
+  width: 100%;
+}
+
+.submit-photo--headlines {
+  @include min-screen($screen-md-min) {
+    padding-top: 35px;
+  }
+  html[lang="ar"] & svg {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+  }
+  @include max-screen($screen-sm-max) {
+    svg {
+      position: relative;
+      left: 10px;
+      top: -7px;
+      html[lang="ar"] & {
+        left: -31px;
+      }
+    }
+  }
+}
+
+.submit-photo--headline {
+  position: relative;
+  padding-bottom: 0.05em;
+  margin-bottom: 2.2em;
+  width: 100%;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+  cursor: pointer;
+  &.submit-photo--headline-active {
+    opacity: 1;
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    width: 112%;
+    background-repeat: repeat-x;
+    z-index: 22;
+  }
+  &:hover:after,
+  &.submit-photo--headline-active:after {
+    background-image: url("/assets/icons/strange-vertline.svg");
+  }
+  @include max-screen($screen-sm-max) {
+    &:hover:after {
+      display: none;
+    }
+    &.submit-photo--headline-active:after {
+      background-image: url("/assets/icons/brechstange.svg");
+      background-repeat: no-repeat;
+      height: 33px;
+      width: 100%;
+      background-size: cover;
+      background-position-x: center;
+      z-index: 22;
+    }
+    &.submit-photo--headline-active:hover:after {
+      display: block;
+    }
+  }
+  @include max-screen($screen-sm-max) {
+    &.submit-photo--headline {
+      display: none;
+    }
+    &.submit-photo--headline-passed {
+      display: block;
+      margin-bottom: 20px;
+    }
+    &.submit-photo--headline-active {
+      padding-bottom: 33px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.to-gallery-button {
+  margin-right: -2em;
+  @include max-screen($screen-sm-max) {
+    margin-right: -0.8em;
+    width: 100%;
+    &:before {
+      float: right;
+      margin-top: -0.5em !important;
+      margin-left: 1em !important;
+    }
+  }
+}
+
+.file-uploadbox {
+  position: relative;
+  padding-bottom: 3em;
+  overflow: hidden;
+  label {
+    cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0;
+  }
+  @include max-screen($screen-sm-max) {
+    textarea {
+      margin-bottom: 0px !important;
+    }
+    &:after {
+      margin-bottom: 2em;
+    }
+  }
+}
+
+.bottom-line {
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/assets/icons/strange-subline.svg);
+    margin-bottom: 2.8em;
+    margin-top: 1.3em;
+  }
+  @include max-screen($screen-sm-max) {
+    &:after {
+      margin-bottom: 0.6em;
+      margin-top: 1.5em;
+    }
+  }
+}
+
+.file-upload {
+  background-color: #f7f7f9;
+  display: block;
+  width: 100%;
+  height: 90px;
+
+  @include max-screen($screen-sm-max) {
+    background-color: transparent;
+  }
+}
+
+.file-remove {
+  background-image: url("/assets/icons/remove.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  margin-top: 0.2em;
+}

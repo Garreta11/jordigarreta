@@ -1,0 +1,99 @@
+$color-highlight: #D8D1CC;
+$color-secondary: #d0c6c0;
+$color-error: #af0120;
+$color-link-hover: #39efff;
+$color-link-visited: #0d01af;
+$color-invert: #ffffff;
+$color-white: #ffffff;
+$color-base: #000000;
+$color-black: #000000;
+$color-inactive: rgba(0, 0, 0, 0.25);
+$color-lightest-grey: #f6f6f6;
+$color-light-grey: #e0e0e0;
+$color-medium-grey: #818181;
+$color-darkest-grey: #2b2b2b;
+$color-accent-01: #d9c7aa;
+$color-accent-02: #b8d7d2;
+$color-accent-03: #e4cbc6;
+$color-accent-04: #fdfdcf;
+$color-accent-05: #f32914;
+
+:root {
+  --color-highlight: #D8D1CC;
+  --color-secondary: #d0c6c0;
+  --color-rust: #BB674D;
+  --color-link-hover: #39efff;
+  --color-link-visited: #0d01af;
+  --color-invert: #ffffff;
+  --color-base: #000000;
+  --color-black: #000000;
+  --color-inactive: rgba(0, 0, 0, 0.25);
+  --color-white: #ffffff;
+  --color-lightest-grey: #f6f6f6;
+  --color-light-grey: #e0e0e0;
+  --color-medium-grey: #818181;
+  --color-darkest-grey: #2b2b2b;
+  --color-accent-01: #d9c7aa;
+  --color-accent-02: #b8d7d2;
+  --color-accent-04: #fdfdcf;
+  --color-accent-03: #e4cbc6;
+  --color-accent-05: #f32914;
+  --color-site-background: #ffffff;
+}
+
+
+.bg-highlight {
+	background-color: $color-highlight;
+}
+
+.bg-error {
+  background-color: $color-error;
+}
+
+.bg-link-hover {
+  background-color: $color-link-hover;
+}
+
+.bg-link-visited {
+  background-color: $color-link-visited;
+}
+
+.bg-invert {
+  background-color: $color-invert;
+}
+
+.bg-lightest-grey {
+  background-color: $color-lightest-grey;
+}
+
+.bg-light-grey {
+  background-color: $color-light-grey;
+}
+
+.bg-medium-grey {
+  background-color: $color-medium-grey;
+}
+
+.bg-darkest-grey {
+  background-color: $color-darkest-grey;
+}
+
+.bg-black {
+  background-color: $color-black;
+}
+
+.bg-base {
+	background-color: $color-base;
+}
+
+body.dark-mode,.dark-mode
+{
+  --color-invert: #000000;
+  --color-base: #ffffff;
+  --color-black: #ffffff;
+  --color-lightest-grey: rgba(255,255,255,.1);
+  --color-light-grey: rgba(255,255,255,.2);
+  --color-medium-grey: rgba(255,255,255,.6);
+  --color-darkest-grey: rgba(255,255,255,.8);
+  color: var(--color-base);
+}

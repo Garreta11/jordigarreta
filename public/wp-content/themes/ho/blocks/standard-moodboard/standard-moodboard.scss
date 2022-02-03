@@ -1,0 +1,42 @@
+@import "../../css/includes";
+
+.standard-moodboard {
+  position: relative;
+  background: var(--color-highlight);
+
+  
+  padding-bottom: var(--spacing-half);
+  margin-bottom: var(--spacing-half) !important;
+
+  .big_image_right_parallax
+  {
+
+  }
+
+  .standard-moodboard-images
+  {
+	padding-top: var(--spacing);
+  }
+
+  &.block-no-margin
+  {
+	margin-bottom: 0 !important;
+	padding-bottom: 0;
+  }
+}
+
+.standard-moodboard + .standard-moodboard,
+.standard-moodboard + .standard-moodboard + .standard-moodboard,
+.standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard,
+.standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard,
+.standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard,
+.standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard,
+.standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard,
+.standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard,
+.standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard + .standard-moodboard,
+{
+  .standard-moodboard-images
+  {
+	padding-top: 0;
+  }
+}

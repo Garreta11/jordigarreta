@@ -1,0 +1,14 @@
+nav.pagination {
+	width: 100%;
+	text-align: center;
+	ul {
+		list-style: none;
+		li {
+			display: inline-block;
+			//@include font-decoration-bold;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}

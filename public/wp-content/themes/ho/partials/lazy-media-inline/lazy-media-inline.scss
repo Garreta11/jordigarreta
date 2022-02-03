@@ -1,0 +1,39 @@
+.lazy-media-inline
+{
+  position:relative;
+
+  .height-container
+  {
+    position: relative;
+    background: #b9d7d2;
+
+    &.lazy-media-loaded
+    {
+      background:transparent;
+      transition: background .6s $ease-out-quad .6s;
+    }
+  }
+}
+
+figcaption
+{
+  margin-bottom: 0 !important;
+  margin-top: var(--spacing-minimal);
+
+  &:empty
+  {
+    margin: 0 !important;
+    display: none;
+  }
+
+  .lazy-media-image-label
+  {
+    @include zeplin-imagecaption;
+  }
+
+  .lazy-media-image-description
+  {
+    @include zeplin-copyright;
+  }
+}
+

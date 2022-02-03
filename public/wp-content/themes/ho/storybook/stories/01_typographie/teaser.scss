@@ -1,0 +1,25 @@
+.story {
+	background-image: url("/assets/icons/strange-vertline.svg");
+	background-repeat: repeat-y;
+	background-position: left top;
+	padding: 0 20px 0;
+
+	@include max-screen($screen-xs-max) {
+		padding-right: 0;
+	}
+
+	html[lang="ar"] & {
+		background-position: right top;
+		padding-right: 20px;
+		padding-left: 0;
+	}
+
+	.story-img-wrapper {
+		text-align: center;
+	}
+}
+
+.courtesy {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}

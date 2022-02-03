@@ -1,0 +1,52 @@
+.snackbar {
+	//position: fixed;
+	top: 200px;
+	right: 20px;
+	//z-index: 99;
+	@include max-screen($screen-sm){
+		width: calc(100% - 40px);
+		top: 10vh;
+	}
+
+	.snacks {
+		///z-index: 99;
+		min-width: 200px;
+		max-width: 500px;
+		@include max-screen($screen-sm){
+			width: 100%;
+			max-width: 100%;
+		}
+		padding: 20px;
+		border-radius: 6px;
+		box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+		background-color: #ffffff;
+		margin-bottom: .5em;
+		cursor: pointer;
+
+		animation: slide-up 0.4s ease;
+		//@include font-decoration;
+		width: 100%;
+		position: relative;
+		padding-right: 60px;
+		>span.icon-close {
+			position: absolute;
+			right: 10px;
+			font-size: 3.6rem;
+			line-height: .7;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+	}
+}
+
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

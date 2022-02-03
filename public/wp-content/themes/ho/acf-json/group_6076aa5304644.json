@@ -1,0 +1,110 @@
+{
+    "key": "group_6076aa5304644",
+    "title": "Block: Append BG",
+    "fields": [
+        {
+            "key": "field_6076aa61f4145",
+            "label": "Background Color",
+            "name": "background-color",
+            "type": "swatch",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "choices": {
+                "transparent": "None",
+                "#D8D2CC": "Beige",
+                "#B69E83": "Ochre",
+                "#DDCAC3": "Syringa",
+                "#F1EEE6": "Mint",
+                "#D2E0E4": "Slight Blue",
+                "#A7BFC7": "Sky Blue",
+                "#4868B5": "School blue",
+                "#CF7C59": "Orange",
+                "#B7624F": "Winered",
+                "#387973": "Dark Green",
+                "#89A895": "Light Green",
+                "#BB674D": "Hover Brown",
+                "#E4E5E6": "Light Grey",
+                "#5CBCC4": "School aqua",
+                "#81B2E2": "Dreamlight Blue",
+                "#F7F7F9": "Bright White",
+                "#598798": "Deep Blue",
+                "#B59D82": "Light Brown"
+            },
+            "allow_null": 1,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "other_choice": 0,
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_6080098278082",
+            "label": "Hidden",
+            "name": "hidden",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "wpml_cf_preferences": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/standard-social-footer"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/special-countdown"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "news"
+            }
+        ]
+    ],
+    "menu_order": 99,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1637752914
+}

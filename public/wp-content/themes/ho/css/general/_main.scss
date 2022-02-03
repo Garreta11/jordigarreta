@@ -1,0 +1,155 @@
+:root {
+    --footer-height: $global-footer-height;
+    --footer-height-mobile: $global-footer-height-mobile;
+}
+
+*
+{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html
+{
+    margin: 0 !important;
+}
+
+/* prevent blank vue template from being shown */
+[inline-template]:empty {
+    display: none;
+}
+
+body
+{
+    //@include copy();
+    position: relative;
+    margin: 0 !important;
+    background-color: #3b3730;
+
+    // min-height: 100vh;
+    // min-height: calc(100vh - var(--vh-offset, 0px));
+
+    //padding-bottom: $global-footer-height; //FOOTER HEIGHT
+
+    @include max-screen($screen-sm)
+    {
+        //    padding-bottom: $global-footer-height-mobile;
+    }
+
+    overflow-x:hidden;
+    color: var(--color-black);
+    background: var(--color-invert);
+
+    &.lock
+    {
+        width: 100%;
+    }
+
+    &.disable-links
+    {
+        @include max-screen($screen-sm)
+        {
+            background: var(--color-invert) !important;
+
+            main,footer
+            {
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+html[lang="ar"] .langblock {
+    text-align: right !important;
+    direction: rtl;
+}
+
+[inline-template] {
+    visibility: hidden;
+}
+
+
+.mobile-view
+{
+    display: none !important;
+}
+
+//MOBILE
+@include max-screen($screen-sm)
+{
+    .web-view
+    {
+        display: none !important;
+    }
+
+    .mobile-view
+    {
+        display: block !important;
+    }
+
+    html
+    {
+        margin-top: 0 !important;
+    }
+}
+
+.hidden
+{
+    display: none !important;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#blocks {
+    width: 100%;
+    overflow: hidden;
+}
+
+.block
+{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-bottom: var(--spacing);
+
+
+    &:first-child {
+        padding-top: 0;
+
+        &.block-header-headline {
+            margin-top: 77px;
+        }
+    }
+
+    &.block-zero-margin {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    &.block-no-margin {
+        //margin-bottom: var(--spacing-sixth);
+        padding-bottom: var(--spacing-sixth);
+    }
+
+    .mobile-view
+    {
+        display: none !important;
+    }
+
+    @include max-screen($screen-sm)
+    {
+        .web-view
+        {
+            display: none !important;
+        }
+
+        .mobile-view
+        {
+            display: block !important;
+        }
+    }
+}
+

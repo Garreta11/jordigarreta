@@ -1,0 +1,82 @@
+@import "../../css/includes";
+
+
+.block-header {
+	.height-container {
+		height: 100vh;
+		height: calc(100vh - var(--vh-offset, 0px));
+		overflow: hidden;
+		min-height: 820px;
+
+		@include max-screen($screen-xs-max) {
+			min-height: 680px;
+		}
+	}
+
+	.masked-content .langblock {
+		top: -20px;
+	}
+}
+
+
+.stoerer {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 3;
+	text-transform: uppercase;
+	font-size: 3.2rem;
+	letter-spacing: 1.78;
+
+	@include max-screen(600px) {
+		font-size: 2rem;
+		letter-spacing: 1.1;
+	}
+}
+
+.stoerer_1 {
+	top: calc(50% - 250px);
+	left: calc(50% - 320px);
+	transform: rotate(-25deg);
+	@include max-screen(500px) {
+		top: calc(50% - 80px);
+		left: calc(50% - 170px);
+	}
+}
+.stoerer_2 {
+	top: calc(50% - 250px);
+	left: calc(50% + 150px);
+	transform: rotate(15deg);
+
+	@include max-screen(500px) {
+		top: calc(50% - 80px);
+		left: calc(50% + 20px);
+	}
+}
+.stoerer_3 {
+	top: calc(50% + 150px);
+	left: calc(50% - 550px);
+	transform: rotate(10deg);
+
+	@include max-screen(500px) {
+		top: calc(50% + 190px);
+		left: calc(50% + 10px);
+	}
+}
+
+html[lang="ar"] .stoerer_2 {
+	@include max-screen(500px) {
+		top: calc(50% - 80px);
+		left: calc(50% + 90px);
+	}
+}
+html[lang="ar"] .stoerer_3 {
+	top: calc(50% + 150px);
+	left: calc(50% - 350px);
+	transform: rotate(10deg);
+
+	@include max-screen(500px) {
+		top: calc(50% + 190px);
+		left: calc(50% - 150px);
+	}
+}

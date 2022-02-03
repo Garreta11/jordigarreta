@@ -1,0 +1,147 @@
+@import "../../css/includes";
+
+.block-gallery
+{
+  background: var(--color-lightest-grey);
+  padding-bottom: var(--spacing-half);
+  padding-top: var(--spacing-half);
+  max-width: 100%;
+  overflow-x: hidden;
+
+
+  swiper,.swiper-wrapper
+  {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+  }
+
+  .swiper-slide img
+  {
+    &:first-of-type
+    {
+      opacity: 0;
+    }
+  }
+
+  .firstLoaded
+  {
+    .swiper-slide img
+    {
+      &:first-of-type
+      {
+        opacity: 1;
+        transition: opacity .6s $ease-out-quad .6s;
+      }
+    }
+  }
+
+  .swiper-pagination
+  {
+    margin-top: var(spacing-third);
+    position: relative;
+  }
+
+  .swiper-wrapper
+  {
+    will-change: transform;
+    padding-bottom: 50px;
+  }
+
+
+  .swiper-button-prev,.swiper-button-next
+  {
+    background-image: none;
+    margin: 0;
+    margin-top: -50px;
+    display: none;
+
+    @include min-screen($screen-md-min)
+    {
+      display: block;
+    }
+  }
+  .swiper-button-next
+  {
+    //right: 0;
+  }
+
+  .swiper-button-prev
+  {
+    // left: 0;
+    // transform: scaleX(-1);
+  }
+
+  .swiper-pagination-bullet
+  {
+    background: var(--color-black);
+  }
+
+  .swiper-pagination-bullet-active
+  {
+    background: transparent;
+    border: 2px solid var(--color-black);
+
+    opacity: 1;
+    transform: scale(1) !important;
+  }
+
+  .swiper-pagination-bullet-active-next,.swiper-pagination-bullet-active-prev
+  {
+    opacity: .75;
+    transform: scale(.75) !important;
+  }
+
+  .swiper-pagination-bullet-active-next-next,.swiper-pagination-bullet-active-prev-prev
+  {
+    opacity: .5;
+    transform: scale(.5) !important;
+  }
+
+  .swiper-slide
+  {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+
+    .swiper-slide-image-wrapper
+    {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .width-container
+      {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        will-change: transform;
+
+        img
+        {
+          &.swiper-lazy-loaded
+          {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    figcaption
+    {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

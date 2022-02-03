@@ -1,0 +1,76 @@
+@import "../../css/includes";
+
+.block-storyteaser {
+
+	.earlydreamers-title {
+		font-size: 71px;
+		text-align: center;
+		html[lang="ar"] & {
+			margin-right: 8.5%;
+			text-align: right;
+        }
+		@include max-screen($screen-xs-max) {
+			font-size: 4em;
+		}
+	}
+	.earlydreamers-description {
+		font-size: 2em;
+		width: 40%;
+		margin: 0 auto;
+		margin-bottom: var(--spacing);
+		html[lang="ar"] & {
+			margin-right: 8.5%;
+			text-align: right;
+        }
+		@include max-screen($screen-xs-max) {
+			width: 60%;
+		}
+	}
+
+	@include max-screen($screen-xs-max) {
+		.storywrapper {
+			background-repeat: repeat-y;
+			background-position: left top;
+			padding: 0 20px 0;
+			position: relative;
+
+			.diaheader-button {
+				position: relative;
+				top: 16px;
+			}
+		}
+	}
+
+	.story-wrapper-row {
+		height: 100%;
+		position: relative;
+	}
+
+	.diaheader-all-button {
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-top: 35%;
+		@include max-screen($screen-sm-min) {
+			display: flex;
+			justify-content: center;
+			margin-top: 5%;
+		}
+	}
+	.second-headline{
+		margin-left: 15.5%;
+    	text-align: left;
+		html[lang="ar"] &{
+			text-align: right;
+    		margin-right: 8.5%;
+        }
+	}
+	.story {
+		margin-top: 30px;
+		@include min-screen($screen-sm-min) {
+			margin-top: 0px;
+			top: 40px;
+			position: relative;
+			
+		}
+	}
+}

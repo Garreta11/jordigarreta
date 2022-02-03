@@ -1,0 +1,61 @@
+$screen-xss:                 375px !default;
+$screen-xss-min:             ($screen-xss - 1) !default;
+
+$screen-xs:                  520px !default;
+
+$screen-sm:                  764px !default;
+$screen-sm-min:              ($screen-sm - 1) !default;
+$screen-tablet:              $screen-sm-min !default;
+
+$screen-md:                  1024px !default;
+$screen-md-min:              ($screen-md - 1) !default;
+$screen-desktop:             $screen-md-min !default;
+
+$screen-lg:                  1440px !default;
+$screen-lg-min:              ($screen-lg - 1) !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+$screen-nav-max:             1100px !default;
+
+$screen-grid-full:          $screen-lg;
+$screen-grid-full-min:      ($screen-grid-full - 1) !default;
+
+// flexboxgrid
+// Set the gutter between columns.
+$gutter-width: 10px;
+
+// Set a margin for the container sides.
+$outer-margin: 25px;
+
+$breakpoints:
+        s $screen-sm $screen-sm,
+        sm $screen-sm $screen-sm,
+        md $screen-md $screen-md,
+        lg $screen-lg $screen-lg,
+        xlg 1920px 1920px;
+
+$flexboxgrid-max-width: 2560px;
+
+$global-header-height: 98px;
+$global-header-height-mobile: 98px;
+$global-header-height-sticky: 66px;
+
+$global-contents-margin-top: 80px;
+$global-footer-height: 80px;
+$global-footer-height-mobile: 80px;
+
+$global-calendar-header-height: 100px;
+$border-radius: 0px;
+
+
+
+
+@mixin globalStickyTranisition()
+{
+  will-change: scroll-position;
+  transition: height .3s $ease-out-expo, top .3s $ease-out-expo;
+}

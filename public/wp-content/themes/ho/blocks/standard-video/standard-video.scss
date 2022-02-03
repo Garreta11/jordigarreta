@@ -1,0 +1,15 @@
+@import "../../css/includes";
+.block-media
+{
+  figcaption {
+	text-align: left;
+	}
+
+	&-full figcaption {
+		padding-left: var(--grid-side-margin);
+		@include min-screen(1440px) {
+			padding-left: calc(50vw - 640px);
+		}
+	}
+
+}

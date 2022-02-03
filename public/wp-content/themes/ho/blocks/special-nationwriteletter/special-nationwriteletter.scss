@@ -1,0 +1,269 @@
+@import "../../css/includes";
+
+.block-nationwriteletter {
+  height: 770px;
+
+  @include max-screen($screen-xs) {
+    height: 650px;
+  }
+}
+
+.nation-writeletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .container {
+    @include max-screen($screen-md) {
+      padding: 0 2rem;
+    }
+
+    @include max-screen($screen-xs) {
+      padding: 0;
+    }
+  }
+
+  &__box {
+    width: 57.8rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 7.4rem 12rem 7rem;
+    position: relative;
+    background-image: url('./assets/bg-desktop.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 0;
+      @media screen and (max-width: 1024px) {
+        height: 310px;
+      }
+      @include max-screen($screen-xs) {
+        width: 95%;
+        left: 2%;
+        height: 260px;
+      }
+      @media screen and (max-width: 375px) {
+        height: 280px;
+      }
+      @media screen and (max-width: 362px) {
+        height: 310px;
+      }
+
+      html[lang="ar"] & {
+        @include max-screen($screen-xs) {
+          height: 300px;
+        }
+        @media screen and (max-width: 332px) {
+          height: 320px;
+        }
+      }
+    }
+
+    html[lang="ar"] & {
+      width: 578px;
+      height: 386px;
+      padding: 7rem 7rem;
+
+      @include max-screen($screen-md) {
+        padding: 7rem 1rem 1rem 1rem;
+      }
+
+      @include max-screen($screen-xs) {
+        width: auto;
+        height: auto;
+        background-position: right;
+
+        padding: 6rem 1rem 1rem 1rem;
+      }
+    }
+
+    @include max-screen($screen-md) {
+      width: 44rem;
+      padding: 7.4rem 5.5rem 7rem 5.5rem;
+      margin: 0 15px;      
+      background-image: url('./assets/bg-mobile.svg');
+    }
+
+    @include max-screen($screen-xs) {
+      width: auto;
+      background-position: right;
+      padding: 7.4rem 1rem 3rem 1rem;
+      max-width: 345px;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__title {
+    font-size: 4.2rem;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    line-height: 4.5rem;
+    color: #000;
+    padding-bottom: 1rem;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    letter-spacing: 0;
+
+    @include max-screen($screen-md) {
+      font-size: 2.8rem;
+      line-height: 3rem;
+      padding: 0 3rem 1rem;
+    }
+
+    html[lang="ar"] & {
+      font-size: 47px;
+
+      @include max-screen($screen-xs) {
+        font-size: 32px;
+        margin: 0;
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #000;
+    line-height: 2.6rem;
+    position: relative;
+    z-index: 2;
+    letter-spacing: .34px;
+
+    @include max-screen($screen-md) {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      padding: 0 2rem;
+      letter-spacing: .39px;
+    }
+
+    html[lang="ar"] & {
+      font-size: 20px;
+
+      @include max-screen($screen-xs) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__ticket-image {
+    content: url("./assets/ticket-image.svg");
+    width: 18.4rem;
+    height: 16.6rem;
+    position: relative;
+    top: 10rem;
+    left: 59.5rem;
+    position: relative;
+    z-index: 2;
+
+    html[lang="ar"] & {
+      left: -44.5rem;
+      top: 8rem;
+      width: 184px;
+      height: 166px;
+
+      @media screen and (max-width: 1919px) {
+        left: -26rem;
+      }
+
+      @media screen and (max-width: 1439px) {
+        left: -10rem;
+      }
+
+      @include max-screen($screen-md) {
+        left: 1rem;
+        top: 5rem;
+        width: 11.6rem;
+        height: 10.5rem;
+      }
+
+      @include max-screen($screen-xs) {
+        left: -14rem;
+        top: 5rem;
+      }
+    }
+
+    @media screen and (max-width: 1919px) {
+      left: 35.5rem;
+    }
+
+    @media screen and (max-width: 1439px) {
+      left: 15rem;
+    }
+
+    @include max-screen($screen-md) {
+      left: 4rem;
+      top: 5rem;
+    }
+
+    @include max-screen($screen-xs) {
+      width: 11.6rem;
+      height: 10.5rem;
+      top: 6rem;
+      left: 4rem;
+    }
+  }
+
+  &__button-holder {
+    margin-top: 4rem;
+    position: relative;
+    z-index: 2;
+
+    @include max-screen($screen-xs) {
+      margin-bottom: 5rem;
+      margin-top: 2rem;
+    }
+
+    html[lang="ar"] & {
+      margin-top: 3rem;
+
+      @include max-screen($screen-xs) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__button {
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-family: "AkzidGroStd";
+    font-weight: 800;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 22px !important;
+    letter-spacing: .34px;
+    border: 5px solid transparent;
+    -webkit-border-image: url(../special-nationwriteletter/assets/bg-button.svg) 5 5 stretch;
+    border-image: url(../special-nationwriteletter/assets/bg-button.svg) 5 5 stretch;
+
+    &:hover {
+      -webkit-border-image: url("./assets/bg-button-hover.svg") 5 5 stretch;
+      border-image: url("./assets/bg-button-hover.svg") 5 5 stretch;
+    }
+
+    html[lang="ar"] & {
+      font-size: 18px;
+      padding: 9px 17px 9px 17px !important;
+      letter-spacing: .39px;
+      border: 5px solid transparent;
+      -webkit-border-image: url("./assets/button-bg-ar.svg") 5 5 stretch;
+      border-image: url("./assets/button-bg-ar.svg") 5 5 stretch;
+
+      &:hover {
+        -webkit-border-image: url("./assets/button-bg-ar-hover.svg") 5 5 stretch;
+        border-image: url("./assets/button-bg-ar-hover.svg") 5 5 stretch;
+      }
+    }
+  }
+}

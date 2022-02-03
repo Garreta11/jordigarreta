@@ -1,0 +1,229 @@
+#site-footer {
+  background-color: #cf7c59;
+  padding-top: 6em;
+  padding-bottom: 5em;
+
+  @media only screen and (max-width: 1023px) {
+    padding-top: 66px;
+    padding-bottom: 66px;
+
+    @media only screen and (max-width: 520px) {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.site-footer-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @media only screen and (max-width: 1023px) {
+    flex-direction: column;
+  }
+
+  &__left-side {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+
+    @media screen and (max-width: 1300px)
+    {
+      padding-bottom: 15px;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 1023px) {
+      padding-bottom: 0;
+      width: auto;
+    }
+
+    @media only screen and (max-width: 340px) {
+      width: 100%;
+      justify-content: center;
+    }
+
+    &:hover .site-footer-bottom__pavilion-arrow {
+      background-image: url('/assets/icons/link_extern_white.svg');
+    }
+
+    &__container {
+      width: 30%;
+
+      @media only screen and (max-width: 1023px) {
+        margin-bottom: 65px;
+        width: 100%;
+        text-align: center;
+
+        html[lang="ar"] & {
+          margin-bottom: 50px;
+        }
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media only screen and (max-width: 1023px) {
+        justify-content: center;
+      }
+
+      &>:first-child {
+        margin-right: 32px;
+
+        @media only screen and (max-width: 340px) {
+          padding-bottom: 15px;
+          margin-right: 0;
+        }
+
+        html[lang="ar"] & {
+          margin-left: 32px;
+          margin-right: 0;
+
+          @media only screen and (max-width: 340px) {
+            margin-left: 0;
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    &__title {
+      line-height: 17px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0;
+      margin-bottom: 10px;
+      margin-top: -15px;
+
+      @media screen and (max-width: 1300px)
+      {
+        margin-top: 0;
+      }
+
+      @media only screen and (max-width: 1023px) {
+        margin-bottom: 20px;
+      }
+
+      html[lang="ar"] & {
+        line-height: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: .3px;
+        margin-bottom: 5px;
+        margin-top: -20px;
+
+        @media only screen and (max-width: 1023px) {
+          margin-bottom: 25px;
+        }
+      }
+  
+    }
+
+  }
+
+  &__pavilion-logo {
+    width: 66px;
+    height: 64px;
+  }
+
+  &__pavilion-text {
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0.34px;
+    line-height: 20px;
+    color: #000;
+    padding-right: 12px;
+    text-transform: uppercase;
+    margin-top: -5px;
+
+    html[lang="ar"] & {
+      padding-left: 12px;
+      padding-right: 0;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: -0.39px;
+      margin-top: 0;
+    }
+  }
+
+  &__pavilion-arrow {
+    background-image: url('/assets/icons/link_extern.svg');
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 25px;
+
+    html[lang="ar"] & {
+      transform: rotate(270deg);
+    }
+  }
+
+  &__right-side {
+    @media only screen and (max-width: 1023px) {
+      padding-bottom: 27px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+
+      @media only screen and (max-width: 1023px) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      li {
+        margin-right: 35px;
+
+        &:hover:last-child a::after {
+          content: url("/assets/icons/download-small-hover.svg");
+        }
+
+        &:last-child {
+          a {
+            &::after {
+              content: url("/assets/icons/download-small.svg");
+              width: 12px;
+              height: 12px;
+              padding-left: 7px;
+              position: relative;
+              top: 4px;
+
+              html[lang="ar"] & {
+                padding-left: 0;
+                padding-right: 7px;
+              }
+            }
+          }
+        }
+
+        @media only screen and (max-width: 1023px) {
+          margin: 0 17px 22px 17px;
+        }
+
+        a {
+          font-size: 14px;
+          font-weight: normal;
+          color: #000;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          html[lang="ar"] & {
+            font-size: 14px;
+            line-height: 21px;
+          }
+
+          @media only screen and (max-width: 1023px) {
+            font-size: 12px;
+            line-height: 14px;
+          }
+        }
+      }
+    }
+  }
+}

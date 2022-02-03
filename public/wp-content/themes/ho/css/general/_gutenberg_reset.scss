@@ -1,0 +1,20 @@
+.button
+{
+  color: black !important;
+  vertical-align: baseline !important;
+  box-shadow: none !important;
+  height: auto !important;
+  border: none !important;
+  background: none !important;
+  border-width: 0 !important;
+
+  &:hover
+  {
+    color: white !important;
+  }
+}
+
+*
+{
+  overflow-wrap:normal;
+}

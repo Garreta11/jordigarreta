@@ -1,0 +1,332 @@
+{
+    "key": "group_618946c05d63b",
+    "title": "Block : Countdown",
+    "fields": [
+        {
+            "key": "field_6189474cb88b2",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61894754b88b3",
+            "label": "Button Link",
+            "name": "button_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "wpml_cf_preferences": 0
+        },
+        {
+            "key": "field_61894763b88b4",
+            "label": "Button Text",
+            "name": "button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_618cc4d20c7a3",
+            "label": "Coutndown end date",
+            "name": "countdown_end_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "display_format": "d\/m\/Y",
+            "return_format": "F d, Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_619e502614c1a",
+            "label": "Countdown Text",
+            "name": "countdown_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_618d0a8826271",
+            "label": "Countdown Text Single",
+            "name": "countdown_text_single",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_619e208228c5f",
+            "label": "Countdown BG Color",
+            "name": "countdown_bg_color",
+            "type": "swatch",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "choices": {
+                "transparent": "None",
+                "#D8D2CC": "Beige",
+                "#B69E83": "Ochre",
+                "#DDCAC3": "Syringa",
+                "#F1EEE6": "Mint",
+                "#D2E0E4": "Slight Blue",
+                "#A7BFC7": "Sky Blue",
+                "#4868B5": "School blue",
+                "#CF7C59": "Orange",
+                "#B7624F": "Winered",
+                "#387973": "Dark Green",
+                "#89A895": "Light Green",
+                "#BB674D": "Hover Brown",
+                "#E4E5E6": "Light Grey",
+                "#5CBCC4": "School aqua",
+                "#81B2E2": "Dreamlight Blue",
+                "#F7F7F9": "Bright White",
+                "#598798": "Deep Blue",
+                "#B59D82": "Light Brown"
+            },
+            "allow_null": 1,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "other_choice": 0,
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_619e17358f8aa",
+            "label": "National Day Teaser Title",
+            "name": "national_day_teaser_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_619e17548f8ab",
+            "label": "National Day Teaser Copy",
+            "name": "national_day_teaser_copy",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_619e17748f8ac",
+            "label": "National Day Teaser Image",
+            "name": "national_day_teaser_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "wpml_cf_preferences": 0
+        },
+        {
+            "key": "field_619e4453291b4",
+            "label": "National Day Teaser Image Mobile",
+            "name": "national_day_teaser_image_mobile",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_619e205b28c5e",
+            "label": "Nation Day Teaser BG Color",
+            "name": "nation_day_teaser_bg_color",
+            "type": "swatch",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "transparent": "None",
+                "#D8D2CC": "Beige",
+                "#B69E83": "Ochre",
+                "#DDCAC3": "Syringa",
+                "#F1EEE6": "Mint",
+                "#D2E0E4": "Slight Blue",
+                "#A7BFC7": "Sky Blue",
+                "#4868B5": "School blue",
+                "#CF7C59": "Orange",
+                "#B7624F": "Winered",
+                "#387973": "Dark Green",
+                "#89A895": "Light Green",
+                "#BB674D": "Hover Brown",
+                "#E4E5E6": "Light Grey",
+                "#5CBCC4": "School aqua",
+                "#81B2E2": "Dreamlight Blue",
+                "#F7F7F9": "Bright White",
+                "#598798": "Deep Blue",
+                "#B59D82": "Light Brown"
+            },
+            "allow_null": 1,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "wpml_cf_preferences": 0,
+            "other_choice": 0,
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_619e5e2914af7",
+            "label": "Draw Teaser",
+            "name": "draw_teaser",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "wpml_cf_preferences": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/special-countdown"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1637768770
+}

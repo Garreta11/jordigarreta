@@ -1,0 +1,62 @@
+.block-do-list {
+    padding-top: 150px;
+    .do-list-item-wrapper {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+        max-height: 10000px;
+        transition: all .5s ease;
+        animation-duration: 1s;
+        .do-list-item {
+            padding-top: 23px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 40%;
+                height: 100%;
+                border-top: 10px solid transparent;
+                border-image: url("/assets/icons/do-list-border-line.svg") 30 stretch;
+                z-index: -1;
+            }
+            h3 {
+                margin: 0;
+            }
+            .heart-button {
+                cursor: pointer;
+                display: flex;
+                background-color: #C0B9C9;
+                width: fit-content;
+                justify-content: center;
+                align-items: center;
+                padding: 11px 15px;
+    
+                .num-likes {
+                    max-width: 0px;
+                    font-size: 16px;
+                    font-family: 'AkzidGroStd';
+                    font-weight: 900;
+                    margin-right: 0px;
+                    transition: all ease 0.8s;
+                    overflow: hidden;
+                    opacity: 0;
+                }
+    
+                .do-list-heart {
+                    fill: #1D1D1B;
+                    // transition: all ease 0.8s;
+                }
+    
+                &:hover {
+                    .num-likes {
+                        max-width: 200px;
+                        margin-right: 5px;
+                        opacity: 1;
+                    }
+                    .do-list-heart {
+                        fill: #C53A48;
+                    }
+                }
+            }
+        }
+    }
+}

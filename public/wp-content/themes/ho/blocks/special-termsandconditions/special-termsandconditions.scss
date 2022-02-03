@@ -1,0 +1,39 @@
+@import "../../css/includes";
+
+.block-special-termsandconditions{
+	.page_head {
+		text-align: center;
+	}
+	.terms_text{
+		text-align: left; 
+		font-size: 16px;
+		line-height: 28px;
+		font-family: 'AkzidGroStd', sans-serif !important;
+		html[lang="ar"] &{
+			text-align: right;
+			font-size: 18px;
+		}
+	}
+	.terms_text *{
+		text-align: left; 
+		font-size: 16px !important;
+		line-height: 28px !important;
+		font-family: 'AkzidGroStd', sans-serif !important;
+		html[lang="ar"] &{
+			text-align: right;
+			font-size: 18px !important;
+		}
+	}
+	.terms_main{
+		margin-top: 10%;
+	}
+	.terms_header {
+		text-align: left; 
+		font-size: 24px;
+		margin-top: 5%;
+		html[lang="ar"] &{
+			text-align: right;
+		}
+	}
+}
+	

@@ -1,0 +1,517 @@
+@import "../../css/includes";
+
+html {
+  scroll-behavior: smooth;
+}
+
+#eventslist {
+  padding-bottom: 0px !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.events-headline {
+  margin-top: 70px;
+}
+
+.text {
+  html[lang="ar"] & {
+    text-align: right;
+  }
+  a {
+    text-decoration: none !important;
+  }
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.eventslist-header {
+  background-color: var(--color-highlight);
+  .container-fluid {
+    @include max-screen($screen-xs-max) {
+      padding-bottom: 3em;
+    }
+  }
+}
+
+.zeplin-heading {
+  html[lang="ar"] & {
+    text-align: center;
+  }
+  @include max-screen($screen-xs-max) {
+    margin-top: 2em;
+  }
+}
+
+.zeplin-anleser {
+  font-size: 1.8em;
+  text-align: left;
+  opacity: 1;
+  html[lang="ar"] & {
+    text-align: right;
+  }
+  @include max-screen($screen-xs-max) {
+    font-size: 1.6em;
+  }
+}
+
+.list-header {
+  font-family: "AkzidGroStd", sans-serif;
+  font-weight: 900;
+  font-size: 4.2em;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: left;
+  display: block;
+  @include max-screen($screen-xs-max) {
+    font-size: 2.8em;
+  }
+  html[lang="ar"] & {
+    text-align: right;
+
+    @include max-screen($screen-xs-max) {
+      font-size: 32px;
+    }
+  }
+}
+
+.mini-header {
+  font-family: "AkzidGroStd", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: left;
+  display: block;
+  @include max-screen($screen-xs-max) {
+    margin-top: 1em;
+  }
+  &.extra {
+    font-weight: 900;
+    font-size: 1.6em;
+    line-height: 1.9em;
+  }
+  &.lowercase {
+    font-size: 1.8em;
+    text-transform: lowercase !important;
+  }
+  html[lang="ar"] & {
+    text-align: right;
+  }
+}
+.extra:hover {
+  color: #bb674d;
+}
+
+.locations-filter {
+  width: 100%;
+  padding: 20px;
+  margin-top: 1em;
+  font-size: 1.8em;
+  border: 2px solid transparent;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
+  background: url(/assets/icons/arrowdown-select.svg) no-repeat 97% #f1eee6;
+  background-size: 20px;
+  html[lang="ar"] & {
+    background-position: 3% center;
+  }
+}
+.locations-filter:hover {
+  background: url(/assets/icons/arrowdown-select-hover.svg) no-repeat 97%
+    #f1eee6;
+  background-size: 20px;
+  border: 2px solid #bb674d;
+}
+
+.eventslist-filter-list {
+  background-color: #f1eee6;
+}
+
+.submit-event-cto {
+  html[lang="ar"] & {
+    margin-bottom: 0em !important;
+  }
+  background-color: #e4e5e6;
+  &.transparent {
+    background-color: transparent;
+  }
+  @include max-screen($screen-xs-max) {
+    margin-bottom: var(--spacing-half);
+  }
+  .text {
+    font-size: 1.8em;
+    @include max-screen($screen-xs-max) {
+      margin-top: 0.5em;
+      line-height: 1.5em;
+      font-size: 1.6em;
+    }
+    .bold {
+      font-weight: 600;
+      @include max-screen($screen-xs-max) {
+        display: block;
+        line-height: 1.5em;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}
+
+// .flip-back .block-bunker-text {
+//     background-image: url(/assets/icons/bunker2-invert-darkblue.svg) !important;
+// }
+// .flip-front .block-bunker-text {
+//     background-image: url(/assets/icons/bunker2-darkblue.svg) !important;
+// }
+.all_events {
+  display: inline-block;
+  margin-top: 1em;
+  margin-bottom: 5em;
+}
+
+.no-events {
+  html[lang="ar"] & {
+    text-align: right;
+  }
+}
+
+#site-footer {
+  background-color: #bb674d !important;
+}
+
+.filter-toggle {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  @include max-screen($screen-xs-max) {
+    width: 50%;
+  }
+  img {
+    width: 2.5em;
+    float: left;
+    margin-right: 1em;
+    html[lang="ar"] & {
+      float: right;
+      margin-right: 0;
+      margin-left: 1em;
+    }
+  }
+}
+
+.clear-all {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.masonry {
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.filter-categories ul li {
+  background-color: #f1eee6;
+  padding: 12px;
+  font-size: 1.2em !important;
+  text-transform: uppercase;
+  font-weight: 600;
+  flex: auto;
+  min-width: 50px;
+  /* Some gutter */
+  margin: 0 8px 8px 0;
+  cursor: pointer;
+  max-width: 200px;
+  html[lang="ar"] & {
+    margin: 0 0 8px 8px;
+  }
+}
+.filter-categories ul li:hover {
+  background-color: #bb674d;
+  color: white;
+}
+
+.filter-dates {
+  overflow: hidden;
+}
+
+.filter-dates .month {
+  background-color: #f1eee6;
+  padding: 12px 20px;
+  font-size: 1.4em !important;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 79px;
+  margin: 0 8px 8px 0;
+  html[lang="ar"] & {
+    margin: 0 0 8px 8px;
+  }
+  cursor: pointer;
+  text-align: center !important;
+}
+.month:hover {
+  background-color: #bb674d;
+  color: white;
+}
+
+.date-arrow {
+  width: 40px;
+  position: absolute;
+  bottom: 50px;
+  cursor: pointer;
+  background-image: url(/assets/icons/arrowleft.svg) !important;
+  background-size: 40px 44px !important;
+  display: none;
+  &.left {
+    left: -65px;
+  }
+  &.right {
+    transform: rotate(180deg);
+    right: -65px;
+  }
+}
+.date-arrow:hover {
+  background-image: url(/assets/icons/arrowleft-hover.svg) !important;
+  background-size: 40px 44px !important;
+  &.left {
+    left: -65px;
+  }
+  &.right {
+    transform: rotate(180deg);
+    right: -65px;
+  }
+}
+
+.event-header {
+  background-image: url(/assets/icons/strange-subline-large.svg);
+  background-repeat: repeat-x;
+  background-size: 100% auto;
+  background-position: bottom center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+
+  .event-details-link {
+    html[lang="ar"] & {
+      transform: rotate(45deg);
+    }
+  }
+
+  .event-categories {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .event-category {
+    background-color: #bb674d;
+    display: inline-block;
+    padding: 6px 15px;
+    color: white;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-right: 1em;
+    text-transform: uppercase;
+
+    html[lang="ar"] & {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include max-screen($screen-xs-max) {
+      margin-right: 0;
+    }
+  }
+  img {
+    transform: rotate(135deg);
+    cursor: pointer;
+    width: 24px;
+    height: 25px;
+
+    &:hover {
+      content: url("/assets/icons/arrowleft-hover.svg") !important;
+    }
+
+    html[lang="ar"] & {
+      transform: rotate(45deg);
+    }
+  }
+  a {
+    margin-top: 1em;
+  }
+}
+
+.active {
+  background-color: #bb674d !important;
+  color: white !important;
+}
+
+.no-events {
+  font-size: 1.6em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.event-content {
+  display: flex;
+  flex-wrap: wrap;
+  .col {
+    flex-basis: 50%;
+    @include max-screen($screen-xs-max) {
+      flex-basis: 100%;
+    }
+    &.info {
+      padding-left: 3.5em;
+
+      html[lang="ar"] & {
+        padding-right: 3.5em;
+        padding-left: 0;
+
+        @include max-screen($screen-xs-max) {
+          padding-right: 0;
+        }
+      }
+      @include max-screen($screen-xs-max) {
+        padding-left: 0em;
+        padding-top: 1em;
+      }
+    }
+    &.img {
+      cursor: pointer;
+    }
+    &.break {
+      display: none;
+      @include max-screen($screen-xs-max) {
+        flex-basis: 100%;
+        display: block;
+        height: 0;
+      }
+    }
+    .header {
+      font-weight: 900;
+      font-size: 3.2em;
+      color: #000000;
+      text-transform: uppercase;
+      display: block;
+
+      html[lang="ar"] & {
+        text-align: right;
+      }
+      &.event {
+        cursor: pointer;
+        text-align: left;
+        @include max-screen($screen-xs-max) {
+          font-size: 2.8em;
+          padding-top: 0.5em;
+          text-align: left;
+        }
+        a {
+          text-decoration: none;
+        }
+
+        html[lang="ar"] & {
+          text-align: right;
+          @include max-screen($screen-xs-max) {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+    .excerpt {
+      text-align: left;
+      display: block;
+      font-size: 1.6em;
+      line-height: 1.4em;
+
+      @include max-screen($screen-xs-max) {
+        width: 90%;
+      }
+
+      html[lang="ar"] & {
+        text-align: right;
+      }
+    }
+    .extra-info {
+      display: flex;
+      align-items: flex-start;
+      .icon {
+        flex-basis: 25px;
+        margin-right: 1em;
+
+        html[lang="ar"] & {
+          margin-right: 0;
+          margin-left: 1em;
+          position: relative;
+          top: 10px;
+        }
+      }
+      .text-wrapper {
+        flex-basis: inherit;
+        @include max-screen($screen-xs-max) {
+          flex-basis: 100%;
+        }
+        .header {
+          font-weight: 300;
+          font-size: 1.6em;
+          padding-top: 0.3em;
+          line-height: 1.4em;
+          @include max-screen($screen-xs-max) {
+            font-size: 1.3em;
+          }
+        }
+        .text {
+          text-align: left;
+          font-size: 1.6em;
+          line-height: 1.4em;
+          color: rgba(0, 0, 0, 0.5);
+          @include max-screen($screen-xs-max) {
+            font-size: 1.3em;
+          }
+
+          html[lang="ar"] & {
+            text-align: right;
+            @include max-screen($screen-xs-max) {
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.eventslist-more-list {
+  background-color: #e4e5e6;
+}
+
+.more-events {
+  font-weight: 900;
+  font-size: 1.6em;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  margin-top: 3em;
+  padding-bottom: 1em;
+  background-image: url(/assets/icons/strange-subline-more.svg);
+  background-repeat: repeat-x;
+  background-size: 100% auto;
+  background-position: bottom center;
+  cursor: pointer;
+
+  html[lang="ar"] & {
+    padding-bottom: 5px;
+  }
+}

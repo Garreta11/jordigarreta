@@ -1,0 +1,109 @@
+@import "vars/settings";
+
+//mixins
+@import "lib/library";
+
+// reset
+
+
+
+
+@import "includes";
+
+//pods
+
+
+//helper
+//
+
+@import "../admin/css/attachment";
+@import "../admin/css/gutenberg";
+@import "../admin/css/acf";
+@import "../admin/css/mce_editor";
+//@import "../storybook/stories/styleguide";
+@import "../storybook/stories/00_base/colors";
+@import "../storybook/stories/00_base/fonts";
+@import "../storybook/stories/00_base/spacing";
+//@import "../storybook/stories/02_form/basics";
+
+.vue-preview,.acf-block-preview
+{
+  @import "lib/grid";
+  @import "helper/helper";
+  /* This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Monotype with any questions regarding Web Fonts: http://www.fontshop.com */
+  //@import "vars/reset";
+  @import "vars/normalize";
+  @import "vars/media-queries";
+
+  @import "general/main";
+
+  @import "general/gutenberg_reset";
+  @import "general/text";
+  @import "../storybook/stories/styleguide";
+
+  // partials
+  @import "../partials/partials";
+
+  // vue partials
+  @import "../pods/pods";
+  @import "../vue/components/partials/vue-partials";
+
+  // blocks
+  // @import "../blocks/blocks";
+
+  .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .teaser-lane {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .block
+  {
+    margin-bottom: 0;
+    padding-bottom: var(--spacing-half);
+
+    &.block-no-margin
+    {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  *[class^="block-"]
+  {
+    pointer-events: none !important;
+  }
+
+  .hidden
+  {
+    display: none !important;
+  }
+}
+
+#wp-admin-bar-dashboard,#menu-dashboard,.wp-menu-separator
+{
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+#menu-posts,
+#wp-admin-bar-new-content {
+  display: none;
+}
+
+//#menu-pages,
+
+.wp-admin // GUTENBERG
+{
+  [data-motion-text]
+  {
+    visibility: visible !important;
+  }
+}

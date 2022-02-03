@@ -1,0 +1,202 @@
+@import "../../css/includes";
+.block-dreamersletter {
+    padding-bottom: 0px !important;
+    .header {
+        width: 600px;
+        text-align: left;
+        color: #fff;
+        font-size: 71px;
+        @include max-screen($screen-xs-max) {
+            width: 90%;
+            font-size: 4em;
+        }
+    }
+    .future_letter_padding{
+        padding-bottom: 120px;
+    }
+    .white_box {
+        background-color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 7em;
+        padding-top: 10em;
+        position:relative;
+        @include max-screen($screen-xs-max) {
+            padding: 4em 1em;
+        }
+        @include max-screen($screen-xs){
+            padding: 4em 1em 1em 1em;
+        }
+    }
+    .subheader {
+        color: #000;
+        font-size: 42px;
+        @include max-screen($screen-xs-max) {
+            font-size: 2.8rem;
+        }
+        @media screen and (max-width: 500px){
+            width: 90%;
+            margin-top: 1em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .videoPoster{
+        display: none; 
+        position: absolute;
+        top: -93%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(/assets/icons/play-button.svg);
+        background-size: auto 20%;
+        background-position: 50%;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: none;
+        overflow: hidden;
+        opacity: 1;
+        @media screen and (max-width: $screen-sm){
+            background-size: auto 20%;
+        }
+        @media screen and (max-width: 764px){
+            background-size: auto 30%;
+        }
+        @media screen and (max-width: 425px){
+            background-size: auto 45%;
+        }
+        @media screen and (max-width: 320px){
+            background-size: auto 51%;
+        }
+        
+    }
+    .para {
+        font-size: 18px;
+        font-weight: 40;
+        font-family: "AkzidGroStd";
+        line-height: 1.2em;
+    }
+    .letter_btn {
+        font-family: "AkzidGroStd", sans-serif;
+        font-weight: 900;
+        font-size: 1.6rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-image: url("/assets/icons/button.svg");
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 2em;
+        margin-top: 2em;
+        display: inline-block;
+    }
+    .video_asset_top {
+        position: relative;
+        left: -4%;
+        top: 31%;
+        width: 100%;
+        pointer-events: none;
+    }
+    .video_asset_bottom {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        top: -1%;
+        margin-left: 4.5%;
+        margin-right: -4.6%;
+        pointer-events: none;
+    }
+    .future_letter_logo {
+        position: absolute;
+        height: 38%;
+        width: auto;
+        left: -117px;
+        top: 50px;
+        @include max-screen($screen-lg){
+            height: 35%;
+            top: -65px;
+            left: -25px;
+        }
+        @media screen and (max-width: 1060px){
+            height: 30%;
+        }
+        @include max-screen($screen-sm-max){
+            height: 40% !important;
+            top: -65px;
+            left: -25px;
+        }
+        @include max-screen ($screen-xs-max){
+            height:38% !important;
+        }
+        @media screen and (max-width: 600px){
+            height: 30% !important;
+            top: -65px;
+            left: -20px;
+        }
+    }
+    .container-video{
+        margin-top: -45%;
+    }
+    .iframe-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        iframe {
+            position: absolute;
+            margin-top: -52%;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+html[lang='ar'] {
+    .white_box {
+        padding: 4em 2em;
+        @include max-screen ($screen-xs){
+            padding: 0;
+        }
+    }
+    .header {   
+        text-align: right;
+    }
+    .para{
+        width: 60%;
+        margin: 1em auto;
+        @include max-screen ($screen-xs){
+            width: 90%;
+        }
+    }
+    .letter_btn{
+        margin-top: 0em;
+    }
+    .future_letter_logo{
+        height: 45%;
+        left: -100px;
+        @include max-screen($screen-lg){
+            height: 35%;
+            top: -65px;
+            left: -25px;
+        }
+        @media screen and (max-width: 1060px){
+            height: 30%;
+        }
+        @include max-screen($screen-sm-max){
+            height: 40% !important;
+            top: -65px;
+            left: -25px;
+        }
+        @include max-screen ($screen-xs-max){
+            height:38% !important;
+        }
+        @media screen and (max-width: 600px){
+            height: 30% !important;
+            top: -65px;
+            left: -20px;
+        }
+    }
+}
+

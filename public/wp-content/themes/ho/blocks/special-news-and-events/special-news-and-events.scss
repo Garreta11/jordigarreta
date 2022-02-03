@@ -1,0 +1,567 @@
+@import "../../css/includes";
+
+.news-and-events {
+  background-color: #f1eee6;
+
+  .text-align-center {
+    text-align: center;
+  }
+
+  .topic-container {
+    display: flex;
+  }
+
+  /* ----- ----- ----- ----- ----- news ----- ----- ----- ----- ----- */
+  .headline {
+    /* EN - Desktop */
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    line-height: 45px;
+    text-align: center;
+    margin: 68px auto 30px;
+
+    /* AR - Desktop */
+    html[lang="ar"] & {
+      font-size: 47px;
+      font-weight: 900;
+      letter-spacing: -0.39px;
+      line-height: 57px;
+    }
+
+    @include max-screen($screen-sm) {
+      /* EN - Mobile */
+      font-size: 28px;
+      letter-spacing: 0;
+      line-height: 30px;
+      margin: 61px auto 27px;
+
+      /* AR - Mobile */
+      html[lang="ar"] & {
+        font-size: 32px;
+        letter-spacing: -0.27px;
+        line-height: 37px;
+      }
+    }
+  }
+
+  .news-container {
+    background-color: #d8d2cc;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+
+    .container-fluid {
+      padding: 0;
+      width: 474px;
+
+      @include max-screen($screen-sm) {
+        /* EN/AR - Mobile */
+        width: 336px;
+      }
+    }
+  }
+
+  .news-topic {
+    /* EN - Desktop */
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.26px;
+    line-height: 17px;
+    text-align: left;
+    display: inline-block;
+    color: #ffffff;
+    background-color: #598798;
+    height: 30px;
+    width: auto;
+    padding: 6px 11px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    /* AR - Desktop/Mobile */
+    html[lang="ar"] & {
+      font-size: 17px;
+      letter-spacing: 0;
+      line-height: 23px;
+      font-weight: 400;
+      font-family: "29LT Zarid" !important;
+    }
+
+    @include max-screen($screen-sm) {
+      /* EN - Mobile */
+      line-height: 20px;
+    }
+  }
+
+  .date {
+    /* EN - Desktop/Mobile */
+    font-size: 12px;
+    letter-spacing: 0;
+    height: 23px;
+    text-align: left;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+
+    /* AR - Desktop */
+    html[lang="ar"] & {
+      font-size: 20px;
+      line-height: 30px;
+      text-align: right;
+    }
+
+    @include max-screen($screen-sm) {
+      /* AR - Mobile */
+      html[lang="ar"] & {
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  .article {
+    /* EN - Desktop/Mobile */
+    font-size: 12px;
+    letter-spacing: 0;
+    height: 23px;
+    text-align: right;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    /* AR - Desktop */
+    html[lang="ar"] & {
+      font-size: 20px;
+      line-height: 30px;
+      text-align: left;
+    }
+
+    @include max-screen($screen-sm) {
+      /* AR - Mobile */
+      html[lang="ar"] & {
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  .news-headline {
+    /* EN - Desktop */
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    line-height: 38px;
+    text-align: left;
+    margin-top: 19.5px;
+    margin-bottom: 27px;
+
+    /* AR - Desktop */
+    html[lang="ar"] & {
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: -0.28px;
+      line-height: 44px;
+      text-align: right;
+    }
+
+    @include max-screen($screen-sm) {
+      /* EN - Mobile */
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: 24px;
+
+      /* AR - Mobile */
+      html[lang="ar"] & {
+        font-size: 23px;
+        letter-spacing: -0.19px;
+        line-height: 33px;
+      }
+    }
+  }
+
+  .news-image {
+    width: 100%;
+  }
+
+  .single-news {
+    /* EN - Desktop/Mobile */
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.34px;
+    line-height: 20px;
+    text-align: left;
+    text-transform: uppercase;
+
+    /* AR - Desktop/Mobile */
+    html[lang="ar"] & {
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 0.39px;
+      line-height: 22px;
+      text-align: right;
+    }
+  }
+
+  .underlined-link {
+    text-decoration: none;
+    margin-bottom: 11px;
+    width: auto;
+    display: inline-block;
+
+    @include max-screen($screen-sm) {
+      html[lang="ar"] & {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .all-news {
+    /* EN/AR - Desktop */
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.34px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-top: 42px;
+    margin-bottom: 52px;
+
+    /* EN/AR - Mobile */
+    @include max-screen($screen-sm) {
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 0.39px;
+      line-height: 22px;
+      margin-bottom: 61px;
+    }
+  }
+
+  .all-news-link {
+    text-decoration: none;
+  }
+
+  /* ----- ----- ----- ----- ----- events ----- ----- ----- ----- ----- */
+  .events-container {
+    background-color: #e4e5e6;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+    .container-fluid {
+      padding: 0 8px 0 0;
+      width: 484px;
+
+      @include max-screen($screen-sm) {
+        /* EN/AR - Mobile */
+        padding: 0 2px 0 0;
+        width: 341px;
+      }
+    }
+  }
+
+  .event-topic {
+    /* EN - Desktop */
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.26px;
+    line-height: 17px;
+    text-align: left;
+    display: inline-block;
+    color: #ffffff;
+    background-color: #bb674d;
+    height: 30px;
+    width: auto;
+    padding: 6px 11px;
+    text-transform: uppercase;
+    margin-bottom: 11px;
+
+    /* AR - Desktop/Mobile */
+    html[lang="ar"] & {
+      font-size: 17px;
+      letter-spacing: 0;
+      line-height: 23px;
+      font-weight: 400;
+      font-family: "29LT Zarid" !important;
+    }
+
+    @include max-screen($screen-sm) {
+      /* EN - Mobile */
+      line-height: 20px;
+    }
+  }
+
+  .arrow-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2.5px;
+    html[lang="ar"] & {
+      flex-direction: row-reverse;
+      justify-content: end;
+    }
+
+    .a {
+
+      img:first-child {
+        display: block;
+
+        a:hover & {
+          display: none;
+        }
+      }
+
+      img:last-child {
+        display: none;
+
+        a:hover & {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .arrow {
+    height: 25px;
+    width: 24px;
+    transform: rotate(135deg);
+    html[lang="ar"] & {
+      transform: rotate(45deg);
+    }
+    margin-left: auto;
+  }
+
+  .events_link {
+    display: block;
+    text-decoration: none;
+  }
+
+  .event-headline {
+    /* EN - Desktop */
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    line-height: 38px;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 25px;
+
+    /* AR - Desktop */
+    html[lang="ar"] & {
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: -0.28px;
+      line-height: 44px;
+      text-align: right;
+    }
+
+    @include max-screen($screen-sm) {
+      /* EN - Mobile */
+      font-size: 28px;
+      letter-spacing: 0;
+      line-height: 30px;
+      margin-top: 19.5px;
+      margin-bottom: 22px;
+
+      /* AR - Mobile */
+      html[lang="ar"] & {
+        font-size: 32px;
+        letter-spacing: -0.27px;
+        line-height: 37px;
+      }
+    }
+  }
+
+  .event-image {
+    width: 100%;
+  }
+
+  .event-date-time {
+    /* EN - Desktop */
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 26px;
+    text-align: left;
+    margin-left: 14px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+
+    /* AR - Desktop */
+    html[lang="ar"] & {
+      margin-left: 0;
+      margin-right: 14px;
+      text-align: right;
+    }
+
+    @include max-screen($screen-sm) {
+      /* EN - Mobile */
+      font-size: 16px;
+      line-height: 22px;
+
+      /* AR - Mobile */
+      html[lang="ar"] & {
+        font-size: 18px;
+        line-height: 25px;
+        margin-right: 33px;
+      }
+    }
+  }
+
+  .event-container {
+    display: flex;
+
+    html[lang="ar"] & {
+      .event-date-time div,
+      .event-place {
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 25px;
+      }
+    }
+  }
+
+  .event-place {
+    /* EN - Desktop */
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 15px;
+
+    /* AR - Desktop */
+    html[lang="ar"] & {
+      margin-left: 0;
+      margin-right: 15px;
+    }
+
+    @include max-screen($screen-sm) {
+      /* EN - Mobile */
+      font-size: 16px;
+      line-height: 22px;
+
+      /* AR - Mobile */
+      html[lang="ar"] & {
+        font-size: 18px;
+        line-height: 25px;
+        margin-right: 33px;
+      }
+    }
+  }
+
+  .all-events {
+    /* EN - Desktop */
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.34px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-top: 45px;
+    margin-bottom: 52px;
+
+    /* AR - Desktop */
+    html[lang="ar"] & {
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 0.39px;
+      line-height: 22px;
+    }
+
+    @include max-screen($screen-sm) {
+      /* EN/AR - Mobile */
+      margin-top: 43px;
+      margin-bottom: 61px;
+    }
+  }
+
+  .all-events-link {
+    text-decoration: none;
+  }
+
+  .calender-icon {
+    width: 25px;
+  }
+
+  .event-icon {
+    width: 22px;
+    height: 25px;
+  }
+
+  .horizontal-line {
+    width: 100%;
+    height: 10px;
+    margin: auto;
+  }
+
+  .display-flex {
+    display: flex;
+  }
+
+  .vertical-line {
+    transform: rotate(90deg);
+    width: 25px;
+    height: 100%;
+  }
+
+  .row--horizontal-line {
+    height: 6px;
+    width: 100%;
+    background-image: url("/assets/icons/strange-subline.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 11px;
+    //transform: rotate(180deg);
+  }
+
+  .row--vertical-line {
+    height: calc(100% - 4px);
+    background-image: url(/assets/icons/strange-vertline.svg);
+    background-position: left top;
+    padding: 0;
+    margin-right: 11px;
+    max-width: 5px;
+    flex: 1;
+    html[lang="ar"] & {
+      margin-left: 20px;
+      margin-right: 0px;
+    }
+
+    @include max-screen($screen-sm) {
+      /* EN/AR - Mobile */
+      margin-right: 11px;
+      html[lang="ar"] & {
+        margin-left: 11px;
+        margin-right: 0px;
+      }
+    }
+  }
+
+  .news_container-all {
+    display: flex;
+    text-decoration: none;
+
+    .news_container {
+      flex: 1;
+    }
+  }
+
+  .topic-container + .row {
+    margin-bottom: 10px;
+  }
+}
+
+html[lang="ar"] {
+  .news-container > .container-fluid {
+    padding: 0;
+    margin: 0;
+  }
+
+  .container-news-border {
+    margin: 0 20px 0 9px;
+    padding: 0 0 0 8px;
+  }
+}
+
+.block-special-news-and-events {
+  padding-bottom: 0 !important;
+}

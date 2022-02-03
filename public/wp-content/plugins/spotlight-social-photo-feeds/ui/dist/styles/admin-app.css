@@ -1,0 +1,44 @@
+#wpcontent {
+    padding-left: 0;
+}
+
+#wpbody-content {
+    float: unset;
+    padding-bottom: 0;
+}
+
+#wpfooter {
+    display: none;
+}
+
+.wrap {
+    margin: 0;
+}
+
+#wpcontent, #wpbody, .wrap {
+    position: absolute !important;
+    inset: 0;
+}
+
+#adminmenu li.wp-has-current-submenu ul.wp-submenu {
+    cursor: auto;
+
+    &.sli-onboarding {
+        display: none;
+    }
+
+    & li, & a {
+        cursor: pointer;
+    }
+
+    & li.disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+
+        a {
+            pointer-events: none;
+        }
+    }
+}
+
+.AdminLoading__root{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;max-width:100%;padding:0 50px;box-sizing:border-box;-webkit-animation:1.5s linear infinite;animation:1.5s linear infinite;-webkit-animation-name:AdminLoading__admin-loading-blink;animation-name:AdminLoading__admin-loading-blink}.AdminLoading__sizer{top:-20%;width:20%;min-width:200px;max-width:300px;border-radius:50%}.AdminLoading__image,.AdminLoading__sizer{position:relative}.AdminLoading__image{display:inline-block;width:100%;height:100%;-o-object-fit:contain;object-fit:contain}.AdminLoading__spinner{position:absolute;top:-20px;right:-20px;bottom:-20px;left:-20px;border-radius:50%;border:3px solid var(--sli-line-color);-webkit-animation:1.6s cubic-bezier(.48,.42,.54,.48) infinite;animation:1.6s cubic-bezier(.48,.42,.54,.48) infinite;-webkit-animation-name:AdminLoading__admin-loading-spinner;animation-name:AdminLoading__admin-loading-spinner}@-webkit-keyframes AdminLoading__admin-loading-blink{0%,to{opacity:1}50%{opacity:.6}}@keyframes AdminLoading__admin-loading-blink{0%,to{opacity:1}50%{opacity:.6}}@-webkit-keyframes AdminLoading__admin-loading-spinner{0%{transform:rotate(0deg);border-top-color:var(--sli-line-color)}20%{border-top-color:var(--sli-rouge)}40%{border-top-color:var(--sli-pink)}60%{border-top-color:var(--sli-insta-purple)}80%{border-top-color:var(--sli-wp-blue)}to{transform:rotate(1turn);border-top-color:var(--sli-line-color)}}@keyframes AdminLoading__admin-loading-spinner{0%{transform:rotate(0deg);border-top-color:var(--sli-line-color)}20%{border-top-color:var(--sli-rouge)}40%{border-top-color:var(--sli-pink)}60%{border-top-color:var(--sli-insta-purple)}80%{border-top-color:var(--sli-wp-blue)}to{transform:rotate(1turn);border-top-color:var(--sli-line-color)}}

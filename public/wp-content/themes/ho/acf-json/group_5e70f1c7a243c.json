@@ -1,0 +1,130 @@
+{
+    "key": "group_5e70f1c7a243c",
+    "title": "Standard – Block: Teaser",
+    "fields": [
+        {
+            "key": "field_5e70f433647ee",
+            "label": "Items",
+            "name": "items",
+            "type": "relationship",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "post_type": [
+                "page",
+                "artwork",
+                "artist",
+                "exhibition",
+                "journal",
+                "book"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": 1,
+            "max": 99,
+            "return_format": "id"
+        },
+        {
+            "key": "field_5e70fd80c6bb2",
+            "label": "Columns",
+            "name": "cols",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "choices": {
+                "1": "100%",
+                "2": "50%",
+                "3": "33%",
+                "4": "25%",
+                "lane": "25% endless",
+                "lane33": "33% endless"
+            },
+            "allow_null": 0,
+            "default_value": 3,
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5f2ac7f94bc24",
+            "label": "Align",
+            "name": "align",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "identical": "Parade",
+                "flappy": "Flappy",
+                "top": "Whatever"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "wpml_cf_preferences": 0
+        },
+        {
+            "key": "field_5f2d56b01b3cc",
+            "label": "Add CTA",
+            "name": "button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "default_value": "",
+            "placeholder": "More",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/standard-teaser"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1630190311
+}

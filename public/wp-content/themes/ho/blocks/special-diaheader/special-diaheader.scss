@@ -1,0 +1,98 @@
+@import "../../css/includes";
+
+
+.block-special-diaheader {
+	figure {
+		border: 22px solid white;
+		transform: rotate(-1deg);
+
+		@include max-screen($screen-md-max) {
+			border: 11px solid white;
+		}
+		
+		-webkit-box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+		box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+		top:-20px;
+	}
+
+	.courtesy-vertical {
+		text-align: left;
+		font-size: 1.4rem;
+
+		@include max-screen($screen-xs-max) {
+			font-size: 1rem;
+		}
+		z-index: 222;
+		width: 100%;
+		text-align: left;
+		margin-top: -20px;
+		margin-left: -20px;
+
+		transform: rotate(-90deg);
+		transform-origin: 0% 0%;
+	}
+
+
+
+	.diaheader-teaser {
+		background-image: url('/assets/icons/skybluebunker.svg');
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+		padding: 0 10% 0;
+		width: 100%;
+
+		min-height: 500px;
+
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+
+		@include min-screen($screen-lg-min) {
+			&.start-xs {
+				padding: 0 20% 0;
+			}
+		}
+		@include max-screen($screen-md-max) {
+			min-height: 30vw;
+			
+		}
+		@include max-screen($screen-sm-max) {
+			min-height: 55vw;
+		}
+		@include max-screen($screen-xs-max) {
+			min-height: 66vw;
+			padding-top: 35px;
+			margin-bottom: 35px;
+		}
+	}
+
+	&.block-special-diaheader-brown-trapez .diaheader-teaser,
+	&.block-special-diaheader-blue-trapez .diaheader-teaser {
+		background-image: url('/assets/icons/trapez.svg');
+		width: 100%;
+
+		html[lang="ar"] & {
+			background-image: url('/assets/icons/trapez-mirror.svg');
+		}
+	}
+
+	h1 {
+		font-size: 47px;
+		@include max-screen($screen-xs-max) {
+			font-size: 25px;
+		}
+	}
+	@include max-screen($screen-sm-max) {
+		.diaheader-button {
+			height: 5rem;
+			overflow: visible;
+		}
+	}
+
+	&.block-special-diaheader-with-image .diaheader-teaser-col {
+		margin-top: -22%;
+		z-index: 22;
+	}
+}

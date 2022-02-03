@@ -1,0 +1,246 @@
+@import "../../css/includes";
+* {
+    font-family: "AkzidGroStd", sans-serif !important;
+}
+
+html[lang="ar"] * {
+    font-family: "29LT Zarid" !important;
+    direction: rtl;
+}
+
+body {
+    background-color: transparent;
+    background-image: none;
+}
+
+.cognigy-chat-bot-avatar,
+.cognigy-chat-user-avatar,
+#cognigy-header,
+#cognigy-form,
+.cognigy-chat-header {
+    display: none;
+}
+
+#cognigy-container {
+    background-color: transparent;
+    padding-top: 0;
+    padding-top: 50vh;
+    /*
+	background-image: url("/assets/icons/chat-credits.png");
+	background-position: center 90px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	*/
+}
+
+.cognigy-chat-container {
+    scrollbar-width: none;
+}
+
+.cognigy-chat-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+#cognigy-outer-container {
+    box-shadow: none;
+    background-color: transparent;
+    height: 100%;
+    width: 100% !important;
+    position: fixed;
+    margin-top: 0;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+    padding-left: 170px !important;
+    @include max-screen($screen-xs-max) {
+        padding-left: 40px !important;
+    }
+}
+
+#botsmile {
+    width: 100px;
+    @include max-screen($screen-xs-max) {
+        width: 32px !important;
+    }
+    position: fixed;
+    left:0;
+    top: 80%;
+}
+
+#cognigy {
+    width: 100%;
+}
+
+.button_template_outer_container {
+    background-color: transparent;
+    border: none;
+}
+
+.button_template_outer_container .button_template_text,
+.cognigy-chat-bot-message {
+    background-color: rgb(167, 191, 199);
+    color: black;
+    //background-image: url('/assets/icons/chatbubble.svg');
+    background-image: url('/assets/icons/chatbubble2.svg');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    border-bottom: none;
+    background-size: 150rem 30rem;
+    border-radius: 0;
+    padding: 1.2em 1.5em calc(1.2em + 20px);
+    font-size: 1.8rem;
+    @include max-screen($screen-xs-max) {
+        font-size: 1.6rem;
+    }
+    line-height: 1.6;
+    -webkit-animation: slideUpBot .8s ease;
+    animation: slideUpBot .8s ease;
+    @include max-screen($screen-xs-max) {
+        max-width: 100%;
+    }
+}
+
+.button_template_outer_container .button_template_text {
+    font-weight: 900;
+}
+
+.quick_reply_container {
+    justify-content: flex-start;
+    margin-left: 6px;
+}
+
+.cognigy-chat-user-message {
+    font-weight: 900;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    margin: 20px;
+    font-size: 2.1rem;
+    @include max-screen($screen-xs-max) {
+        font-size: 1.8rem;
+        width: 80%;
+        max-width: 80%;
+        text-align: right;
+    }
+}
+
+.cognigy-chat-container {
+    direction: ltr !important;
+}
+
+.button_template_outer_container .button_template_container,
+button.quick_reply {
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+    background-color: rgb(167, 191, 199);
+    color: black !important;
+    font-weight: bold;
+    position: relative;
+    padding: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    &:after,
+    &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0;
+        bottom: 0;
+        background-image: url('/assets/icons/button-left.svg');
+        background-size: cover;
+        width: 51%;
+        height: 100%;
+        z-index: 2;
+    }
+    &:before {
+        left: 0;
+    }
+    &:after {
+        right: 0;
+        background-image: url('/assets/icons/button-right.svg');
+        background-position-x: right;
+    }
+}
+
+@-webkit-keyframes slideUpBot {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(10px) scale(0.95);
+        transform: translateY(10px) scale(0.95);
+        /*transform: translateY(10px);*/
+        /*transform: scale(0.8) translateY(-8px) translateY(3px);*/
+    }
+    100% {
+        opacity: 1;
+        /*transform: translateY(0px);*/
+    }
+}
+
+@keyframes slideUpBot {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(10px) scale(0.95);
+        transform: translateY(10px) scale(0.95);
+        /*transform: translateY(10px);*/
+        /*transform: scale(0.8) translateY(-8px) translateY(3px);*/
+    }
+    100% {
+        opacity: 1;
+        /*transform: translateY(0px);*/
+    }
+}
+
+.carousel {
+    .slide {
+        background-color: transparent !important;
+        padding-right: 15px;
+        font-size: 1.4rem;
+        min-width: 378px!important;
+        width: 378px!important;
+        @include max-screen($screen-xs-max) {
+            width: 378px!important;
+        }
+        .text_title {
+            font-weight: normal;
+            padding-bottom: 10px;
+            color: rgba(0, 0, 0, .45);
+        }
+    }
+    .galleryFlexAvatar {
+        display: none;
+    }
+    .generic_template_element_container,
+    .generic_template_element_container>div {
+        border-radius: 0 !important;
+        border: none !important;
+        background-color: transparent !important;
+    }
+    .generic_template_element_container {
+        &>div:first-child {
+            min-height: 274px!important;
+            @include max-screen($screen-xs-max) {
+                min-height: 100px!important;
+                height: 150px !important;
+            }
+        }
+    }
+}
+
+.cognigy-chat-bot-message-container {
+    width: 80%;
+    -webkit-box-align: start !important;
+    align-items: flex-start !important;
+}
+
+.cognigy-chat-user-message-container,
+.quick_reply_container,
+.cognigy-chat-bot-message-container {
+    direction: ltr !important;
+    .cognigy-chat-bot-message {
+        html[lang="ar"] & {
+            direction: rtl !important;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@import "../../css/includes";
+
+.block-special-branddownload {
+  background-image: url("assets/brand-download.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  .p1 {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a {
+    position: relative;
+    top: 40px;
+  }
+
+  .container-fluid .row {
+    height: 500px;
+  }
+
+  @include max-screen($screen-xs-max) {
+    background-size: contain;
+    background-image: url("assets/brand-download-mobile.png");
+
+    .p1 {
+      width: 60%;
+    }
+
+    .container-fluid .row {
+      padding-top: 140px;
+    }
+  }
+}

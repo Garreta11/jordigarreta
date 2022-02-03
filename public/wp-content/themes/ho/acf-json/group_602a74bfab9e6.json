@@ -1,0 +1,298 @@
+{
+    "key": "group_602a74bfab9e6",
+    "title": "Slide – Options",
+    "fields": [
+        {
+            "key": "field_602a7554f9e78",
+            "label": "Background",
+            "name": "background",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "collapsed": "",
+            "min": 1,
+            "max": 1,
+            "layout": "row",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_602a757cf9e79",
+                    "label": "Type",
+                    "name": "type",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "color": "Color",
+                        "image": "Image",
+                        "video": "Video"
+                    },
+                    "allow_null": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_602a8674f9e7a",
+                    "label": "Color",
+                    "name": "color",
+                    "type": "swatch",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_602a757cf9e79",
+                                "operator": "==",
+                                "value": "color"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "#000000": "&nbsp;",
+                        "#ffffff": "&nbsp;",
+                        "#9adac7": "&nbsp;",
+                        "#ffccb4": "&nbsp;",
+                        "#ff6a6b": "&nbsp;",
+                        "#fffa8a": "&nbsp;"
+                    },
+                    "allow_null": 1,
+                    "default_value": "#ffffff",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "other_choice": 0,
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_602a86def9e7b",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_602a757cf9e79",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_602a757cf9e79",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "wpml_cf_preferences": 0
+                },
+                {
+                    "key": "field_602a870bf9e7d",
+                    "label": "Video",
+                    "name": "video",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_602a757cf9e79",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 0,
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_602e94ba8546a",
+                    "label": "Brightness",
+                    "name": "brightness",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_602a757cf9e79",
+                                "operator": "!=",
+                                "value": "color"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "default_value": 100,
+                    "min": "",
+                    "max": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_602ceb1707797",
+                    "label": "Transition",
+                    "name": "transition",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "parallax": "Parallax",
+                        "crossfade": "Crossfade",
+                        "sticky": "Sticky"
+                    },
+                    "default_value": "parallax",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_602a74f8f9e75",
+            "label": "Foreground",
+            "name": "foreground",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "collapsed": "",
+            "min": 1,
+            "max": 1,
+            "layout": "row",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_602a8766f9e7e",
+                    "label": "Color",
+                    "name": "color",
+                    "type": "swatch",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "#000000": "&nbsp;",
+                        "#ffffff": "&nbsp;"
+                    },
+                    "allow_null": 0,
+                    "default_value": "#000000",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "other_choice": 0,
+                    "save_other_choice": 0
+                }
+            ]
+        },
+        {
+            "key": "field_602a8782f9e7f",
+            "label": "Audio",
+            "name": "audio",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "wpml_cf_preferences": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "viewport"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1630190309
+}

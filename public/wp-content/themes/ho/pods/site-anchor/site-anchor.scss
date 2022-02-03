@@ -1,0 +1,82 @@
+aside.anchor-nav
+{
+  .anchor-nav-view
+  {
+    position: fixed;
+	bottom: -60px;
+	padding-bottom: 60px;
+    width: 100%;
+    background: white;
+    will-change: opacity,transform,scroll-position;
+    text-align: center;
+	//z-index: 9999;
+
+	&:after {
+	  content: "";
+	  display: block;
+	  width: 30px;
+	  height: 100%;
+	  right: 0;
+	  top: 0;
+	  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.001)), to(white));
+	  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.001), white);
+	  background: linear-gradient(to right, rgba(255, 255, 255, 0.001), white);
+	  position: absolute;
+	  //z-index: 1;
+	}
+	
+	visibility: hidden;
+	opacity: 0;
+	transform: matrix(1, 0, 0, 1, 0, 100);
+
+	li {
+		display: inline-block;
+		@include min-screen($screen-sm-min) {
+			padding: 20px 16px 16px 16px;
+		}
+	}
+
+	&.small-style li {
+		@include min-screen($screen-sm-min) {
+			padding: 20px 0 16px 0;
+		}
+	}
+  }
+}
+
+.customize-support
+{
+   aside.anchor-nav .anchor-nav-view
+  {
+   //  bottom: 32px;
+  }
+}
+/*
+-webkit-box-align: center;
+display: flex;
+align-items: center;
+border-top-width: 1px;
+border-top-style: solid;
+border-top-color: rgb(235, 235, 235);
+position: fixed;
+bottom: -60px;
+height: 125px;
+left: 0px;
+right: 0px;
+padding-bottom: 60px;
+background-image: initial;
+background-position-x: initial;
+background-position-y: initial;
+background-size: initial;
+background-repeat-x: initial;
+background-repeat-y: initial;
+background-attachment: initial;
+background-origin: initial;
+background-clip: initial;
+background-color: rgb(255, 255, 255);
+transition-duration: 0.2s, 0.2s, 0.2s, 0.2s;
+transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955), cubic-bezier(0.455, 0.03, 0.515, 0.955), cubic-bezier(0.455, 0.03, 0.515, 0.955), initial;
+transition-delay: initial, initial, initial, initial;
+transition-property: -ms-transform, transform, transform, visibility;
+z-index: 1;
+ */

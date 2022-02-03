@@ -1,0 +1,359 @@
+@import "../../css/includes";
+
+.block-abouttickets {
+  height: 1350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include max-screen($screen-sm-max) {
+    height: 1370px;
+  }
+
+  .row {
+    padding: 180px 0;
+
+    @include max-screen($screen-sm-max) {
+      padding: 30px 0;
+    }
+  }
+}
+
+.about-tickets {
+  @include max-screen($screen-sm-max) {
+    position: relative;
+    top: -50px;
+  }
+  &__background {
+    background-image: url("./assets/about-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 645px;
+    height: 387px;
+    position: absolute;
+    z-index: 0;
+    margin-top: 20px;
+
+    html[lang="ar"] & {
+      background-image: url("./assets/bg-desktop-ar.png");
+      margin-top: 0;
+    }
+
+    @include max-screen($screen-sm-max) {
+      width: 313px;
+      height: 318px;
+      left: 0;
+      top: -45px;
+      background-image: url("./assets/bg-mobile-en.png");
+      object-fit: cover;
+
+      html[lang="ar"] & {
+        left: auto;
+        right: 0;
+        top: -35px;
+        background-image: url("./assets/bg-mobile-ar.png");
+      }
+    }
+
+    &.second {
+      background-image: url("./assets/background.svg");
+      @include max-screen($screen-sm-max) {
+        background-image: url("./assets/background-mobile.svg");
+        height: 338px;
+        left: auto;
+        right: 0;
+        top: -35px;
+
+        html[lang="ar"] & {
+          background-image: url("./assets/background-mobile.svg");
+        }
+      }
+      html[lang="ar"] & {
+        background-image: url("./assets/background.svg");
+      }
+    }
+  }
+
+  &__left-side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &.second {
+      @include max-screen($screen-sm-max) {
+        align-items: flex-end;
+      }
+    }
+    &.first {
+      .about-tickets__container {
+        html[lang="ar"] & {
+          margin-top: -85px;
+        }
+      }
+      .about-tickets__subtitle {
+        html[lang="ar"] & {
+          max-width: 350px;
+        }
+      }
+    }
+  }
+
+  &__ticket-image {
+    width: 213px;
+    height: 191px;
+    position: relative;
+    left: -160px;
+    right: auto;
+    top: -55px;
+
+    html[lang="ar"] & {
+      left: 0;
+      right: -170px;
+      top: -65px;
+    }
+
+    @media screen and (max-width: 1365px) {
+      left: -30px;
+      top: 20px;
+    }
+
+    @include max-screen($screen-sm-max) {
+      width: 252px;
+      height: 178px;
+      left: 110px;
+      top: 60px;
+
+      html[lang="ar"] & {
+        left: -105px;
+        right: auto;
+        top: 19px;
+      }
+    }
+
+    &.second {
+      right: -270px;
+      z-index: 1;
+      top: -21px;
+      left: auto;
+      width: 310px;
+      height: 219px;
+
+      html[lang="ar"] & {
+        left: -270px;
+        right: auto;
+        top: -20px;
+      }
+
+      @media screen and (max-width: 1365px) {
+        right: -170px;
+      }
+
+      @include max-screen($screen-sm-max) {
+        bottom: -420px;
+        top: auto;
+        left: auto;
+        right: -300px;
+        width: 252px;
+        height: 178px;
+
+        html[lang="ar"] & {
+          left: auto;
+          right: -15px;
+          top: auto;
+        }
+      }
+
+      @include max-screen($screen-xs-max) {
+        right: 15px;
+        bottom: -440px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 42px;
+    line-height: 45px;
+    letter-spacing: 0.2px;
+    font-weight: 800;
+    position: relative;
+    margin-left: 80px;
+    margin-bottom: 15px;
+
+    html[lang="ar"] & {
+      font-size: 47px;
+      font-weight: 900;
+      line-height: 57px;
+      letter-spacing: -0.39px;
+      margin-left: 0;
+      margin-right: 70px;
+    }
+
+    @include max-screen($screen-sm-max) {
+      font-size: 28px;
+      line-height: 30px;
+      margin-left: 10px;
+
+      html[lang="ar"] & {
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 37px;
+        max-width: 300px;
+        width: 300px;
+        letter-spacing: -0.27px;
+        margin-right: 0;
+        left: -10px;
+      }
+    }
+
+    &.second {
+      margin-left: 150px;
+      html[lang="ar"] & {
+        margin-left: 0;
+        margin-right: 135px;
+      }
+
+      @include max-screen($screen-sm-max) {
+        width: 200px;
+        margin-left: 0;
+        margin-right: 74px;
+        margin-top: 20px;
+
+        html[lang="ar"] & {
+          margin-right: 50px;
+          right: 30px;
+        }
+      }
+    }
+  }
+
+  .first {
+    color: #fff;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: unset;
+    position: relative;
+    margin-left: 80px;
+    max-width: 400px;
+    margin-bottom: 20px;
+    letter-spacing: 0 !important;
+
+    html[lang="ar"] & {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      margin-left: 0;
+      margin-right: 70px;
+      width: 415px;
+    }
+
+    @include max-screen($screen-sm-max) {
+      font-size: 16px;
+      line-height: 22px;
+      margin-left: 10px;
+      max-width: 260px;
+
+      html[lang="ar"] & {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        max-width: 260px;
+        margin-right: 0;
+        left: -10px;
+      }
+    }
+
+    &.second {
+      margin-left: 150px;
+
+      html[lang="ar"] & {
+        margin-left: 0;
+        margin-right: 135px;
+      }
+
+      @include max-screen($screen-sm-max) {
+        margin-left: 0;
+        margin-right: 38px;
+        max-width: 234px;
+
+        html[lang="ar"] & {
+          margin-right: 50px;
+          right: -10px;
+        }
+      }
+    }
+  }
+
+  &__button {
+    font-family: "AkzidGroStd";
+    font-weight: 900;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: url("./assets/button.svg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 15px;
+    display: inline-block;
+    letter-spacing: 0.34px;
+    position: relative;
+    margin-left: 80px;
+
+    &:hover {
+      background-image: url("./assets/button-hover.svg");
+    }
+
+    html[lang="ar"] & {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 20px;
+      letter-spacing: 0.39px;
+      margin-left: 0;
+      margin-right: 70px;
+    }
+
+    @include max-screen($screen-sm-max) {
+      margin-left: 0;
+      padding: 17px 27px;
+
+      html[lang="ar"] & {
+        background-image: url("./assets/button.svg");
+        margin-right: 0;
+        left: -10px;
+      }
+    }
+
+    &.second {
+      margin-left: 150px;
+      background-image: url("./assets/button-second.svg");
+
+      html[lang="ar"] & {
+        margin-left: 0;
+        margin-right: 135px;
+        padding: 16px;
+      }
+
+      @include max-screen($screen-sm-max) {
+        margin-left: 0;
+        margin-right: 50px;
+        padding: 15px;
+
+        html[lang="ar"] & {
+          background-image: url("./assets/button-second.svg");
+          margin-right: 50px;
+          left: 35px;
+        }
+      }
+
+      &:hover {
+        background-image: url("./assets/button-hover-second.svg");
+      }
+    }
+  }
+}

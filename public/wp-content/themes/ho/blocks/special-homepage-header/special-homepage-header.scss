@@ -1,0 +1,618 @@
+@import '../../css/includes';
+
+.homepage-header {
+  background-color: #f1eee6;
+
+  .year--2 .background:hover {
+    transform: none !important;
+  }
+
+  @include max-screen($screen-sm) {
+    .timeline_line {
+      display: none;
+    }
+  }
+
+  .text-align-center {
+    text-align: center;
+  }
+
+  /* ----- ----- ----- ----- ----- title ----- ----- ----- ----- ----- */
+  .title {
+    margin-top: 147px;
+    margin-bottom: 80px;
+
+    @include max-screen($screen-sm) {
+      margin-bottom: 59px;
+    }
+  }
+
+  .headline {
+    font-size: 71px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    line-height: 71px;
+    text-align: center;
+    margin: 0px auto 7px;
+
+    @include max-screen($screen-sm) {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 42px;
+      margin: 0px auto 10px;
+      width: 252px;
+    }
+  }
+
+  .subline {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 28px;
+    text-align: center;
+    margin: 0px auto 14px;
+
+    @include max-screen($screen-sm) {
+      font-size: 16px;
+      line-height: 21px;
+      margin: 0px auto 20px;
+      height: 21px;
+      width: 333px;
+      color: #000000;
+      font-weight: bold;
+    }
+  }
+
+  .introductory {
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 26px;
+    text-align: center;
+    margin: 0px auto 25px;
+    max-width: 775px;
+
+    @include max-screen($screen-sm) {
+      font-size: 16px;
+      line-height: 22px;
+      margin: 0px auto 40px;
+      max-width: none;
+      width: 340px;
+    }
+
+    html[lang="ar"] & {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  .about-btn {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.34px;
+    line-height: 20px;
+    text-align: center;
+    width: 175px;
+    height: 50px;
+    background-image: url('/assets/icons/button.svg');
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  /* ----- ----- ----- ----- ----- timeline ----- ----- ----- ----- ----- */
+  .desktop-version {
+    display: flex;
+    width: 100%;
+    margin: 0 7%;
+
+    @include max-screen($screen-sm) {
+      display: none;
+    }
+  }
+
+  .mobile-version {
+    display: none;
+
+    @include max-screen($screen-sm) {
+      display: block;
+    }
+  }
+  $scaleFactor: 1.5;
+  $scaleSpeed: 0.25s;
+
+  .timeline {
+    margin-bottom: 140px;
+
+    @include max-screen($screen-sm) {
+      margin-bottom: 90px;
+    }
+
+    .year {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+      .background {
+        width: 305px;
+        height: 290px;
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: $scaleSpeed;
+        display: flex;
+        flex-direction: column;
+        background-position-y: center;
+        background-size: contain;
+        background-position-x: center;
+      }
+
+      .link {
+        font-size: 32px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        line-height: 38px;
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .slogan {
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 28px;
+        width: 210px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        display: none;
+        margin-top: 0;
+      }
+
+      .background.desktop:hover {
+        transform: scale($scaleFactor);
+      }
+
+      .background.desktop:hover .number {
+        font-size: 71px;
+        transform: scale(1 / $scaleFactor);
+      }
+
+      .background.desktop:hover .slogan {
+        transform: scale(1 / $scaleFactor);
+        display: block;
+      }
+    }
+
+    .swiper-box {
+      width: 100%;
+      height: 450px;
+      padding-bottom: 0px;
+      margin: 0px auto;
+      .swiper {
+        height: 100%;
+        width: 100%;
+        .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 392px;
+          height: 225px;
+          text-align: center;
+          font-weight: bold;
+          font-size: 10em;
+          background-color: transparent;
+          background-position: center;
+          background-size: cover;
+          color: black;
+          img {
+            width: 382px;
+          }
+        }
+      }
+      .swiper-pagination-bullet {
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 40px;
+        text-align: center;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        width: 91px;
+        height: 40px;
+        opacity: 1;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: black;
+
+        &.year-0,
+        &.year-1 {
+          color: black;
+        }
+        &.year-2 {
+          color: #d8d2cc;
+        }
+        &.swiper-pagination-bullet-active {
+          background-color: transparent;
+          color: #BB674D;
+        }
+        html:not([lang="ar"]) &:not(:last-child):after,
+        html[lang="ar"] &:not(:first-child):after {
+          content: '';
+          width: 33px;
+          height: 2px;
+          position: absolute;
+          display: inline-block;
+          background-color: #bf6651;
+          right: -19px;
+        }
+      }
+      .swiper-pagination {
+        width: 100%;
+      }
+
+    }
+  }
+
+  .swiper-slide-active .background.mobile .slogan {
+    display: block;
+    margin-top: 0;
+  }
+
+  .background.mobile .number {
+    display: none;
+  }
+
+  .swiper-slide-active .background.mobile .number {
+    display: block;
+  }
+
+  .swiper-slide-active .background.mobile {
+    margin-top: 200px;
+  }
+
+  .timeline {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timeline * {
+    //position: relative;
+    z-index: 4;
+  }
+
+  .timeline_line {
+
+    position: absolute;
+    z-index: 3;
+    width: 40%;
+    max-width: 800px;
+    height: 6px;
+    background-color: #BB674D;
+  }
+
+}
+
+.year-header{
+
+  .left-arrow-container, .right-arrow-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover
+    {
+      .right-arrow, .left-arrow {
+        background-image: url('/assets/icons/arrowleft-hover.svg');
+      }
+    }
+
+    span{
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: .34px;
+
+      html[lang="ar"] & {
+        font-family: 'AkzidGroStd' !important;
+      }
+    }
+
+
+  }
+  .right-arrow-container {
+    justify-content: right;
+  }
+  .left-arrow-container {
+    justify-content: left;
+  }
+  .menu-box{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 99;
+    .arrow-wrapper{
+      width: 200px;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: -35px;
+
+      @include max-screen($screen-xs)
+      {
+        width: auto;
+        bottom: -110px;
+      }
+
+      html[lang="ar"] & {
+        bottom: -39px;
+        @include max-screen($screen-xs)
+        {
+          bottom: -115px;
+        }
+      }
+
+      &.right{
+        justify-content: right;
+        right: 0;
+
+        html[lang="ar"] & {
+          left: 0;
+          right: auto;
+          justify-content: left;
+        }
+      }
+      &.left{
+        justify-content: left;
+        left: 0;
+
+        html[lang="ar"] & {
+          right: 0;
+          left: auto;
+          justify-content: right;
+        }
+      }
+
+    }
+  }
+  .left-arrow, .right-arrow{
+
+    width: 39px;
+    height: 43px;
+    background-image: url('/assets/icons/arrowleft.svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-right: 5px;
+
+  }
+  .right-arrow{
+    margin-right: 0px;
+    margin-left: 5px;
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    html[lang="ar"] & {
+      transform: none;
+      -webkit-transform: none;
+      margin-left: 0;
+      margin-right: 5px;
+    }
+  }
+  .left-arrow{
+    html[lang="ar"] & {
+      transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      margin-right: 0;
+      margin-left: 5px;
+    }
+  }
+}
+
+html:not([lang="ar"]) {
+  .homepage-header {
+    @include max-screen($screen-sm) {
+      .swiper-wrapper {
+        margin-right: 555px;
+      }
+      .subline {
+        letter-spacing: 0 !important;
+      }
+    }
+  }
+}
+
+
+html[lang="ar"] {
+
+
+  .homepage-header {
+
+    .year .number {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      line-height: 38px;
+      font-family: "Akzidenz-Grotesk Std", AkzidGroStd, sans-serif !important;
+    }
+
+    .swiper-pagination-bullet {
+      font-family: "Akzidenz-Grotesk Std Bold", AkzidGroStdBold, AkzidGroStd, sans-serif !important;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 40px;
+    }
+
+    .swiper-wrapper {
+      margin-left: 390px;
+    }
+
+    @include max-screen($screen-sm) {
+
+      .headline {
+        font-size: 47px;
+        margin-bottom: 5px;
+      }
+
+      .subline {
+        font-size: 17px;
+        line-height: 25px;
+        height: 29px;
+        margin-bottom: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .introductory {
+        font-size: 18px;
+        margin-bottom: 28px;
+      }
+
+      .introductory + div {
+        line-height: 1;
+      }
+
+      .about-btn {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.homepage-popup-header{
+  .relativ-parent{
+    position: relative;
+  }
+  .home-header-back{
+    height: 29px;
+    cursor: pointer;
+    width: auto;
+    margin: 4.4em auto 10.5em auto;
+    position: relative;
+    z-index: 500;
+
+    @include max-screen($screen-xs)
+    {
+      margin-bottom: 68px;
+    }
+  }
+}
+
+.block-special-homepage-header {
+  padding-bottom: 0 !important;
+}
+
+@include max-screen($screen-xs)
+{
+  .homepage-popup-header{
+    > .row {
+      position: relative;
+      .relativ-parent {
+        position: static;
+        .menu-box {
+          position: static;
+        }
+      }
+    }
+  }
+}
+
+.block-special-homepage-header {
+  padding-bottom: 0 !important;
+}
+
+@keyframes slideDown{
+  from {
+    transform: translateY(-80%);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.past-year-container,
+.present-year-container {
+  animation-name: 'slideDown';
+  animation-duration: 1.5s;
+}
+
+.past-year-container {
+
+
+  .left .home-popup-image-wrapper > img:first-child {
+    height: 441px;
+    @include max-screen($screen-sm) {
+      height: 354px;
+    }
+  }
+
+  .left .home-popup-image-wrapper > img:last-child {
+    height: 165px;
+    @include max-screen($screen-sm) {
+      height: 98.5px;
+    }
+  }
+
+  .right .home-popup-wrapper img {
+    height: 443px;
+    @include max-screen($screen-sm) {
+      height: 356px;
+    }
+  }
+
+}
+
+
+.present-year-container {
+
+  .home-popup-image-wrapper > img:first-child {
+    height: 349px;
+    @include max-screen($screen-sm) {
+      height: 288.5px;
+    }
+  }
+
+  .home-popup-image-wrapper > img:last-child {
+    height: 152px;
+    @include max-screen($screen-sm) {
+      height: 98px;
+    }
+  }
+
+  .home-popup-container.second > div > img {
+    height: 350px;
+    @include max-screen($screen-sm) {
+      height: 289px;
+    }
+  }
+
+  .home-popup-container.third .home-popup-wrapper > img {
+    height: 255px;
+    @include max-screen($screen-sm) {
+      height: 287.5px;
+    }
+
+  }
+
+}
+
+@import './years/1971/1971';
+@import './years/2021/2021';
+@import './years/2071/2071';

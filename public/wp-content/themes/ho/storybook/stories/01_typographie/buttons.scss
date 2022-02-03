@@ -1,0 +1,332 @@
+.btn {
+  @include font-highlight;
+  font-size: 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: url("/assets/icons/button.svg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 3em;
+  display: inline-block;
+  letter-spacing: 0.34px;
+
+  &:hover {
+    background-image: url("/assets/icons/buttonhover.svg");
+  }
+
+  @include max-screen($screen-xs-max) {
+    padding: 1.7em;
+  }
+
+  &.submit-button {
+    padding: 41px ​30px;
+  }
+
+  &-thanks_giving {
+    padding: 25px 17px !important;
+
+    html[lang="ar"] & {
+      padding: 28px 11px !important;
+    }
+  }
+}
+
+.btn-line {
+  @include font-highlight;
+  text-decoration: none;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background-image: url("/assets/icons/button-line.svg");
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &:hover:after {
+    background-image: url("/assets/icons/button-line-hover.svg");
+  }
+
+  &.btn-line-special-aboutus::after {
+    &:hover {
+      background-image: url("/assets/icons/button-line-hover-about.svg");
+    }
+  }
+}
+.btn-line::after {
+  html[lang="ar"] & {
+    right: 0px;
+  }
+}
+
+.btn-line-special::after {
+  html[lang="ar"] & {
+    right: 0px;
+  }
+}
+.btn-line-special-news::after {
+  html[lang="ar"] & {
+    right: 20px;
+  }
+}
+
+.btn-circle {
+  @include font-highlight;
+  font-size: 1.4rem;
+  padding: 0.6em;
+  width: 106px;
+  height: 106px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: url("/assets/icons/circle.svg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+a.btn-download {
+  @include font-highlight;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  text-decoration: none;
+  max-width: 20ch;
+  display: inline-block;
+  text-align: center;
+
+  &:after {
+    position: relative;
+    top: 15px;
+    content: "";
+    display: block;
+    background-image: url("/assets/icons/download-icon.svg");
+    background-repeat: no-repeat;
+    height: 59px;
+    width: 41px;
+    margin: 0 auto;
+
+    @include max-screen($screen-xs-max) {
+      height: 108px;
+      width: 59px;
+      background-size: contain;
+    }
+  }
+
+  &:hover:after {
+    background-image: url("/assets/icons/download-icon-hover.svg");
+  }
+}
+
+.btn-prev,
+.btn-next {
+  @include font-highlight;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  vertical-align: baseline;
+
+  padding: 2.6em 0;
+
+  &.btn-nomargin {
+    padding: 0em 0;
+  }
+
+  @include max-screen($screen-xs-max) {
+    padding: 0.5em 0;
+  }
+
+  &.btn-prev:before {
+    margin: 0 1ch 0 0;
+    html[lang="ar"] & {
+      margin: 0 0 0 1ch;
+    }
+  }
+  &.btn-next:after {
+    margin: 0 0 0 1ch;
+
+    html[lang="ar"] & {
+      margin: 0 1ch 0 0;
+    }
+  }
+
+  &.btn-prev:before,
+  &.btn-next:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("/assets/icons/arrowleft.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 43px;
+  }
+
+  &.btn-prev:hover::before,
+  &.btn-next:hover::after {
+    background-image: url("/assets/icons/arrowleft-hover.svg");
+  }
+
+  @include max-screen($screen-xs-max) {
+    &.btn-prev:before,
+    &.btn-next:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      background-image: url("/assets/icons/arrowleft.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 2em;
+      width: 2em;
+      display: block;
+
+      margin: 1ch 0ch;
+      display: block;
+      background-position-x: left;
+    }
+    &.btn-next:after {
+      display: none;
+    }
+  }
+
+  &.btn-next:before,
+  &.btn-next:after {
+    transform: rotate(180deg);
+  }
+}
+
+html[lang="ar"] .btn-next:before,
+html[lang="ar"] .btn-next:after {
+  transform: rotate(0deg);
+}
+html[lang="ar"] .btn-prev:before,
+html[lang="ar"] .btn-prev:after {
+  transform: rotate(180deg);
+}
+
+.btn-prev-group,
+.btn-next-group {
+  text-decoration: none;
+
+  padding: 2.6em 0;
+  display: flex;
+  align-items: center;
+  @include max-screen($screen-xs-max) {
+    padding: 0.5em 0;
+  }
+
+  .button-story {
+    @include font-highlight;
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+
+  .button-label {
+    line-height: 2;
+  }
+
+  &.btn-prev-group:before,
+  &.btn-next-group:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("/assets/icons/arrowleft.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 2em;
+    width: 2em;
+    margin: 0 1ch;
+  }
+
+  &.btn-next-group {
+    justify-content: flex-end;
+  }
+
+  &.btn-next-group:after {
+    transform: rotate(180deg);
+  }
+}
+
+html[lang="ar"] .btn-prev-group::before {
+  transform: rotate(180deg);
+}
+html[lang="ar"] .btn-next-group::after {
+  transform: rotate(0deg);
+}
+
+.btn-down {
+  text-align: center;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  span {
+    display: block;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    height: 26px;
+    width: 26px;
+    background-image: url("/assets/icons/arrowdown.svg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+a {
+  &.btn-square {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: .34px;
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+    border: 10px solid transparent;
+    border-image: url('/assets/icons/button.svg') 10 10 stretch;
+    -webkit-border-image: url('/assets/icons/button.svg') 10 10 stretch;
+    padding: 3px 15px;
+    display: inline-block;
+
+    html[lang = 'ar'] & {
+      font-size: 18px;
+      letter-spacing: .39px;
+      font-weight: 700;
+    }
+
+    &.white {
+      color: #fff;
+      border-image: url('/assets/icons/buttonwhite.svg') 10 10 stretch;
+      -webkit-border-image: url('/assets/icons/buttonwhite.svg') 10 10 stretch;
+    }
+  }
+
+  &:hover.btn-square {
+    border-image: url('/assets/icons/buttonhover.svg') 10 10 stretch;
+    -webkit-border-image: url('/assets/icons/buttonhover.svg') 10 10 stretch;
+  }
+}
+
+

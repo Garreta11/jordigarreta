@@ -1,0 +1,67 @@
+@import "../../css/includes";
+
+.block-aboutdownload {
+  height: 307px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 !important;
+
+  @include max-screen($screen-xs-max) {
+    height: 338px;
+  }
+}
+
+.about-download {
+  &__box a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+      .about-download__icon {
+        background-image: url("./assets/download-icon-hover.svg");
+      }
+    }
+  }
+
+  &__headline {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 45px;
+    color: #fff;
+    margin-bottom: 17px;
+    text-align: center;
+
+    html[lang="ar"] & {
+      font-size: 47px;
+      font-weight: 900;
+      line-height: 57px;
+      margin-bottom: 20px;
+    }
+
+    @include max-screen($screen-xs-max) {
+      font-size: 28px;
+      line-height: 30px;
+      margin-bottom: 25px;
+
+      html[lang="ar"] & {
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 37px;
+        letter-spacing: -0.27px;
+        margin-bottom: 22px;
+      }
+    }
+  }
+
+  &__icon {
+    background-image: url("./assets/download-icon.svg");
+    width: 41px;
+    height: 59px;
+    cursor: pointer;
+
+    
+  }
+}

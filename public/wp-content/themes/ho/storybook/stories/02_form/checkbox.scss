@@ -1,0 +1,75 @@
+input[type="checkbox"] {
+	position: absolute;
+	opacity: 0;
+}
+
+
+.checkbox label {
+	display: block;
+	position: relative;
+	padding-left: 2em;
+	padding-top: 1.5em;
+	padding-bottom: .5em;
+	line-height: 1.5;
+	@include max-screen($screen-xs-max) {
+		padding-bottom: 0;
+	}
+	
+	cursor: pointer;
+
+	&.disabled {
+		opacity: .3;
+		font-size: 1.7rem;
+		//@include font-decoration-bold;
+	}
+	
+	&:before {
+		content: '';
+		
+		position: absolute;
+		display: block;
+		height: .8em;
+		width: .8em;
+		left: 0;
+		font-size: 1.5rem;
+		
+		border-width: 2px;
+		border-style: solid;
+		border-radius: 2px;
+
+		margin-right: 1em;
+		margin-top: .47rem;
+		background-position: center;
+		background-repeat: no-repeat;
+		transition: background 0.2s;
+		
+	}
+
+	&.selected:before {
+		background-image: url('/assets/form/check.svg');
+		background-color: black;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	&:hover {
+		&:before {
+			opacity: .7;
+		}
+	}
+}
+
+.checkbox.invalid label:before {
+	background-color: rgba(255,0,0,0.2);
+}
+
+input[type="checkbox"]:checked + label:before {
+	background-image: url('/assets/form/check.svg');
+	background-color: black;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+input[type="checkbox"]:focus + label {
+	outline: -webkit-focus-ring-color auto 5px;
+}

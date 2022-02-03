@@ -1,0 +1,77 @@
+@mixin font-smoothing($value: antialiased) {
+    -webkit-font-smoothing: $value;
+
+    @if($value == "antialiased") {
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@mixin hyphen()
+{
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+.hyphen
+{
+    @include hyphen;
+}
+
+.hyph-disable
+{
+    -ms-hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+
+    *
+    {
+        -ms-hyphens: none;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        hyphens: none;
+    }
+}
+
+.elipis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@mixin uppercase
+{
+    text-transform: uppercase;
+}
+
+.uppercase
+{
+    @include uppercase;
+}
+
+@mixin lowercase
+{
+    text-transform: none;
+}
+
+.lower-case,.lowercase
+{
+    @include lowercase;
+}
+
+.text-align-left
+{
+    text-align: left;
+}
+
+.text-align-center
+{
+    text-align: center;
+}
+
+.text-align-right
+{
+    text-align: right;
+}

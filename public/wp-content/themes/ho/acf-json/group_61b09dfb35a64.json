@@ -1,0 +1,23 @@
+{
+    "key": "group_61b09dfb35a64",
+    "title": "Tax : Merchandise Category",
+    "fields": [],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "merchandise-category"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1638964869
+}

@@ -1,0 +1,183 @@
+@import "../../css/includes";
+
+.block-nationdreamers {
+  height: 770px;
+  @include max-screen($screen-xs) {
+    height: 650px;
+  }
+}
+
+.nation-nationdreamers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5rem;
+  height: 100%;
+
+  &__box {
+    background-image: url("./assets/box-background.svg");
+    background-position: top;
+    background-size: cover;
+    padding: 12rem 0 1.5rem 0;
+    width: 90%;
+    margin: 0 auto;
+
+    @include max-screen($screen-xs) {
+      padding: 12rem 3rem 1rem 3rem;
+      width: 100%;
+    }
+
+    html[lang="ar"] & {
+      padding: 8rem 0 0.5rem 0;
+      @include max-screen($screen-xs) {
+        background-position: top;
+        padding: 6.5rem 3rem 1rem 3rem;
+        width: 100rem;
+      }
+    }
+  }
+
+  &__headline {
+    font-size: 4.2rem;
+    font-weight: 800;
+    line-height: 4.5rem;
+    letter-spacing: 0.2px;
+    color: #000;
+    text-align: center;
+
+    @include max-screen($screen-xs) {
+      font-size: 2.8rem;
+      line-height: 3rem;
+    }
+
+    html[lang="ar"] & {
+      font-size: 47px;
+      margin-bottom: 3px;
+
+      @include max-screen($screen-xs) {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    letter-spacing: 0;
+    text-align: center;
+    color: #000;
+    width: 35rem;
+    margin: 0 auto;
+
+    @include max-screen($screen-xs) {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      padding: 0 10px;
+    }
+
+    html[lang="ar"] & {
+      font-size: 20px;
+
+      @include max-screen($screen-xs) {
+        width: 25rem;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__button-wrapper {
+    text-align: center;
+    margin-top: 3.5rem;
+    margin-bottom: 15rem;
+
+    @include max-screen($screen-xs) {
+      margin-bottom: 9rem;
+    }
+
+    html[lang="ar"] & {
+      margin-top: 3rem;
+      margin-bottom: 0;
+      @include max-screen($screen-xs) {
+        margin-top: 2rem;
+        margin-bottom: 17rem;
+      }
+    }
+  }
+
+  &__button {
+    background-image: url("./assets/button-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "AkzidGroStd";
+    font-weight: 800;
+
+    &:hover {
+      background-image: url("./assets/button-bg-hover.svg");
+    }
+
+    html[lang="ar"] & {
+      font-size: 18px;
+      padding: 1rem 2rem;
+    }
+  }
+
+  &__background-box {
+    background-image: url("./assets/section-background.svg");
+    height: 44rem;
+    width: 37.5rem;
+    margin-bottom: -40rem;
+    margin-left: 10rem;
+    background-size: cover;
+    background-position: right;
+
+    @include max-screen($screen-xs) {
+      width: 22.4rem;
+      margin-left: 6rem;
+      margin-bottom: -45rem;
+      background-image: url("./assets/section-background-mobile.svg");
+      background-position: left;
+    }
+
+    html[lang="ar"] & {
+      margin-right: 90rem;
+      position: relative;
+      top: 8rem;
+
+      @media screen and (max-width: 1919px) {
+        margin-right: 60rem;
+      }
+
+      @media screen and (max-width: 1439px) {
+        margin-right: 35rem;
+      }
+
+      @include max-screen($screen-md) {
+        position: relative;
+        top: 7rem;
+        width: 19rem;
+        height: 35rem;
+        margin-left: 0;
+        margin-right: 43rem;
+        background-image: url("./assets/section-background-mobile.svg");
+        background-position: right;
+      }
+
+      @include max-screen($screen-xs) {
+        position: relative;
+        top: -9rem;
+        width: 19rem;
+        height: 35rem;
+        margin-left: 0;
+        margin-right: 43rem;
+        background-image: url("./assets/section-background-mobile.svg");
+        background-position: right;
+      }
+    }
+  }
+}

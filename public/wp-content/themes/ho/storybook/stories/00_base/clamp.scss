@@ -1,0 +1,25 @@
+*[class*="clamp-"] {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+
+.clamp-1 {
+	-webkit-line-clamp: 1;
+}
+
+.clamp-2 {
+	-webkit-line-clamp: 2;
+}
+
+.clamp-3 {
+	-webkit-line-clamp: 3;
+}
+
+.clamp-4 {
+	-webkit-line-clamp: 4;
+}
+
+.clamp-5 {
+	-webkit-line-clamp: 5;
+}

@@ -1,0 +1,141 @@
+@import "../../css/includes";
+.block-dreamersread {
+    padding-bottom: 0px !important;
+    @include max-screen($screen-md){
+        margin-top: 10%;
+    }
+    .read_container {
+        padding-top: 1%;
+        display: flex;
+        justify-content: center;
+        width: 75%;
+        @include max-screen($screen-xs){
+            html[lang="ar"] & {
+                margin-top: -4em;
+            }
+        }
+    }
+    .read_header {
+        width: 50%;
+        margin-top: 1em;
+        @include max-screen($screen-xs){
+            width: 80%;
+            margin-top: -3em;
+        }
+        @media screen and (max-width: 350px){
+            h2{
+                font-size: 2.4rem;
+            }
+        }
+    }
+    .read_text {
+        font-size: 18px;
+        width: 500px;
+        line-height: 1.5em;
+        width: 60%;
+        @include min-screen($screen-md){
+            width: 50%; 
+        }
+        @include max-screen($screen-sm){
+            width: 60%; 
+        }
+        @include max-screen($screen-xs){
+            width: 60%; 
+        }
+        @media screen and (max-width: 400px){
+            width: 100%; 
+        }
+        @media screen and (max-width: 350px){
+            font-size: 15px;
+        }
+    }
+    .read_btn_container{
+        @media screen and (max-width: 350px){
+            html[lang="ar"] & {
+                margin-top: -5em;
+            }
+        }
+    }
+    .foreground {
+        position: relative;
+        z-index: 5;
+        @include max-screen($screen-lg) {
+            background-image: url("/assets/icons/read-letters-mobile.svg");
+            height: 60em;
+            margin-top: -13em;
+            background-size: 46em;
+            html[lang="ar"] & {
+                background-size: 39em;
+            }
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 30px 30px;
+        }
+        @include max-screen($screen-xs){
+            height: 42em;
+            margin-top: -10em;
+            background-size: 33em;
+            html[lang="ar"] & {
+                background-size: 26.5em;
+            }
+        }
+        @media screen and (max-width: 350px){
+            background-size: 29em;
+            html[lang="ar"] & {
+                background-size: 22.5em;
+            }
+        }
+    }
+    .first_read{
+        @include max-screen($screen-lg) {
+            width: 50%;
+            margin-top: 14em;
+            html[lang="ar"] & {
+                margin-top: 19em;
+            }
+        }
+        @include max-screen($screen-xs){
+            width: 80%;
+            margin-top: 18em;
+            html[lang="ar"] & {
+                margin-top: 22em;
+            }
+        }
+    }
+    .letter_btn {
+        font-family: "AkzidGroStd", sans-serif;
+        font-weight: 900;
+        font-size: 1.6rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-image: url("/assets/icons/button.svg");
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 2em;
+        margin-top: 2em;
+        display: inline-block;
+        @include max-screen($screen-xs){
+            margin-top: 5px;
+            padding: 1.2em;
+            font-size: 1.3rem;
+        }
+    }
+    .read_letters_bg {
+        position: absolute;
+        width: 63%;
+        transform: translate(66px,-347px);
+        html[lang="ar"] & {
+            transform: translate(-307px, -330px);
+        }
+        z-index: 2;
+        @include max-screen($screen-lg) {
+            display: none;
+        }
+    }
+    .dreamers_banner {
+        position: absolute;
+        z-index: 1;
+        transform: translate(10%, -10%);
+    }
+}

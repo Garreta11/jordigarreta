@@ -1,0 +1,230 @@
+@import "../../css/includes";
+
+.block.block-nationheader {
+  @media (min-width: 1921px)
+  {
+    padding-bottom: 240px;
+  }
+}
+
+.nation-header {
+  @include max-screen($screen-xs) {
+    padding-bottom: 20px;
+  }
+
+  .container {
+    margin: 0 auto;
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 7.1rem;
+    line-height: 7.1rem;
+    letter-spacing: 0.2px;
+    padding: 15rem 5rem 1.5rem 5rem;
+    margin: 0;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "AkzidGroStd", sans-serif !important;
+
+    @include max-screen($screen-xs) {
+      font-size: 4.2rem;
+      line-height: 4.2rem;
+      padding: 14rem 4rem 1rem 4rem;
+    }
+
+    html[lang="ar"] & {
+      font-size: 71px;
+
+      @include max-screen($screen-xs) {
+        font-size: 47px;
+        padding: 8rem 5rem 1rem 5rem;
+      }
+    }
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    letter-spacing: 0;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 5.5rem;
+    text-align: center;
+    font-family: "AkzidGroStd";
+
+    @include max-screen($screen-xs) {
+      font-size: 1.6rem;
+      padding: 0 3rem;
+      margin-bottom: 60px;
+    }
+
+    html[lang="ar"] & {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 4rem;
+      line-height: 30px;
+
+      @include max-screen($screen-xs) {
+        font-size: 18px;
+        padding: 0 1rem 1rem 1rem;
+        line-height: 25px;
+      }
+    }
+  }
+
+  &__youtube-image {
+    background-image: url("./assets/youtube-image.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    z-index: 2;
+    top: 90px;
+    left: -90px;
+
+    @media screen and (max-width: 1024px) {
+      width: 100px;
+      height: 100px;
+      top: 50px;
+      left: -50px;
+    }
+
+    @include max-screen($screen-xs) {
+      left: -10px;
+      width: 80px;
+      height: 80px;
+      top: 10px;
+    }
+
+    @media screen and (max-width: 370px) {
+      top: 5px;
+      left: -5px;
+    }
+
+    html[lang="ar"] & {
+      left: auto;
+      right: -90px;
+
+      @media screen and (max-width: 1024px) {
+        left: auto;
+        right: -50px;
+      }
+  
+      @include max-screen($screen-xs) {
+        left: auto;
+        right: -10px;
+      }
+  
+      @media screen and (max-width: 370px) {
+        right: -5px;
+        left: auto;
+      }
+    }
+  }
+
+  &__youtube-image-2 {
+    background-image: url("./assets/youtube-image-2.svg");
+    background-repeat: no-repeat;
+    height: 372px;
+    width: 1164px;
+    position: relative;
+    margin-top: -19rem;
+    margin-left: -50px;
+    z-index: 0;
+
+    @media (min-width: 1921px) {
+      position: absolute;
+      left: -5px;
+      margin-left: 0;
+      margin-top: -265px;
+    }
+
+    @include max-screen($screen-md) {
+      margin-left: -450px;
+    }
+
+    @include max-screen($screen-xs) {
+      right: 21rem;
+      margin-top: -12rem;
+      height: 230px;
+      width: 116rem;
+      margin-left: -420px;
+      background-position-y: bottom;
+    }
+
+    html[lang="ar"] & {
+      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+      margin-right: -50px;
+      margin-left: 0;
+
+      @media (min-width: 1921px) {
+        left: auto;
+        right: -5px;
+        margin-right: 0;
+      }
+
+      @include max-screen($screen-md) {
+        margin-right: -450px;
+      }
+
+      @include max-screen($screen-xs) {
+        right: -42rem;
+        margin-top: -12rem;
+        height: 280px;
+        margin-right: -50px;
+      }
+    }
+  }
+
+  &__video-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1165px;
+    height: 655px;
+    position: relative;
+
+    @media (max-width: 1200px)
+    {
+      width: 720px;
+      height: 405px;
+    }
+
+    @media (max-width: 850px)
+    {
+      width: 480px;
+      height: 270px;
+    }
+
+    @media (max-width: 520px)
+    {
+      width: 340px;
+      height: 192px;
+    }
+
+    @media (max-width: 370px)
+    {
+      width: 301px;
+      height: 170px;
+    }
+
+    iframe {
+      height: 100%;
+    }
+  }
+
+  &__video {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+  }
+}

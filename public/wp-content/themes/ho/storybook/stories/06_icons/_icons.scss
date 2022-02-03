@@ -1,0 +1,28 @@
+.external-content-play-btn {
+	background-color: transparent !important;
+	border: none !important;
+	overflow: visible;
+	.button-icon {
+		background-image: url(/assets/icons/play.svg);
+		width: 200px;
+		height: 100px;
+		display: inline-block;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+
+		@include max-screen($screen-xs-max) {
+			width: 100px;
+			height: 80px;
+		}
+	}
+
+	.button-label {
+		display: none;
+	}
+}
+
+.btn-top-z{
+	position: relative;
+	z-index: 999;
+}

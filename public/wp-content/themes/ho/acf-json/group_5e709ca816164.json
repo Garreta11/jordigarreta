@@ -1,0 +1,63 @@
+{
+    "key": "group_5e709ca816164",
+    "title": "Pagetype: Logo",
+    "fields": [
+        {
+            "key": "field_5e709cafb3c0a",
+            "label": "Skalierung",
+            "name": "scale",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "hide_admin": 0,
+            "default_value": 100,
+            "min": 20,
+            "max": 150,
+            "step": 10,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5f23f0b24e8b7",
+            "label": "Link",
+            "name": "link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "wpml_cf_preferences": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "logo"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1630190309
+}

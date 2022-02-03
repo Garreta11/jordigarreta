@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'AkzidGroStd';
+    src: url("/assets/fonts/AkzidGroStdReg.otf") format("OpenType");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkzidGroStd';
+    src: url("/assets/fonts/AkzidGroStdLig.woff2") format("woff2"), url("/assets/fonts/AkzidGroStdLig.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkzidGroStd';
+    src: url("/assets/fonts/AkzidGroStdMed.woff2") format("woff2"), url("/assets/fonts/AkzidGroStdMed.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkzidGroStd';
+    src: url("/assets/fonts/AkzidGroStdBol.woff2") format("woff2"), url("/assets/fonts/AkzidGroStdBol.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkzidGroStd';
+    src: url("/assets/fonts/AkzidGroStdExtBol.woff2") format("woff2"), url("/assets/fonts/AkzidGroStdExtBol.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '29LT Zarid';
+    src: url("/assets/fonts/29LT Zarid Sans-Medium.woff2") format("woff2"), url("/assets/fonts/29LT Zarid Sans-Medium.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: '29LT Zarid';
+    src: url("/assets/fonts/29LT Zarid Sans-Regular.woff2") format("woff2"), url("/assets/fonts/29LT Zarid Sans-Regular.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: '29LT Zarid';
+    src: url("/assets/fonts/29LT Zarid Sans-Black.woff2") format("woff2"), url("/assets/fonts/29LT Zarid Sans-Black.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: '29LT Zarid';
+    src: url("/assets/fonts/29LT Zarid Sans-Bold.otf") format("OpenType");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkzidGroStdCnd';
+    src: url("/assets/fonts/AkzidGroStdLigCnd.otf") format("OpenType");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkzidGroStdCnd';
+    src: url("/assets/fonts/AkzidGroStdMedCnd.otf") format("OpenType");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkzidGroStdCnd';
+    src: url("/assets/fonts/AkzidGroStdBolCnd.otf") format("OpenType");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkzidGroStdCnd';
+    src: url("/assets/fonts/AkzidGroStdXBolCnd.otf") format("OpenType");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Impact';
+    src: url("/assets/fonts/Impact.woff2") format("woff2"), url("/assets/fonts/Impact.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin font-highlight {
+    //font-family: "AkzidGroStd", sans-serif;
+    font-family: 'AkzidGroStd';
+    font-weight: 900;
+}
+
+.font-highlight {
+    @include font-highlight;
+}
+
+@mixin font-regular {
+    font-family: "AkzidGroStd", sans-serif;
+    font-weight: normal;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-regular {
+    @include font-regular;
+}
+
+@mixin font-bold {
+    font-family: "AkzidGroStd", sans-serif;
+    font-weight: bold;
+}
+
+.font-bold {
+    @include font-bold;
+}
+
+html {
+    font-size: 10px;
+}
+
+html[lang='ar'] {
+    font-size: 13px;
+}
+
+html[lang='ar'] * {
+    font-family: "29LT Zarid" !important;
+    direction: rtl;
+    line-height: 1.25;
+}
+
+.ar,
+html[lang='ar'] .copy,
+html[lang='ar'] .langblock,
+.langswitch[href="/ar"] {
+    font-family: "29LT Zarid" !important;
+    direction: rtl;
+}
+
+.langswitch[href="/"] {
+    font-family: "AkzidGroStd", sans-serif;
+    font-weight: bold;
+}

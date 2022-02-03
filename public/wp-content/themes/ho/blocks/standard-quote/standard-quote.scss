@@ -1,0 +1,77 @@
+@import "../../css/includes";
+.block-standard-quote {
+  color: #fff;
+  padding-bottom: 0 !important;
+  .quote-container {
+    // padding: 20px 0px 0px;
+    margin: 20% 0px;
+  }
+  .quote-container img {
+    position: relative;
+    @include min-screen($screen-sm-min) {
+      top: -6em;
+      html[lang="ar"] & {
+        top: -3em;
+      }
+    }
+  }
+  .subline {
+    color: #fff;
+    text-transform: inherit;
+  }
+  .quote {
+    text-transform: inherit;
+    color: #bb674d;
+    line-height: 54px;
+    font-size: 50px;
+    @include max-screen($screen-sm-max) {
+      max-width: 600px;
+      line-height: 3rem;
+      font-size: 2.8rem;
+    }
+  }
+  .subline_top {
+    top: 3em;
+    color: #bb674d;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    html[lang="ar"] & {
+      transform: translateY(10px);
+      font-size: 18px;
+      @media screen and (max-width: 762px) {
+        top: 2em;
+      }
+    }
+  }
+  .quote_asset {
+    width: 165%;
+    height: 150px;
+    object-fit: cover;
+    html[lang="ar"] & {
+      transform: scaleX(-1);
+    }
+    @include max-screen($screen-sm-max) {
+      width: 120%;
+      height: 100px;
+    }
+    @media screen and (max-width: 350px) {
+      width: 130%;
+    }
+  }
+  .motionLoaded {
+    @include max-screen($screen-sm-max) {
+      padding-bottom: 1em;
+    }
+  }
+  /*
+    html[lang=ar] .quote-container img { 
+        -moz-transform: scale(-1, 1);
+        -webkit-transform: scale(-1, 1);
+        -o-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+        transform: scale(-1, 1);
+    }*/
+}

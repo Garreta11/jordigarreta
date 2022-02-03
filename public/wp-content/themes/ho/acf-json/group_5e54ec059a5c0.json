@@ -1,0 +1,109 @@
+{
+    "key": "group_5e54ec059a5c0",
+    "title": "Standard – Block: Moodboard",
+    "fields": [
+        {
+            "key": "field_5e54ee1531829",
+            "label": "Copy",
+            "name": "text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 500,
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e54ec05bb139",
+            "label": "Images",
+            "name": "images",
+            "type": "gallery",
+            "instructions": "JPG only.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "hide_admin": 0,
+            "return_format": "id",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": 2,
+            "max": 2,
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg"
+        },
+        {
+            "key": "field_5e54fb7e8dbef",
+            "label": "Reverse Order",
+            "name": "reverse_order",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f3be7b89ec08",
+            "label": "Background",
+            "name": "background",
+            "type": "color_picker",
+            "instructions": "Needs to be a bright color to contrast the font color",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "default_value": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/standard-moodboard"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1630190310
+}

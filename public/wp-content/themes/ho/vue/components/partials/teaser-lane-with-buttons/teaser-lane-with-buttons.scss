@@ -1,0 +1,44 @@
+.teaser-lane-with-buttons
+{
+  position: relative;
+  z-index: 1001;
+
+  .teaser-lane-with-buttons-container
+  {
+	@include container-fluid;
+
+	position: relative;
+	top: 130px;
+	@include max-screen(1440px) {
+	  top: 7.5vw;
+	}
+	width: 100%;
+	display: none;
+
+	@include min-screen($screen-md-min)
+	{
+	  display: block;
+	}
+
+	.btn-wrapper
+	{
+	  position: relative;
+	}
+  }
+
+  .teaser-lane-with-buttons-prev
+  {
+	position: absolute;
+	transform: scaleX(-1);
+	left: -75px;
+	z-index: 1002;
+  }
+
+  .teaser-lane-with-buttons-next
+  {
+	position: absolute;
+	right: -75px;
+	z-index: 1002;
+  }
+
+}

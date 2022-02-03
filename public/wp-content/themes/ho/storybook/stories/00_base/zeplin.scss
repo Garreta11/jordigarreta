@@ -1,0 +1,478 @@
+@mixin zeplin-bigHeading {
+  @include font-highlight;
+  font-size: 45px;
+  color: $color-black;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;}
+
+@mixin zeplin-MobilebigHeading {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.zeplin-bigHeading {
+  @include zeplin-bigHeading;
+
+  @include max-screen($screen-xs-max) {
+    @include zeplin-MobilebigHeading;
+  }
+}
+
+@mixin zeplin-heading {
+  @include font-highlight;
+  font-size: 70px;
+  color: $color-black;
+
+
+  @include max-screen($screen-xs-max) {
+	  @include zeplin-Mobileheading;
+  }
+}
+
+@mixin zeplin-Mobileheading {
+  font-size: 42px;
+}
+
+
+.zeplin-heading {
+  @include zeplin-heading;
+}
+
+
+@mixin zeplin-quote {
+  @include font-highlight;
+  font-size: 5.0rem;
+  line-height: 1.2;
+  color: $color-black;
+}
+
+@mixin zeplin-Mobilequote {
+  font-size: 2.8rem;
+}
+
+.zeplin-quote {
+  @include zeplin-quote;
+
+  @include max-screen($screen-xs-max) {
+    @include zeplin-Mobilequote;
+  }
+}
+
+@mixin zeplin-subHead01 {
+  @include font-highlight;
+  font-size: 4.2rem;
+  color: $color-black;
+
+  html[lang=ar] &{
+    font-size: 47px;
+    line-height: 57px;
+  }
+
+  @include max-screen($screen-xs-max) {
+    @include zeplin-MobilesubHead01;
+  }
+}
+
+@mixin zeplin-MobilesubHead01 {
+  font-size: 2.8rem;
+
+  html[lang=ar] & {
+    font-size: 42px;
+    line-height: 37px;
+  }
+}
+
+.zeplin-subHead01 {
+  @include zeplin-subHead01;
+}
+
+
+@mixin zeplin-teaserHeadline-M {
+	@include font-highlight;
+	font-size: 2.6rem;
+	color: $color-black;
+  }
+  
+  @mixin zeplin-MobileteaserHeadline-M {
+	font-size: 2.0rem;
+  }
+  
+  .zeplin-teaserHeadline-M {
+	@include zeplin-teaserHeadline-M;
+  
+	@include max-screen($screen-xs-max) {
+	  @include zeplin-MobileteaserHeadline-M;
+	}
+  }
+
+@mixin zeplin-teaserHeadline-L {
+  @include font-highlight;
+  font-size: 4.0rem;
+  color: $color-black;
+}
+
+@mixin zeplin-mobileTeaserHeadline-L {
+  font-size: 3.0rem;
+}
+
+.zeplin-teaserHeadline-L {
+  @include zeplin-teaserHeadline-L;
+
+  @include max-screen($screen-xs-max) {
+	@include zeplin-mobileTeaserHeadline-L;
+	
+	&.zeplin-teaserHeadline-L-mobile-M {
+		@include zeplin-MobileteaserHeadline-M;
+	}
+  }
+}
+
+@mixin zeplin-subHead02 {
+  @include font-highlight;
+  font-size: 4.0rem;
+  color: $color-black;
+  line-height: 1.2;
+
+  @include zeplin-MobilesubHead02;
+}
+
+@mixin zeplin-MobilesubHead02 {
+  font-size: 2.8rem;
+}
+
+.zeplin-subHead02 {
+  @include zeplin-subHead02;
+}
+
+@mixin zeplin-subHead03 {
+  @include font-highlight;
+  font-size: 2.4rem;
+  color: $color-black;
+}
+
+@mixin zeplin-MobilesubHead03 {
+  @include font-highlight;
+  font-size: 2.2rem;
+  color: $color-black;
+}
+
+.zeplin-subHead03 {
+  @include zeplin-subHead03;
+
+  @include max-screen($screen-xs-max) {
+    @include zeplin-MobilesubHead03;
+  }
+}
+
+
+@mixin zeplin-subHead04 {
+  @include font-bold;
+  font-size: 1.4rem;
+  line-height: 1.38;
+  color: $color-black;
+}
+
+@mixin zeplin-MobilesubHead04 {
+  font-size: 1.2rem;
+}
+
+.zeplin-subHead04 {
+  @include zeplin-subHead04;
+
+  @include max-screen($screen-xs-max) {
+    @include zeplin-MobilesubHead04;
+  }
+}
+
+@mixin zeplin-input-field {
+  @include font-bold;
+  font-size: 2.2rem;
+  line-height: 0.91;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.zeplin-input-field {
+  @include zeplin-input-field;
+}
+
+@mixin zeplin-anleser {
+  @include font-regular;
+  font-size: 2.2rem;
+  line-height: 1.36;
+  color: $color-black;
+}
+
+.zeplin-anleser {
+  @include zeplin-anleser;
+  opacity: 0.68;
+}
+
+@mixin zeplin-subHead05 {
+  @include font-highlight;
+  font-size: 2rem;
+  line-height: 1.4;
+  color: $color-black;
+}
+
+@mixin zeplin-MobilesubHead05 {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.zeplin-subHead05 {
+  @include zeplin-subHead05;
+
+  @include max-screen($screen-xs-max) {
+    @include zeplin-MobilesubHead05;
+  }
+}
+
+@mixin zeplin-button {
+  @include font-bold;
+  font-size: 1.6rem;
+  line-height: 1.22;
+  letter-spacing: 0.9px;
+  color: $color-black;
+}
+
+@mixin zeplin-Mobilebutton {
+  font-size: 1.4rem;
+  line-height: 1.43;
+}
+
+.zeplin-button {
+  @include zeplin-button;
+
+  @include max-screen($screen-xs-max) {
+    @include zeplin-Mobilebutton;
+  }
+}
+
+@mixin zeplin-copy {
+  @include font-regular;
+  font-size: 1.8rem;
+  line-height: 1.44;
+  color: $color-black;
+
+  strong
+  {
+    @include font-bold;
+    letter-spacing: 1px;
+  }
+
+
+  ul
+  {
+    list-style: none;
+    margin: 0;
+    padding-bottom: var(--spacing-sixth);
+    padding-left: 30px;
+
+    li
+    {
+      @include margin-bottom-sixth;
+
+      &:before
+      {
+        position: absolute;
+        margin-left: -30px;
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: $color-secondary; /* Change the color */
+      }
+    }
+  }
+
+  ol
+  {
+    list-style: none;
+    counter-reset: standard-ol-counter;
+    padding-bottom: var(--spacing-sixth);
+    margin: 0;
+    padding-left: 30px;
+
+    li
+    {
+      @include margin-bottom-sixth;
+      counter-increment: standard-ol-counter;
+
+
+      &:before
+      {
+        position: absolute;
+        margin-left: -30px;
+        content: counter(standard-ol-counter)".";
+        @include font-bold;
+      }
+    }
+  }
+}
+
+@mixin zeplin-Mobilecopy {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.zeplin-copy {
+  @include zeplin-copy;
+
+  @include max-screen($screen-xs-max) {
+    @include zeplin-Mobilecopy;
+  }
+}
+
+@mixin zeplin-copySmall {
+  @include font-regular;
+  font-size: 1.6rem;
+  line-height: 1.63;
+  color: $color-black;
+}
+
+.zeplin-copySmall {
+	@include zeplin-copySmall;
+  
+	@include max-screen($screen-xs-max) {
+		font-size: 1.4rem;
+		line-height: 1.71;
+	}
+}
+
+
+@mixin zeplin-MobileteaserCopy {
+  @include font-regular;
+  font-size: 1.4rem;
+  line-height: 1.71;
+  color: $color-black;
+}
+
+@mixin zeplin-subHead06 {
+  @include font-bold;
+  font-size: 1.2rem;
+  line-height: 1.33;
+  letter-spacing: 1px;
+  color: $color-black;
+  text-transform: uppercase;
+}
+
+@mixin zeplin-MobilesubHead06 {
+  font-size: 1.2rem;
+  line-height: 1.33;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.zeplin-subHead06 {
+  @include zeplin-subHead06;
+
+  @include max-screen($screen-xs-max) {
+    @include zeplin-MobilesubHead06;
+  }
+}
+
+@mixin zeplin-audio {
+  @include font-regular;
+  font-size: 1.2rem;
+  line-height: 1.67;
+  text-align: center;
+  color: $color-medium-grey;
+}
+
+@mixin zeplin-Mobileaudio {
+  font-size: 1rem;
+  line-height: 2;
+  text-align: center;
+}
+
+.zeplin-audio {
+  @include  zeplin-audio;
+
+  @include max-screen($screen-xs-max) {
+    @include zeplin-Mobileaudio;
+  }
+}
+
+@mixin zeplin-bildunterschrift {
+  @include font-regular;
+  font-size: 1.2rem;
+  line-height: 1.33;
+  color: $color-medium-grey;
+}
+
+@mixin zeplin-imagecaption {
+  @include zeplin-bildunterschrift;
+}
+
+.zeplin-imagecaption {
+  @include zeplin-imagecaption;
+}
+
+.zeplin-bildunterschrift {
+  @include  zeplin-bildunterschrift;
+}
+
+@mixin zeplin-copyright {
+  @include font-regular;
+  font-size: 1.2rem;
+  font-style: oblique;
+  line-height: 1.33;
+  color: $color-medium-grey;
+}
+
+.zeplin-copyright {
+  @include  zeplin-copyright;
+}
+
+@mixin zeplin-category {
+  @include font-bold;
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
+  color: $color-black;
+}
+
+@mixin zeplin-Mobilecategory {
+  @include font-bold;
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  color: $color-black;
+}
+
+.zeplin-category {
+  @include zeplin-category;
+
+  @include max-screen($screen-xs-max) {
+    @include zeplin-Mobilecategory;
+  }
+}
+
+
+@mixin zeplin-metadata {
+  @include font-bold;
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
+  color: $color-medium-grey;
+}
+
+.zeplin-metadata {
+  @include  zeplin-metadata;
+}
+
+
+
+
+@mixin zeplin-quoteName {
+  @include font-bold;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: $color-black;
+
+  @include max-screen($screen-xs-max) {
+    font-size: 1.2rem;
+  }
+}
+
+.zeplin-quoteName {
+  @include  zeplin-quoteName;
+}

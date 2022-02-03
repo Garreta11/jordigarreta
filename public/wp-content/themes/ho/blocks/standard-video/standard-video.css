@@ -1,0 +1,1 @@
+.block-media figcaption{text-align:left}.block-media-full figcaption{padding-left:var(--grid-side-margin)}@media (min-width:1440px){.block-media-full figcaption{padding-left:calc(50vw - 640px)}}

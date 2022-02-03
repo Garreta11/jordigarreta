@@ -1,0 +1,71 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+</IfModule>
+AddType font/woff .woff
+AddType font/woff2 .woff2
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteRule ^admin/(.*) /wp-content/themes/ho/admin/$1 [QSA,L]
+RewriteRule ^css/(.*) /wp-content/themes/ho/css/$1 [QSA,L]
+RewriteRule ^libs/(.*) /wp-content/themes/ho/libs/$1 [QSA,L]
+RewriteRule ^apps/(.*) /wp-content/themes/ho/apps/$1 [QSA,L]
+RewriteRule ^libs-on-demand/(.*) /wp-content/themes/ho/libs-on-demand/$1 [QSA,L]
+RewriteRule ^pods/(.*) /wp-content/themes/ho/pods/$1 [QSA,L]
+RewriteRule ^mixins/(.*) /wp-content/themes/ho/mixins/$1 [QSA,L]
+RewriteRule ^services/(.*) /wp-content/themes/ho/services/$1 [QSA,L]
+RewriteRule ^specials/(.*) /wp-content/themes/ho/specials/$1 [QSA,L]
+RewriteRule ^partials/(.*) /wp-content/themes/ho/partials/$1 [QSA,L]
+RewriteRule ^blocks/(.*) /wp-content/themes/ho/blocks/$1 [QSA,L]
+RewriteRule ^vue-mixins/(.*) /wp-content/themes/ho/vue-mixins/$1 [QSA,L]
+RewriteRule ^vue/(.*) /wp-content/themes/ho/vue/$1 [QSA,L]
+RewriteRule ^modules/(.*) /wp-content/themes/ho/modules/$1 [QSA,L]
+RewriteRule ^assets/(.*) /wp-content/themes/ho/assets/$1 [QSA,L]
+RewriteRule ^favicon.ico /assets/favicon/favicon.ico [QSA,L]
+RewriteRule ^build/(.*) /wp-content/themes/ho/build/$1 [QSA,L]
+RewriteRule ^styleguide/(.*) /wp-content/themes/ho/storybook/storybook-static/$1 [QSA,L]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{HTTP_HOST} ^uaeyearof.local$
+RewriteRule wp-content/uploads/(.*)$ https://uaeyearof.ae/wp-content/uploads/$1 [NC,L]
+
+</IfModule>
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# Wordfence WAF
+<Files ".user.ini">
+<IfModule mod_authz_core.c>
+	Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+	Order deny,allow
+	Deny from all
+</IfModule>
+</Files>
+
+# END Wordfence WAF
+
+
+php_value upload_max_filesize 64M
+php_value post_max_size 128M
+php_value memory_limit 256M
+php_value max_execution_time 300
+php_value max_input_time 300

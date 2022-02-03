@@ -1,0 +1,12 @@
+@media print {
+	.hide-print,
+	#logo,
+	#site-footer,
+	nav[role='navigation'] {
+		display: none !important;
+	}
+
+	body, .block {
+		background-color: transparent !important;
+	}
+}

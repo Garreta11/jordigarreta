@@ -1,0 +1,195 @@
+{
+    "key": "group_5c51a34bcff8d",
+    "title": "Standard – Block: Video",
+    "fields": [
+        {
+            "key": "field_5c51a34c3bcdb",
+            "label": "Preview-Image",
+            "name": "image",
+            "type": "image",
+            "instructions": "JPG only.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "hide_admin": 0,
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg"
+        },
+        {
+            "key": "field_5c51d94aa267f",
+            "label": "Preview-Video",
+            "name": "autoplay",
+            "type": "file",
+            "instructions": "MP4 only.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "hide_admin": 0,
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp4"
+        },
+        {
+            "key": "field_5c51d96aa2680",
+            "label": "Video Type",
+            "name": "type",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "hide_admin": 0,
+            "choices": {
+                "video": "Local",
+                "youtube": "Youtube"
+            },
+            "allow_null": 0,
+            "default_value": "youtube",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5c51d936a267e",
+            "label": "Video",
+            "name": "video",
+            "type": "file",
+            "instructions": "MP4 only.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c51d96aa2680",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "hide_admin": 0,
+            "return_format": "id",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp4"
+        },
+        {
+            "key": "field_5c51d995a2681",
+            "label": "Youtube",
+            "name": "youtube",
+            "type": "url",
+            "instructions": "E.g. https:\/\/www.youtube.com\/watch?v=fTSp3dHYVNw",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c51d96aa2680",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "hide_admin": 0,
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f204b7f9caf0",
+            "label": "Size",
+            "name": "size",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "medium": "Medium",
+                "full": "Full"
+            },
+            "allow_null": 0,
+            "default_value": "medium",
+            "layout": "horizontal",
+            "return_format": "value",
+            "wpml_cf_preferences": 0
+        },
+        {
+            "key": "field_5e29b399a15a8",
+            "label": "Brightness",
+            "name": "brightness",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "hide_admin": 0,
+            "default_value": 70,
+            "min": "",
+            "max": "",
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/standard-video"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1630190311
+}

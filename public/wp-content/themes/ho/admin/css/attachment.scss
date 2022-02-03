@@ -1,0 +1,12 @@
+.wpmfjaoassign_row
+{
+ // display: none !important;
+}
+
+
+//AUDIO PLAYER HIDE UNSUSED FIELDS
+
+[data-setting="title"],[data-setting="artist"],[data-setting="album"]
+{
+  display: none !important;
+}

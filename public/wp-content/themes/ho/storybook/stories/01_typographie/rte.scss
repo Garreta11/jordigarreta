@@ -1,0 +1,48 @@
+
+ul li, ol li,
+p,em,i {
+ // @include zeplin-copy;
+}
+
+.copy
+{
+  @include zeplin-copy;
+
+  @include max-screen($screen-xs-max) {
+    @include zeplin-Mobilecopy;
+  }
+}
+
+
+.intro {
+  //@include Anleser;
+}
+
+em,i
+{
+  font-style: italic;
+}
+
+p + p, p + h1, p + h2, p + h3, p + h4, p + h5, p + h6, p + ol, p + ul,
+ol + p, ol + h1, ol + h2, ol + h3, ol + h4, ol + h5, ol + h6, ol + p, ol + ul,
+ul + p, ul + h1, ul + h2, ul + h3, ul + h4, ul + h5, ul + h6, ul + ol, ul + p
+{
+  margin-top: var(--spacing-sixth);
+}
+
+@mixin insignificant
+{
+  color: var(--color-medium-grey);
+}
+
+.insignificant {
+    @include insignificant;
+}
+
+abbr[title] {
+	text-decoration: none;
+	border:none;
+	font-size: inherit;
+	font-style: inherit;
+	vertical-align: baseline;
+}

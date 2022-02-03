@@ -1,0 +1,82 @@
+//  Author: Rafal Bromirski
+//  www: http://rafalbromirski.com/
+//  github: http://github.com/paranoida/sass-mediaqueries
+//
+//  Licensed under a MIT License
+//
+//  Version:
+//  1.5.1
+
+// --- screen ------------------------------------------------------------------
+
+@mixin screen($res-min, $res-max, $orientation: false) {
+    @if $orientation {
+        @media (min-width: $res-min) and (max-width: $res-max)
+        and (orientation:#{$orientation}) {
+            @content;
+        }
+    }
+    @else {
+        @media (min-width: $res-min) and (max-width: $res-max) {
+            @content;
+        }
+    }
+}
+
+@mixin max-screen($res) {
+    @media (max-width: $res) {
+        @content;
+    }
+}
+
+@mixin min-screen($res) {
+    @media (min-width: $res) {
+        @content;
+    }
+}
+
+@mixin screen-height($res-min, $res-max, $orientation: false) {
+    @if $orientation {
+        @media (min-height: $res-min) and (max-height: $res-max)
+        and (orientation:#{$orientation}) {
+            @content;
+        }
+    }
+    @else {
+        @media (min-height: $res-min) and (max-height: $res-max) {
+            @content;
+        }
+    }
+}
+
+@mixin max-screen-height($res) {
+    @media (max-height: $res) {
+        @content;
+    }
+}
+
+@mixin min-screen-height($res) {
+    @media screen and (min-height: $res) {
+        @content;
+    }
+}
+
+// --- orientation -------------------------------------------------------------
+
+@mixin _orientation($orientation) {
+    @media (orientation: $orientation) {
+        @content;
+    }
+}
+
+@mixin landscape() {
+    @include _orientation(landscape) {
+        @content;
+    }
+}
+
+@mixin portrait() {
+    @include _orientation(portrait) {
+        @content;
+    }
+}

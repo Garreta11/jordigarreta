@@ -1,0 +1,68 @@
+textarea,
+input[type="text"],
+input[type="email"] {
+	border: 2px solid black;
+	background-color: transparent;
+	padding: 1em;
+	position: relative;
+	width: 90%;
+	border-radius: 0 !important;
+
+	@include font-bold;
+
+	&.input-second {
+
+	}
+
+	&.invalid {
+		border-color: red;
+	}
+}
+.checkbox_invalid label a{
+	color: red;
+}
+::placeholder {
+	@include font-regular;
+	color: black;
+	opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+	font-family: "AkzidGroStd", sans-serif;
+}
+html[lang="ar"] input::-webkit-input-placeholder {
+	font-family: "29LT Zarid" !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+}
+
+
+.wiggle {
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+  }
+  
+  @keyframes shake {
+	10%, 90% {
+	  transform: translate3d(-1px, 0, 0);
+	}
+	
+	20%, 80% {
+	  transform: translate3d(2px, 0, 0);
+	}
+  
+	30%, 50%, 70% {
+	  transform: translate3d(-4px, 0, 0);
+	}
+  
+	40%, 60% {
+	  transform: translate3d(4px, 0, 0);
+	}
+}

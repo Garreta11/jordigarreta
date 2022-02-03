@@ -1,0 +1,99 @@
+@import "../../css/includes";
+
+.block-future_header {
+    padding-top: 60px;
+    .content_container {
+        position: relative;
+
+        @include max-screen($screen-md){
+            margin-bottom: 100px;
+        }
+        @include max-screen($screen-sm){
+            margin-bottom: 150px;
+        }
+
+        .dreamers_banner {
+            margin-top: -40px;
+            
+            @include max-screen($screen-md){
+
+                margin-left: -22px;
+                margin-right: -22px;
+                width: calc(100% + 44px);
+                object-fit: cover;
+            }
+            
+        }
+        .content {
+            max-width: 575px;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top: -50px;
+            /*
+            background-image: url('/assets/icons/letter-bg-mobile.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            */
+
+            @include max-screen($screen-xs) {
+                top: -10px;
+            }
+
+            .text_container {
+                position: inherit;
+                top: 0;
+                margin: 6rem 10rem 0 10rem;
+
+                @include max-screen($screen-sm){
+                    margin: 40px 45px 0 45px;
+                }
+                
+                @include max-screen($screen-xss-min){
+                    margin: 10px 30px 0 30px;
+                }
+                
+                h1 {
+                    font-size: 71px;
+                    line-height: 71px;
+                    text-align: center;
+                    margin-bottom: 15px;
+
+                    html[lang=ar] & {
+                        line-height: 80px;
+
+                    }
+
+                    @include max-screen($screen-xs){
+                        font-size: 42px;
+                        line-height: 42px;
+                        margin-bottom: 10px;
+
+                        html[lang=ar] & {
+                            font-size: 47px;
+                            line-height: 57px;
+                        }
+                    }
+                }
+                p {
+                    line-height: 26px;
+                    font-size: 18px;
+
+                    @include max-screen($screen-xss-min){
+                        font-size: 16px;
+                        line-height: 23px;
+                    }
+                    html[lang=ar] & {
+                        line-height: 30px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .letters_background {
+        }
+    }
+}

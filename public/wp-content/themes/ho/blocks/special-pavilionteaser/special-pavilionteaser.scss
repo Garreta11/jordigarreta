@@ -1,0 +1,202 @@
+@import "../../css/includes";
+
+.block-pavilionteaser {
+  .content_container {
+    position: relative;
+    margin-top: 233px;
+    margin-bottom: 233px;
+    height: 387px;
+
+    .content {
+      max-width: 650px;
+      height: 400px;
+      position: absolute;
+      margin-left: 200px;
+      left: 0;
+      right: 0;
+      html[lang="ar"] & {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media screen and (max-width: 1275px) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include max-screen($screen-sm) {
+        margin-right: 36px;
+
+        html[lang="ar"] & {
+          margin-left: 20px;
+          margin-right: unset;
+        }
+      }
+
+      .brown_background {
+        height: inherit;
+
+        @media screen and (max-width: 520px) {
+          height: 350px;
+        }
+      }
+      .circle_shape {
+        position: absolute;
+        width: 250px;
+        top: -125px;
+        left: -125px;
+
+        html[lang="ar"] & {
+          left: unset;
+          right: -125px;
+        }
+
+        @include max-screen($screen-md) {
+          width: 160px;
+          top: -115px;
+          left: unset;
+          right: 46px;
+
+          html[lang="ar"] & {
+            right: unset;
+            left: 46px;
+          }
+        }
+      }
+      .teaser_image {
+        position: absolute;
+        width: 320px;
+        top: 36px;
+        right: -240px;
+
+        html[lang="ar"] & {
+          right: unset;
+          left: -240px;
+        }
+
+        @include max-screen(1150px) {
+          width: 250px;
+          right: -170px;
+
+          html[lang="ar"] & {
+            right: unset;
+            left: -170px;
+          }
+        }
+        @include max-screen($screen-md) {
+          right: -27px;
+          top: unset;
+          bottom: -70px;
+
+          html[lang="ar"] & {
+            right: unset;
+            left: -27px;
+          }
+        }
+      }
+      .text_container {
+        position: inherit;
+        top: 0;
+        margin: 105px 100px 0 100px;
+
+        @include max-screen($screen-sm) {
+          margin: 70px 45px 0 45px;
+        }
+        @include max-screen($screen-xs) {
+          margin: 70px 30px 0 30px;
+        }
+        @include max-screen($screen-xss-min) {
+          margin: 70px 20px 0 20px;
+        }
+
+        h2 {
+          font-size: 42px;
+          line-height: 45px;
+          text-align: left;
+          margin-bottom: 15px;
+          letter-spacing: 0.2px;
+
+          html[lang="ar"] & {
+            text-align: right;
+            font-size: 47px;
+            line-height: 57px;
+          }
+
+          @include max-screen($screen-xs) {
+            font-size: 28px;
+            line-height: 30px;
+            margin-bottom: 10px;
+            letter-spacing: 0;
+
+            html[lang="ar"] & {
+              font-size: 32px;
+              line-height: 37px;
+            }
+          }
+          @include max-screen($screen-xss-min) {
+            max-width: 180px;
+          }
+        }
+        p {
+          text-align: left;
+          line-height: 26px;
+          font-size: 18px;
+          margin-bottom: 30px;
+          
+
+          @include max-screen($screen-xs) {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 23px;
+          }
+
+          html[lang="ar"] & {
+            text-align: right;
+            line-height: 30px;
+            font-size: 20px;
+            width: 80%;
+
+            @include max-screen($screen-xs) {
+              width: 100%;
+            }
+          }
+        }
+        .btn_container {
+          text-align: left;
+
+          html[lang="ar"] & {
+            text-align: right;
+          }
+          .read_btn {
+            text-align: center;
+            font-family: "AkzidGroStd";
+            font-weight: 900;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            max-width: 250px;
+            width: 100%;
+            padding: 0px 0px;
+            display: inline-block;
+            letter-spacing: 0.34px;
+            border: 14px solid black;
+            border-image-slice: 15;
+            border-image-source: url("/assets/icons/button.svg");
+            
+            &:hover {
+              border-image-source: url("/assets/icons/buttonhover.svg");
+            }
+            
+            @include max-screen($screen-xs) {
+              width: auto;
+
+            }
+
+            html[lang="ar"] & {
+              font-size: 18px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

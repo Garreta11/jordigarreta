@@ -1,0 +1,34 @@
+@import "../../css/includes";
+
+.bunker-invert-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+	background-image: url('/assets/icons/bunker-outline.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	width: 100%;
+	height: 250px;
+	text-align: center;
+}
+.bunker-invert {
+	text-align: center;
+
+	h3 {
+		width: 230px;
+	}
+}
+
+.block-special-needhelp .container-fluid {
+	.stagger-item {
+		padding: var(--spacing-half) 0;
+
+
+		@include max-screen($screen-xs-max) {
+			min-height: 60vw;
+		}
+	}
+}

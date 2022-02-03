@@ -1,0 +1,52 @@
+{
+    "key": "group_606ab70b407d5",
+    "title": "Page Color",
+    "fields": [
+        {
+            "key": "field_606ab7107c0b7",
+            "label": "Background-color",
+            "name": "background-color",
+            "type": "swatch",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "choices": {
+                "#F2EDE6": "Beige",
+                "#B69E83": "Ochre",
+                "#DDCAC3": "Syringa",
+                "#F1EEE6": "Mint",
+                "#A7BFC7": "Sky Blue"
+            },
+            "allow_null": 1,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "other_choice": 0,
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1635339321
+}

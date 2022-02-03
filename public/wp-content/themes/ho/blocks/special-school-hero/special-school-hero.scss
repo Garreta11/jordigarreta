@@ -1,0 +1,156 @@
+
+/* Imagining section css start */
+.block-school-hero {
+    * {
+        font-family: 'AkzidGroStd' !important;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        letter-spacing: 0.5px !important;
+    }
+
+    h1,h2 {
+        font-weight: 900 !important;
+    }
+.cus-imagining-sec .row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.cus-imagining-sec .col-9 {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.cus-imagining-inner img {
+    width: 100%;
+}
+
+.cus-imagining-inner {
+    padding-top: 70px;
+}
+
+
+.block-school-hero {
+    .container {
+        margin: 0 auto;
+    }
+}
+
+.school-hero-img {
+    &__mobile {
+        display: none;
+    }
+}
+
+
+.cus-imagining-sec .cus-box-txt {
+    background-image: url('./assets/school-hero-bg.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 643px;
+    margin: -160px auto 50px;
+    padding: 80px;
+    text-align: center;
+    width: 80%;
+    position: relative;
+}
+
+.cus-imagining-sec .cus-box-txt h6 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 0.4px;
+    
+}
+
+.cus-imagining-sec .cus-box-txt h1 {
+    font-size: 72px;
+    line-height: 72px;
+    margin: 10px 0 30px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.cus-imagining-sec .cus-box-txt p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 450px) and (max-width: 776px) {
+    .cus-imagining-sec .cus-box-txt {
+        
+        background-size: cover;
+        
+    }
+}
+@media screen and (max-width: 450px) {
+    .cus-imagining-inner {
+        padding-top: 97px;
+    }
+
+        .container {
+            padding: 0 15px;
+        }
+
+
+    .school-hero-img {
+        &__mobile {
+            display: block;
+        }
+        &__desktop {
+            display: none;
+        }
+    }
+
+    
+    .cus-imagining-sec .cus-box-txt {
+        background-image: url('./assets/school-hero-bg-mobile.svg');
+        background-size: cover;
+        background-position: top;
+        margin: -30px auto 30px;
+        padding: 40px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .cus-imagining-sec .cus-box-txt h6 {
+        font-size: 14px;
+    }
+    
+    .cus-imagining-sec .cus-box-txt h1 {
+        font-size: 42px;
+        line-height: 46px;
+        margin-bottom: 15px;
+    }
+    
+    .cus-imagining-sec .cus-box-txt p {
+        font-size: 18px;
+        width: 100%;
+        line-height: 28px;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .cus-imagining-sec .cus-box-txt {
+        padding: 40px 30px;
+        
+    }
+}
+}

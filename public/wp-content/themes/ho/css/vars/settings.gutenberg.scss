@@ -1,0 +1,43 @@
+$screen-xs:                  520px !default;
+
+$screen-sm:                  1440px !default;
+$screen-sm-min:              ($screen-sm - 1) !default;
+$screen-tablet:              $screen-sm-min !default;
+
+$screen-md:                  1440px !default;
+$screen-md-min:              ($screen-md - 1) !default;
+$screen-desktop:             $screen-md-min !default;
+
+$screen-lg:                  1920px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+$screen-nav-max:             1280px !default;
+
+
+// flexboxgrid
+// Set the gutter between columns.
+$gutter-width: 30px;
+
+// Set a margin for the container sides.
+$outer-margin: 25px;
+
+
+$breakpoints:
+		s $screen-sm $screen-sm,
+		sm $screen-sm $screen-sm,
+		md $screen-md $screen-md,
+		lg $screen-lg $screen-lg,
+		xlg 1920px 1920px;
+
+$flexboxgrid-max-width: 2560px;
+$border-radius: 12px;
+
+$global-header-height: 203px;
+$global-header-height-mobile: 130px;
+$global-footer-height: 491px;
+$global-footer-height-mobile: 800px;

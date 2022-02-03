@@ -1,0 +1,25 @@
+*:focus
+{
+  outline: none !important;
+
+  + label
+  {
+	outline: none !important;
+  }
+}
+
+.tabbing
+{
+  *:focus
+  {
+	/**
+	 * SGE RED!!!
+	 */
+	outline: 3px solid #E1000F !important;
+
+	+ label
+	{
+	  outline: 3px solid #E1000F !important;
+	}
+  }
+}

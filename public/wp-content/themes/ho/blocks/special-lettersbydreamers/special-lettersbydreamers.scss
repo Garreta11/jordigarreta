@@ -1,0 +1,113 @@
+@import "../../css/includes";
+
+.block-lettersbydreamers{
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0;
+    
+    .top_padding {
+        padding-top: 10%;
+        @include max-screen($screen-xs){
+            padding-top: 35%;
+        }
+    }
+
+    .content_container {
+        position: relative;
+
+        .orange_background_1 {
+            width: 100%;
+
+            @include max-screen($screen-sm){
+                width:150%;
+                margin-left: -25%;
+            }
+            @include max-screen($screen-xs){
+                width: 250%;
+                margin-left: -75%;
+            }
+
+            html[lang='ar'] & {
+                @include max-screen($screen-sm){
+
+                    margin-left: auto;
+                    margin-right: -25%;
+                }
+                @include max-screen($screen-xs){
+                    margin-right: -75%;
+                }
+            }
+        }
+
+        .text_content {
+            position: absolute;
+            left:0;
+            right: 0;
+            bottom: 0;
+
+            h2 {
+                margin-bottom: 10px;
+                letter-spacing: 0.2px;
+            }
+            p {
+                font-size: 18px;
+                line-height: 26px;
+                max-width: 375px;
+                margin: 0 auto 10px auto;
+
+                @include max-screen($screen-sm){
+                    font-size: 16px;
+                    line-height: 22px;
+                    max-width: 310px;
+                }
+            }
+
+            
+        }
+        .margin_left {
+            margin-left: auto;
+        }
+        
+    }
+    .orange_background_2_container{
+        direction: ltr;
+    }
+    .btn_container {
+        margin-top: 25px;
+        @include max-screen($screen-xs){
+            margin-top: 15px;
+        }
+
+        .read_btn {
+            font-family: 'AkzidGroStd';
+            font-weight: 900;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            max-width: 250px;
+            width: 100%;
+            padding: 0px 0px;
+            display: inline-block;
+            letter-spacing: 0.34px;
+            border: 12px solid black;
+            -webkit-border-image-slice: 15;
+            -webkit-border-image-source: url('/assets/icons/button.svg');
+            border-image-slice: 15;
+            border-image-source: url('/assets/icons/button.svg');
+            padding: 2px 6px;
+
+            &:hover {
+                -webkit-border-image-source: url('/assets/icons/buttonwhite.svg');
+                border-image-source: url('/assets/icons/buttonwhite.svg');
+            }
+        }
+    }
+    .offset {
+        padding-left: 0;
+        margin-left: 8.3333%;
+    }
+    .orange_background_2{
+        margin-top: 25%;
+    }
+}

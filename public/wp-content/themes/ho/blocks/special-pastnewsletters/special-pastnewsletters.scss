@@ -1,0 +1,304 @@
+@import "../../css/includes";
+.pastnewsletters{
+  padding-top: 150px;
+  @include min-screen($screen-md-min)
+  {
+    padding-bottom: 158px;
+  }
+  @include max-screen($screen-md)
+  {
+    padding-top: 125px;
+  }
+}
+.news-header{
+  .header-wrapper{
+    position: relative;
+    .background{
+      position: absolute;
+      width: 575px;
+      height: auto;
+      z-index: 1;
+      left: 50%;
+      right: 50%;
+      transform: translate(-50%);
+      -webkit-transform: translate(-50%);
+      html[lang="ar"] &{
+        transform: translate(50%) scaleX(-1);
+        -webkit-transform: translate(50%) scaleX(-1);
+      }
+      @include max-screen($screen-md) {
+        height: 100%;
+      }
+      @media (max-width: 762px)
+      {
+        width: 305px;
+      }
+    }
+    .header-content{
+      position: relative;
+      z-index: 20;
+      padding: 85px 20px;
+      width: 575px;
+
+      @include max-screen($screen-xs-max) {
+        padding: 80px 30px;
+      }
+      @media (max-width: 762px)
+      {
+        width: 305px;
+      }
+      .btn{
+        html[lang="ar"] & {
+          margin-top: -20px;
+        }
+      }
+      h1{
+        margin-bottom: 20px;
+        html[lang="ar"] & {
+          margin-bottom: 15px;
+        }
+      }
+      p{
+        font-size: 18px;
+        line-height: 26px;
+        max-width: 380px;
+        margin: 0 auto;
+        html[lang="ar"] & {
+          font-size: 20px;
+          line-height: 30px;
+          @media screen and (max-width: 768px) {
+            font-size: 18px;
+            line-height: 25px;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+        }
+        html[lang="ar"] & {
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+    }
+    .stair-stroke{
+      position: absolute;
+      width: 315px;
+      z-index: 20;
+      right: -82px;
+      bottom: -25px;
+      @media screen and (max-width: 768px) {
+        content: url('/assets/icons/combined_shape_mobile.svg');
+      }
+      html[lang="ar"] &{
+        transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        right:auto;
+        left: -82px;
+        bottom: -5px;
+        @media screen and (max-width: 1024px) {
+          left: -15px;
+        }
+      }
+      @include max-screen($screen-xs-max) {
+        width: 135px;
+        right: -11px;
+        bottom: 10px;
+        html[lang="ar"] &{
+          left: -11px;
+        }
+      }
+    }
+  }
+}
+
+.newsletter-title{
+  margin-top: 175px;
+  margin-bottom: 52px;
+  text-align: left;
+  html[lang="ar"] &{
+    text-align: right;
+    font-size: 47px;
+    letter-spacing: -.39px;
+    line-height: 57px;
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 37px;
+      letter-spacing: -.27px;
+    }
+  }
+  font-size: 42px;
+  font-family: 'AkzidGroStd', sans-serif;
+  font-weight: 900;
+  color: white;
+
+  @include max-screen($screen-xs-max) {
+    font-size: 28px;
+    margin-top: 85px;
+    margin-bottom: 30px;
+  }
+}
+.news-wrapper-container{
+  display: flex;
+  flex-direction: column;
+  .news-wrapper-header{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-bottom: 30px;
+    @include max-screen($screen-xs)
+    {
+      padding-bottom: 10px;
+    }
+    .arrow-hover{
+      display: none;
+    }
+    a:hover{
+      .arrow-hover{
+        display: block;
+      }
+      .arrow{
+        display: none;
+      }
+    }
+    .stroke{
+      height: 6px;
+      object-fit: cover;
+    }
+    .arrow, .arrow-hover{
+      padding-bottom: 9px;
+      width: 20px;
+      height: auto;
+      html[lang="ar"] & {
+        transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+      }
+      @media screen and (max-width: 768px) {
+        width: 24px;
+      }
+    }
+  }
+}
+.newsletter_showmore {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.34px;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding-bottom: 10px;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 50px;
+  &:hover::after {
+      background-image: url("/assets/icons/button-line-new-hover.svg");
+  }
+  &::after {
+      content: " ";
+      height: 5px;
+      position: absolute;
+      width: 100%;
+      background-image: url("/assets/icons/button-line-new-invert.svg");
+      background-repeat: no-repeat;
+      bottom: 0;
+      left: 0;
+  }
+}
+.news-wrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: space-between;
+  align-content: stretch;
+  margin-bottom: 68px;
+  text-decoration: none !important;
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+  }
+
+  .news-image{
+    flex-grow: 1;
+    flex-basis: 50%;
+    @media screen and (max-width: 865px) {
+      align-self: flex-end;
+    }
+    img{
+      @media screen and (max-width: 865px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .news-content{
+    flex-grow: 1;
+    flex-basis: 50%;
+    @include max-screen($screen-xs-max) {
+      margin-top: 0px;
+    }
+    h3{
+      margin-top: 16px;
+      html[lang="ar"] & {
+        font-size: 34px;
+        @media screen and (max-width: 768px) {
+          font-size: 23px;
+        }
+      }
+    }
+    p{
+      html[lang="ar"] & {
+        font-size: 18px !important;
+        letter-spacing: 0;
+        line-height: 25px;
+      }
+    }
+    h3, p, a{
+      text-decoration: none !important;
+      text-align: left;
+      font-family: 'AkzidGroStd', sans-serif;
+      html[lang="ar"] &{
+        text-align: right;
+      }
+    }
+    .news-copy{
+      font-size: 18px;
+      font-weight: normal;
+      color: white;
+      line-height: 26px;
+      html[lang="ar"] & {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0;
+      }
+    }
+    .news-date{
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      html[lang="ar"] & {
+        text-transform: initial;
+        font-size: 22px;
+        letter-spacing: 0;
+        line-height: 28px;
+        @media screen and (max-width: 768px) {
+          font-size: 17px !important;
+          line-height: 23px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+    h3{
+      font-size: 32px;
+      font-weight: 900;
+      color: #D8D2CC;
+      letter-spacing: 0.2px;
+      @include max-screen($screen-xs-max) {
+        font-size: 25px;
+      }
+    }
+  }
+}

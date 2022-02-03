@@ -1,0 +1,55 @@
+{
+    "key": "group_60e9a04b269e9",
+    "title": "Tax : Event Category",
+    "fields": [
+        {
+            "key": "field_60e9a04b5b0aa",
+            "label": "Color",
+            "name": "color",
+            "type": "swatch",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "transparent": "None",
+                "#F2EDE6": "Beige",
+                "#B69E83": "Ochre",
+                "#DDCAC3": "Syringa",
+                "#F1EEE6": "Mint",
+                "#D2E0E4": "Slight Blue",
+                "#A7BFC7": "Sky Blue",
+                "#598798": "Night Sky"
+            },
+            "allow_null": 1,
+            "default_value": "#598798",
+            "layout": "horizontal",
+            "return_format": "value",
+            "wpml_cf_preferences": 0,
+            "other_choice": 0,
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "news-topic"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1630190311
+}

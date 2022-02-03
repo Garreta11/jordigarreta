@@ -1,0 +1,413 @@
+.present-year-container {
+
+    h1 {
+        color: #fff;
+    }
+    .year-header{
+        .left-arrow, .right-arrow{
+          background-image: url('/assets/icons/arrowleft-white.svg');
+
+        }
+
+        .arrow-wrapper  
+        {
+            span {
+                color: #fff;
+            }
+            
+            &:hover {
+                .left-arrow, .right-arrow{
+                    background-image: url('/assets/icons/arrowleft-hover.svg');
+                }
+            }
+        }
+    }
+}
+
+.year-present {
+    @include max-screen($screen-md) {
+        padding: 0 40px;
+    }
+    @include max-screen($screen-xs) {
+        padding: 0 17px;
+    }
+    .container-fluid {
+        .col-sm-6 {
+            @media (max-width: 924px) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+    }
+    h2.slogan {
+        color: #fff;
+        padding-bottom: 80px;
+
+        @include max-screen($screen-xs) {
+            padding-bottom: 159px;
+        }
+    }
+    
+}
+
+.year-present {
+
+    .container-wrapper 
+    {
+        position: relative;
+
+    .background-image-big{
+        position: absolute;
+        left: 9%;
+        top: 0;
+
+        @media (max-width: 924px) {
+            top: 0;
+        }
+        @include max-screen($screen-xs)
+        {
+            top: -20px;
+            left: -304px;
+            width: 1322px;
+        }
+    }
+    }
+    .container-fluid {
+        position: relative;
+        padding-top: 70px;
+        max-width: 1176px;
+        padding-right: 0;
+
+        @media (max-width: 924px) {
+            padding-top: 0;
+            padding-left: 0;
+        }
+    }
+}
+.year-present {
+    .background-image-small {
+        position: absolute;
+        top: -13px;
+        max-width: 375px;
+        left: 200px;
+
+        @media (max-width: 924px) {
+            left: auto;
+            right: -120px;
+            top: -100px;
+        }
+        @include max-screen($screen-xs) {
+            max-width: 297px;
+            right: -80px;
+            top: -80px;
+        }
+    }
+
+    .home-popup-container {
+        position: relative;
+
+        &.third {
+            padding-left: 100px;
+            padding-top: 145px;
+            @media (max-width: 924px)
+            {
+                padding: 0;
+            }
+            .home-popup-wrapper {
+                padding-right: 100px;
+
+                @media (max-width: 924px)
+                {
+                    margin: 160px 0 0 auto;
+                    padding-right: 0;
+                }
+            }
+        }
+        &.second {
+            transform: translateY(247px);
+            -webkit-transform: translateY(247px);
+            transform-origin: top;
+            -webkit-transform-origin: top;
+            z-index: 1;
+            @media (max-width: 924px)
+            {
+                transform: none;
+                -webkit-transform: none;
+            }
+            .home-popup-wrapper {
+                margin-left: auto;
+                margin-right: 0;
+                @media (max-width: 924px)
+                {
+                    margin: 80px auto 0 0;
+                }
+            }
+        }
+
+        &.first {
+            .home-popup-wrapper {
+                @media (max-width: 924px)
+                {
+                    margin: 0 0 0 auto;
+                }
+            }
+        }
+
+        .home-popup-wrapper {
+            max-width: 375px;
+            position: relative;
+
+            @media (max-width: 924px) {
+                margin: 0 auto;
+            }
+
+            @include max-screen($screen-xs) {
+                max-width: 310px;
+            }
+
+            .home-popup-image-wrapper {
+                position: relative;
+                width: 100%;
+
+                .image-overlay {
+                    position: absolute;
+                    top: -45px;
+                    left: -45px;
+                    max-width: 171px;
+
+                    @include max-screen($screen-md) {
+                        max-width: 110px;
+                        top: -60px;
+                    }
+                    @media (max-width: 924px)
+                    {
+                        top: -40px;
+                        left: -25px;
+                    }
+                    @include max-screen($screen-xss-min)
+                    {
+                        left: -10px;
+                    }
+                }
+            }
+
+            img {
+                margin-bottom: 35px;
+
+                @include max-screen($screen-xs)
+                {
+                    margin-bottom: 20px;
+                }
+            }
+            h3 {
+                font-size: 42px;
+                letter-spacing: 0.2px;
+                line-height: 45px;
+                margin-bottom: 13px;
+                color: #fff;
+                @include max-screen($screen-xs) {
+                    font-size: 28px;
+                    letter-spacing: initial;
+                    line-height: 30px;
+                    margin-bottom: 10px;
+                }
+            }
+            p {
+                font-size: 18px;
+                line-height: 26px;
+                letter-spacing: 0;
+                margin-bottom: 20px;
+                color: #fff;
+                @include max-screen($screen-xs) {
+                    font-size: 16px;
+                    letter-spacing: initial;
+                    line-height: 22px;
+                    margin-bottom: 20px;
+                }
+            }
+            .link-wrapper {
+                padding-bottom: 8px;
+            }
+            a {
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0.34px;
+                text-transform: uppercase;
+                font-weight: 900;
+                padding-bottom: 10px;
+                position: relative;
+                text-decoration: none;
+                color: #fff;
+                &:hover::after {
+                    background-image: url("/assets/icons/button-line-new-hover.svg");
+                }
+                &::after {
+                    content: " ";
+                    height: 5px;
+                    position: absolute;
+                    width: 100%;
+                    background-image: url("/assets/icons/button-line-new-invert.svg");
+                    background-repeat: no-repeat;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+html[lang="ar"] {
+    .block-special-homepage-header {
+        h2.slogan {
+            font-size: 26px;
+            line-height: 36px;
+            letter-spacing: 0.21px;
+        }
+    }
+
+    .year-present {
+
+        .container-wrapper > img{
+            left: 0;
+            right: 9%;
+            transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            top: -30px;
+
+            @include max-screen($screen-xs)
+            {
+                top: -30px;
+                left: -304px;
+                width: 1322px;
+                transform: none;
+                -webkit-transform: none;
+                right: auto;
+            }
+        }
+
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 180px;
+
+            @media (max-width: 924px) {
+                padding-right: 0;
+            }
+        }
+
+        .background-image-small {
+            left: auto;
+            right: 100px;
+            transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            top: 114px;
+
+            @media (max-width: 924px) {
+                left: -200px;
+                right: auto;
+                top: -100px;
+            }
+            @include max-screen($screen-xs)
+            {
+                left: -100px;
+                top: -70px;
+            }
+            
+        }
+
+        .home-popup-container {
+            position: relative;
+
+            &.second {
+                transform: translateY(300px);
+                -webkit-transform: translateY(300px);
+                @media (max-width: 924px)
+                {
+                    transform: none;
+                    -webkit-transform: none;
+                }
+                .home-popup-wrapper {
+                    margin-right: auto;
+                    margin-left: 0;
+                    @media (max-width: 924px)
+                    {
+                        margin: 80px 0 0 auto;
+                    }
+                }
+            }
+
+            &.third {
+                padding-top: 273px;
+                @media (max-width: 924px)
+                {
+                    padding: 0;
+                }
+                .home-popup-wrapper {
+                    padding-left: 100px;
+                    padding-right: 0;
+
+                    @media (max-width: 924px)
+                    {
+                        margin: 160px auto 0 0;
+                        padding-left: 0;
+                    }
+                }
+            }
+
+            &.first {
+                .home-popup-wrapper {
+                    @media (max-width: 924px)
+                    {
+                        margin: 0 0 0 auto;
+                    }
+                }
+            }
+
+            .home-popup-wrapper {
+
+
+                @media (max-width: 924px) {
+                    margin: 0 auto;
+                }
+                img {
+                    margin-bottom: 30px;
+
+                    @include max-screen($screen-xs)
+                    {
+                        margin-bottom: 20px;
+                    }
+                }
+                h3 {
+                    font-size: 47px;
+                    letter-spacing: 0.39px;
+                    line-height: 57px;
+
+                    @include max-screen($screen-xs) {
+                        font-size: 32px;
+                        letter-spacing: 0.27px;
+                        line-height: 37px;
+                    }
+                }
+                p {
+                    line-height: 30px;
+                    font-size: 20px;
+                }
+                .link-wrapper {
+                    padding-bottom: 9px;
+                    a {
+                        font-size: 18px;
+                        line-height: 22px;
+                        letter-spacing: 0.39px;
+
+                        @include max-screen($screen-xs) {
+                            line-height: 20px;
+                        }
+
+                        &::after {
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

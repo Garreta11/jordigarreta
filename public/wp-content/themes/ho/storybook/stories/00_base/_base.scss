@@ -1,0 +1,82 @@
+$screen-xs:                  520px !default;
+
+$screen-sm:                  764px !default;
+$screen-sm-min:              ($screen-sm - 1) !default;
+$screen-tablet:              $screen-sm-min !default;
+
+$screen-md:                  1024px !default;
+$screen-md-min:              ($screen-md - 1) !default;
+$screen-desktop:             $screen-md-min !default;
+
+$screen-lg:                  1440px !default;
+$screen-lg-min:              ($screen-lg - 1) !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+$screen-nav-max:             1100px !default;
+
+$screen-grid-full:          $screen-lg;
+$screen-grid-full-min:      ($screen-grid-full - 1) !default;
+
+// FONT SMOOTING
+@mixin font-smoothing($value: antialiased) {
+  -webkit-font-smoothing: $value;
+
+  @if($value == "subpixel-antialiased") {
+    background: rgba(0,0,0,0);
+  }
+
+  @if($value == "antialiased") {
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@mixin text-rendering($value: optimizeSpeed) {
+  text-rendering: $value;
+}
+
+// BOX SIZING
+*
+{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+// HYPHEN
+@mixin hyphen()
+{
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+.hyphen
+{
+  @include hyphen;
+}
+
+@mixin max-screen($res) {
+  @media (max-width: $res) {
+	@content;
+  }
+}
+
+@mixin min-screen($res) {
+  @media (min-width: $res) {
+	@content;
+  }
+}
+
+
+
+@import './timing.function';
+@import './spacing';
+@import './fonts';
+@import './colors';
+@import './zeplin';
+

@@ -1,0 +1,85 @@
+@import "../../css/includes";
+.header-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 760px;
+    background-image: url('/assets/media/Dream_Header.png');
+}
+
+.block-dreamersheader {
+    margin: 0px !important;
+    padding: 0pc !important;
+}
+
+.dream_header_container {
+    height: 100%;
+}
+
+.dream_header_row {
+    height: 80%;
+    align-content: center;
+    @include max-screen($screen-xs-max) {
+        height: 100%;
+    }
+}
+
+.dream_header {
+    display: flex;
+    margin-top: 13%;
+    @include max-screen($screen-xs-max) {
+        display: block;
+        margin-top: -15em;
+    }
+}
+
+.header_text {
+    color: white;
+    font-size: 4.2em;
+    width: 50%;
+    text-align: left;
+    html[lang="ar"] & {
+        text-align: right;
+    }
+    @include max-screen($screen-sm) {
+        font-size: 2.4em !important;
+        width: 100%;
+        margin-left: 40% !important;
+        html[lang="ar"] & {
+            margin-right: 40%;
+            width: 50%;
+            text-align: right;
+        }
+    }
+    @include max-screen($screen-xs) {
+        padding-bottom: 1em;
+        margin-left: 5% !important;
+        width: 200%;
+        html[lang="ar"] & {
+            width: 150%;
+            margin-top: 54%;
+            margin-right: 5%;
+        }
+    }
+}
+
+.header_img {
+    position: relative;
+    margin-left: -25%;
+    margin-right: -25%;
+    width: 50%;
+    @include max-screen($screen-sm) {
+        width: 60% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include max-screen($screen-xs) {
+        width: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.header_filler {
+    width: 220px;
+}

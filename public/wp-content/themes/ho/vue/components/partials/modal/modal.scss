@@ -1,0 +1,101 @@
+.modal-backdrop {
+    //position: fixed;
+    //z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-medium-grey);
+   // backdrop-filter: blur(4px);
+    user-select: none;
+}
+
+.modal {
+    position: relative;
+    background: var(--color-invert);
+    border-radius: 3px;
+    display: flex;
+    min-width: 320px;
+    max-width: 520px;
+    width: 90vw;
+    user-select: none;
+
+  	&.fullWidth
+	{
+	  max-width: 964px;
+	}
+
+    .modal-close
+    {
+        position: absolute;
+        cursor: pointer;
+        display: block;
+        right: 10px;
+        top: 0;
+        width: 16px;
+        height: 15px;
+        padding:20px 30px 30px 20px;
+       // z-index: 10;
+
+        img
+        {
+            width: 16px;
+            height: 15px;
+        }
+	}
+
+
+	
+	.icon-close {
+		position: absolute;
+		font-size: 50px;
+		right: 10px;
+		top: 10px;
+		//z-index: 99999;
+
+		@include max-screen($screen-xs-max) {
+			font-size: 40px;
+			right: 5px;
+			top: 5px;
+		}
+	}
+
+    a.button
+    {
+        justify-content: center;
+        margin-top: var(--spacing-sixth);
+        width: 100%;
+        max-width: none;
+    }
+}
+
+
+.modal > div {
+    position: relative;
+    padding: 52px var(--spacing-half) 42px;
+	width: 100%;
+
+
+	@include max-screen($screen-xs-max) {
+		padding: 25px 40px;
+	}
+}
+
+.modal.fullWidth > div {
+	@include max-screen($screen-xs-max) {
+	  padding: 25px 20px;
+	}
+}
+
+.modal-fade-enter,
+.modal-fade-leave-active {
+  opacity: 0;
+}
+
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: opacity .3s
+}

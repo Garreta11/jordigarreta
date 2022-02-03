@@ -1,0 +1,387 @@
+@import "../../css/includes";
+
+.spotlight-instagram-feed {
+  display: none !important;
+}
+
+.startpage_wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .startpage_arrow {
+    width: 40px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-image: url('/assets/icons/arrowleft.svg');
+    cursor: pointer;
+    position: absolute;
+    left: -98px;
+    top: 0;
+    @media screen and (max-width: 1220px) {
+      top: -98px;
+      left: 18px;
+
+      @media screen and (max-width: 1000px) and (orientation: landscape) and (max-height: 450px) {
+        top: 0;
+        left: 10%;
+      }
+    }
+    &:hover {
+      background-image: url('/assets/icons/arrowleft-hover.svg');
+    }
+
+    html[lang="ar"] & {
+      left: auto;
+      right: -98px;
+      @media screen and (max-width: 1220px) {
+        top: -98px;
+        right: 18px;
+
+        @media screen and (max-width: 1000px) and (orientation: landscape) and (max-height: 450px) {
+          top: 0;
+          right: 10%;
+        }
+      }
+      transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+    }
+  }
+
+  .startpage_controls {
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    .startpage_controls_hide {
+      position: relative;
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+    }
+
+    .startpage_controls_hide_line:first-child {
+      position: absolute;
+      top: -1px;
+      left: 9px;
+      height: 24.19px;
+      width: 2.68px;
+      transform: scaleX(-1) rotate(-45deg);
+      background-color: #FFFFFF;
+    }
+
+    .startpage_controls_hide_line:last-child {
+      position: absolute;
+      top: -1px;
+      left: 9px;
+      height: 24.19px;
+      width: 2.68px;
+      transform: rotate(-45deg);
+      background-color: #FFFFFF;
+    }
+  }
+
+  
+
+  .startpage_clip-container {
+    position: fixed;
+    z-index: 800;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+  }
+
+  .startpage_main {
+    position: absolute;
+    z-index: 801;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .startpage_main_inner_container {
+      position: absolute;
+      top: 230px;
+      text-align: center;
+      @media screen and (max-width: 800px) and  (min-width: 800px) and (aspect-ratio: 4/3){
+        top: 50px;
+      }
+      @media screen and (max-width: 768px) {
+        top: auto;
+        bottom: 17%;
+      }
+      @media screen and (max-width: 1000px) and (orientation: landscape) and (max-height: 450px) {
+        top: auto; 
+        bottom: 17%;
+      }
+    }
+  }
+
+  .startpage_clip {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .startpage_link-area {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  .startpage_logo {
+    height: 344px;
+    width: 374px;
+    margin-bottom: 44px;
+
+    @media screen and (max-width: 768px) {
+      height: 236px;
+      width: 257px;
+    }
+
+    @media screen and (max-width: 1000px) and (orientation: landscape) and (max-height: 450px) {
+      height: auto;
+      width: 35vh;
+      margin-bottom: 30px;
+    }
+
+    @media (orientation: portrait) and (max-width: 350px) {
+      width: 200px;
+      height: auto;
+    }
+  }
+  #player{
+    @media screen and (max-width: 1000px) and (orientation: landscape) and (max-height: 450px) {
+      padding: 0;
+    }
+  }
+  .startpage_button {
+    height: 41.74px;
+    width: 169px;
+    margin-bottom: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/assets/icons/startpage-button.svg');
+    padding: 0;
+
+    @media screen and (max-width: 1000px) and (orientation: landscape) and (max-height: 450px) {
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      background-image: url('/assets/icons/startpage-button-hover.svg');
+    }
+
+    html[lang="ar"] & {
+      font-family: "29LT Zarid Sans", "Akzidenz-Grotesk Std", AkzidGroStd, sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 0.39px;
+      line-height: 22px;
+      text-align: center;
+    }
+
+    @include max-screen($screen-sm) {
+
+    }
+  }
+
+  .btn-line {
+    cursor: pointer;
+  }
+
+  .btn-line:after {
+    background-image: url('/assets/icons/button-line-new-invert.svg');
+  }
+
+  .btn-line:hover:after {
+    background-image: url('/assets/icons/button-line-hover.svg');
+  }
+
+  .startpage_video-inner-container {
+    .startpage_link {
+      color: #000;
+      margin-top: 30px;
+      @media screen and (max-width: 680px) {
+        margin-top: 100px;
+      }
+
+      @media (orientation: landscape) and (max-width: 1000px) and (max-height: 450px) {
+        margin-top: 30px;
+      }
+
+      &::after {
+        background-image: url("/assets/icons/button-line-new.svg");
+      }
+    }
+  }
+
+  .startpage_link {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.34px;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-bottom: 10px;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+
+    &:hover::after {
+        background-image: url("/assets/icons/button-line-new-hover.svg");
+    }
+
+    &::after {
+        content: " ";
+        height: 5px;
+        position: absolute;
+        width: 100%;
+        background-image: url("/assets/icons/button-line-new-invert.svg");
+        background-repeat: no-repeat;
+        bottom: 0;
+        left: 0;
+    }
+
+    html[lang="ar"] & {
+      font-size: 18px;
+      letter-spacing: 0.39px;
+      line-height: 22px;
+    }
+
+    
+
+    @include max-screen($screen-sm) {
+
+    }
+  }
+
+  .startpage_video-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 802;
+    position: relative;
+    padding-bottom: 30px;
+
+    .startpage_video-inner-container
+    {
+      max-width: 977px;
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      top: 113px;
+
+      @media screen and (max-width: 1220px) {
+        padding-right: 18px;
+          padding-left: 18px;
+      }
+
+      @media screen and (max-width: 1024px) {
+        top: 160px;
+      }
+      @media screen and (max-width: 768px) { 
+        top: auto;
+        bottom: 17%;
+      }
+      @media screen and (max-width: 1000px) and (orientation: landscape) and (max-height: 450px) {
+        top: auto; 
+        bottom: 17%;
+      }
+    
+      .startpage_player_wrapper {
+        height: calc(977px * 0.5625);
+        width: 100%;
+        text-align: center;
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%;
+        background-color: #000;
+        @media screen and (max-width: 1220px) {
+          padding-bottom: calc(56.25%);
+          
+        }
+        @media screen and (max-width: 1000px) and (orientation: landscape) and (max-height: 450px) {
+          height: calc(320px * .5625);
+          max-width: 320px;
+          margin: 0 auto;
+          padding-bottom: 0;
+        }
+        iframe{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+
+}
+
+//#siteNavigation,
+#site-logo,
+#site-footer {
+  display: none;
+}
+
+nav {
+  z-index: 900;
+}
+
+body {
+  overflow: hidden;
+}
+
+html[lang] {
+  margin-bottom: 0 !important;
+}
+
+#menuToggle span {
+  background-image: url(/assets/icons/bar3_white.svg);
+}
+
+.startpage_main {
+  .langswitch {
+    color: white !important;
+
+    html[lang="en"] & 
+    {
+      font-size: 18px;
+    }
+  }
+}
+
+.startpage_menu_switch {
+  display: block;
+  position: absolute;
+  top: 52px;
+  right: 63px;
+  width: auto;
+  text-align: center;
+  overflow: visible;
+  z-index: 801;
+  text-transform: uppercase;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media only screen and (max-width: 768px) {
+    right: 18px;
+    top: 30px;
+  }
+}

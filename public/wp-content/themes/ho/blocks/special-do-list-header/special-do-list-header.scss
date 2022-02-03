@@ -1,0 +1,20 @@
+.block-do-list-header {
+    .do-list-header-container {
+        padding-top: 100px;
+        .do-list-header {
+            padding-bottom: 50px;
+            .do-list-header-description {
+                font-size: 18px;
+                letter-spacing: 0;
+                line-height: 26px;
+                text-align: center;
+                margin: 0 auto 25px;
+                max-width: 775px;
+                margin-bottom: 30px;
+            }
+            .share-btn {
+                padding: 2em;
+            }
+        }
+    }
+}

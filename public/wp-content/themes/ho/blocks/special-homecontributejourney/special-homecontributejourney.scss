@@ -1,0 +1,79 @@
+@import "../../css/includes";
+
+.block-dreamersjourney{
+    padding-bottom: 0px !important;
+    .mobile_margin {
+        @include max-screen($screen-sm-max){
+            margin: 0 10%;
+            margin-top: 25%; 
+        }
+    }
+    .white_box{
+        position: relative;
+        background-color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 7em;
+        padding-top:10em;
+        @include max-screen($screen-xs-max){
+            padding: 10% 8%;
+        }
+    }
+    .subheader {
+        @include max-screen($screen-xs-max){
+            font-size: 28px !important;
+            font-weight: 800;
+        }
+    }
+    .journey_container{
+        padding-top: 1%;
+        display: flex;
+        justify-content: center;
+    }
+    .subheader{
+        color: #000;
+        font-size: 42px;
+        width: 300px;
+        @include max-screen($screen-xs-max){
+            letter-spacing: normal;
+        }
+    }
+    .text{
+        font-size: 18px;
+        font-weight: 410;
+        font-family: AkzidGroStd;
+        @include max-screen($screen-xs-max){
+            font-size: 16px !important;
+            font-weight: normal !important;
+        }
+    }
+    .letter_btn{
+        font-family: "AkzidGroStd", sans-serif;
+        font-weight: 900;
+        font-size: 1.6rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-image: url("/assets/icons/button.svg");
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 2em;
+        margin-top: 2em;
+        display: inline-block;
+    }
+    .future_letter_logo{
+        position: absolute;
+        height: 200px;
+        width: auto;
+        left: -125px;
+        @include max-screen($screen-sm-max){
+            top: -130px;
+            left: -35px;
+        }
+        @include max-screen($screen-xs-max){
+            height:100px;
+            top: -65px;
+            left: -20px;
+        }
+    }
+}
